@@ -1,3 +1,7 @@
+<?php
+$page_id = 2;
+$con = mysql_connect ( 'localhost', 'root', 'root' );
+?>
 <html lang="es_PE">
 <head>
 <?php include('./webframes/resources.php');?>
@@ -17,26 +21,29 @@
 					style="background-color: #F1F1F1; height: 800px;">
 					<?php
 					// Create connection
-					$con = mysql_connect( 'localhost', 'root', 'root');
+					$con = mysql_connect ( 'localhost', 'root', 'root' );
 					
-					mysql_select_db('ogrrhhwebsitedb', $con);
-					// Check connection
-// 					if (mysqli_connect_errno ()) {
-// 						echo "Failed to connect to MySQL: " . mysqli_connect_error ();
-// 					} else {
-						echo "CONECTADO!!!";
-						$sql    = 'SELECT name FROM websites';
-						$result = mysql_query($sql, $con);
-						echo $result;
-						while ($row = mysql_fetch_assoc($result)) {
-							echo $row['name'];
-						}
-// 					}
+					mysql_select_db ( 'ogrrhhwebsitedb', $con );
+
+					$query = "	SELECT WPC.*
+								FROM WEB_PAGE_CONTAINS WPC
+								INNER JOIN DETAIL_WEB_PAGE_CONTAIN DWP ON WPC.ID = DWP.WEB_PAGE_CONTAIN_ID
+								WHERE DWP.PAGE_ID = ".$page_id;
+					
+					$result = mysql_query ( $query, $con );
+					while ( $row = mysql_fetch_assoc ( $result ) ) {
+						echo $row ['id'] . '\xA';
+						echo $row ['title'] . '\xA';
+						echo $row ['subtitle'] . '\xA';
+						echo $row ['contain'] . '\xA';
+						echo $row ['publication_date'] . '\xA';
+					}
 					?>
 					
 					</div>
 			</div>
 			<?php include('./webframes/footer.php');?>
+			
 		</div>
 		<div class="col-md-2"></div>
 	</div>
@@ -55,3 +62,6 @@
 	});
 </script>
 </html>
+<?php
+mysql_close ( $con );
+?>

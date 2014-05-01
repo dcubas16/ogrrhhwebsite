@@ -38,7 +38,7 @@
 				style="font-weight: bold; line-height: 45px;">
 				<li
 					data-bind="attr: { class: (mainMenuSelected() == 1)? 'active' : '' }"
-					class="active"><a href="#">INICIO</a></li>
+					class="active"><a href="index.php">INICIO</a></li>
 				<li
 					data-bind="attr: { class: (mainMenuSelected() == 2)? 'active' : '' }"
 					class=""><a href="aboutus.php">NOSOTROS</a></li>

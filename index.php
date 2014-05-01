@@ -1,3 +1,7 @@
+<?php
+$page_id = 1;
+$con = mysql_connect ( 'localhost', 'root', 'root' );
+?>
 <html lang="es_PE">
 <head>
 <?php include('./webframes/resources.php');?>
@@ -52,9 +56,60 @@
 			</div>
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<div class="col-md-3 background-image-style"
-					style="background: url('resources/pages-styles/body-left-panel.jpeg') no-repeat center; height: 800px;"></div>
+					style="background: url('resources/pages-styles/body-left-panel.jpeg') no-repeat center; height: 800px;">
+					<div class="row">
+						<div class="col-md-12">
+						<?php
+						// Create connection
+						
+						mysql_select_db ( 'ogrrhhwebsitedb', $con );
+						
+						$query = "	SELECT WPC.*
+								FROM WEB_PAGE_CONTAINS WPC
+								INNER JOIN DETAIL_WEB_PAGE_CONTAIN DWP ON WPC.ID = DWP.WEB_PAGE_CONTAIN_ID
+								WHERE DWP.PAGE_ID = " . $page_id;
+						
+						$result = mysql_query ( $query, $con );
+						while ( $row = mysql_fetch_assoc ( $result ) ) {
+							// echo $row ['id'] . '</br>';
+							echo "<h1>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
+							// echo "<small>" . $row ['subtitle'] . "</small>" . '</br>';
+							echo "<p>" . $row ['contain'] . "</p>" . '</br>';
+							// echo $row ['publication_date'] . '</br>';
+						}
+						
+						?>
+						</div>
+					</div>
+				</div>
 				<div class="col-md-9"
-					style="background-color: #F1F1F1; height: 800px;"></div>
+					style="background-color: white; height: 800px;">
+					<div class="row">
+						<div class="col-md-12">
+						<?php
+						// Create connection
+						
+						mysql_select_db ( 'ogrrhhwebsitedb', $con );
+						
+						$query = "	SELECT WPC.*
+								FROM WEB_PAGE_CONTAINS WPC
+								INNER JOIN DETAIL_WEB_PAGE_CONTAIN DWP ON WPC.ID = DWP.WEB_PAGE_CONTAIN_ID
+								WHERE DWP.PAGE_ID = " . $page_id;
+						
+						$result = mysql_query ( $query, $con );
+						while ( $row = mysql_fetch_assoc ( $result ) ) {
+							// echo $row ['id'] . '</br>';
+							echo "<h1>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
+							// echo "<small>" . $row ['subtitle'] . "</small>" . '</br>';
+							echo "<p>" . $row ['contain'] . "</p>" . '</br>';
+							// echo $row ['publication_date'] . '</br>';
+						}
+						
+						?>
+						
+						</div>
+					</div>
+				</div>
 			</div>
 			<?php include('./webframes/footer.php');?>
 		</div>
@@ -75,3 +130,6 @@
 	});
 </script>
 </html>
+<?php
+mysql_close ( $con );
+?>
