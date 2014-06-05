@@ -82,8 +82,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 										<div class="col-md-1"></div>
 									</div>
 									<div class="row">5 de Junio del 2014</div>
-									<div class="row">Aqui va el subtitulo del contenido de la
-										pagina web</div>
+									<div class="row">Aqui va el subtitulo del contenido de la noticia</div>
 								</div>
 							</div>
 						</div>
