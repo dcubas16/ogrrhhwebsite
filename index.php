@@ -58,34 +58,43 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 				<div class="col-md-3 background-image-style"
 					style="background: url('resources/pages-styles/body-left-panel.jpeg') no-repeat center; height: 800px;">
 					<div class="row">
-						<div class="col-md-12">
-						<?php
-						// Create connection
-						
-						mysql_select_db ( 'ogrrhhwebsitedb', $con );
-						
-						$query = "	SELECT WPC.*
-								FROM WEB_PAGE_CONTAINS WPC
-								INNER JOIN DETAIL_WEB_PAGE_CONTAIN DWP ON WPC.ID = DWP.WEB_PAGE_CONTAIN_ID
-								WHERE DWP.PAGE_ID = " . $page_id;
-						
-						$result = mysql_query ( $query, $con );
-						while ( $row = mysql_fetch_assoc ( $result ) ) {
-							// echo $row ['id'] . '</br>';
-							echo "<h1>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
-							// echo "<small>" . $row ['subtitle'] . "</small>" . '</br>';
-							echo "<p>" . $row ['contain'] . "</p>" . '</br>';
-							// echo $row ['publication_date'] . '</br>';
-						}
-						
-						?>
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<div class="row" style="height: 30;"></div>
+							<div class="row font-style-short-title-white">ULTIMAS</div>
+							<div class="row font-style-tall-title-white">NOTICIAS</div>
 						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<div class="row" style="height: 30;"></div>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="row">
+										<div class="col-md-1"></div>
+										<div class="col-md-10">
+											<div
+												style="background: url('resources/images/recursos-humanos_1_210_110.jpg') no-repeat center;"
+												style="wi"></div>
+										</div>
+										<div class="col-md-1"></div>
+									</div>
+									<div class="row">5 de Junio del 2014</div>
+									<div class="row">Aqui va el subtitulo del contenido de la
+										pagina web</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
 					</div>
 				</div>
 				<div class="col-md-9"
 					style="background-color: white; height: 800px;">
 					<div class="row">
-						<div class="col-md-12">
+						<div class="col-md-12"
+							style="padding-left: 35px; padding-top: 15px;">
 						<?php
 						// Create connection
 						
@@ -99,7 +108,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 						$result = mysql_query ( $query, $con );
 						while ( $row = mysql_fetch_assoc ( $result ) ) {
 							// echo $row ['id'] . '</br>';
-							echo "<h1>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
+							echo "<h1 class=' font-style-tall-title-dark'>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
 							// echo "<small>" . $row ['subtitle'] . "</small>" . '</br>';
 							echo "<p>" . $row ['contain'] . "</p>" . '</br>';
 							// echo $row ['publication_date'] . '</br>';

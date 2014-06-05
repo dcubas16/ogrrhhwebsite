@@ -10,12 +10,14 @@
 }
 
 .nav-pills>li+li {
- 	padding-right: 1px; 
-	background: url(../pages-styles/navbar-button-separator.jpeg) top right no-repeat;
+	padding-right: 1px;
+	background: url(../pages-styles/navbar-button-separator.jpeg) top right
+		no-repeat;
 }
 
 .nav-pills>li>a:hover {
-	background: url(../pages-styles/navbar-button-background.jpeg) top left repeat-x;
+	background: url(../pages-styles/navbar-button-background.jpeg) top left
+		repeat-x;
 	color: #031a35;
 	border-radius: 0px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -23,15 +25,16 @@
 	font-size: 18px;
 	font-weight: bold;
 	color: #fff;
-/* 	-webkit-background-size: cover; */
-/* 	-moz-background-size: cover; */
-/* 	-o-background-size: cover; */
-/* 	background-size: cover; */
+	/* 	-webkit-background-size: cover; */
+	/* 	-moz-background-size: cover; */
+	/* 	-o-background-size: cover; */
+	/* 	background-size: cover; */
 }
 
 .nav-pills>li.active>a,.nav-pills>li.active>a:hover,.nav-pills>li.active>a:focus
 	{
-	background: url(../pages-styles/navbar-button-background.jpeg) top left repeat-x;
+	background: url(../pages-styles/navbar-button-background.jpeg) top left
+		repeat-x;
 	color: #031a35;
 	border-radius: 0px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -39,11 +42,10 @@
 	font-size: 18px;
 	font-weight: bold;
 	color: #fff;
-/* 	-webkit-background-size: cover; */
-/* 	-moz-background-size: cover; */
-/* 	-o-background-size: cover; */
-/* 	background-size: cover; */
-	
+	/* 	-webkit-background-size: cover; */
+	/* 	-moz-background-size: cover; */
+	/* 	-o-background-size: cover; */
+	/* 	background-size: cover; */
 }
 
 /* background: url(../images/bg_li.gif) top right no-repeat; */
@@ -99,3 +101,38 @@
 	background-size: auto;
 }
 
+.font-style-tall-title-white {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+		Geneva, Verdana, sans-serif;
+	color: #FFFFFF;
+	font-size: 47;
+	padding: 5;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	line-height: 20PX;
+	padding-left: 0px;
+}
+
+.font-style-short-title-white {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+		Geneva, Verdana, sans-serif;
+	color: #FFFFFF;
+	font-size: 20;
+	padding: 5;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	line-height: 20PX;
+	padding-left: 0px;
+}
+
+.font-style-tall-title-dark {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+		Geneva, Verdana, sans-serif;
+	color: #A81212;
+	font-size: 47;
+	padding: 5;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	line-height: 20PX;
+	padding-left: 0px;
+}
