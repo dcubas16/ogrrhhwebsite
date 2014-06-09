@@ -21,17 +21,21 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 						role="complementary">
 						<ul class="nav bs-docs-sidenav">
 							<li class="active"><a class="vertical-navbar-font-style"
-								href="#mission-and-goals">Misión y Visión</a></li>
+								href="#universitary-legislation">Legislación Universitaria</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
-								href="#history">Historia</a></li>
+								href="#personal-system">Sistema de Personal</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
-								href="#organization-chart">Organigrama</a></li>
+								href="#admiistrative-simplification">Simplificación
+									Administrativa</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
-								href="#authorities">Autoridades</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#mof">MOF</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#rof">ROF</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#tupa">TUPA</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#mapro">MAPRO</a></li>
+								href="#supply-system">Sistema de Abastecimiento</a></li>
+							<li class=""><a class="vertical-navbar-font-style"
+								href="#control-legislation">Normas de Control</a></li>
+							<li class=""><a class="vertical-navbar-font-style"
+								href="#public-administration">Delitos Contra la Administración
+									Pública</a></li>
+							<li class=""><a class="vertical-navbar-font-style"
+								href="#public-gestion">Gestión Pública</a></li>
 						</ul>
 						<a class="back-to-top" href="#top">Retornar al inicio</a>
 					</div>
@@ -39,22 +43,35 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
-						<h1 id="mision-and-goals"
-							class="font-style-medium-title-dark page-header ">Misión y Visión</h1>
-						<h3 id="overview-doctype">Misión</h3>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects.</p>
-						<h3 id="overview-doctype">Visión</h3>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects.</p>
+						<h1 id="universitary-legislation"
+							class="font-style-medium-title-dark page-header ">Legislación
+							Universitaria</h1>
+						<ul>
+							<li><a href="#">Ley N° 23733 - Ley Universitaria</a></li>
+							<li><a href="#">Estatuto de la Universidad Nacional Mayor de San
+									Marcos</a></li>
+							<li><a href="#">Reglamento de Organización y Funciones de la
+									Universidad Nacional Mayor de San Marcos</a></li>
+						</ul>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="history" class="font-style-medium-title-dark page-header ">Historia</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects.</p>
+						<h1 id="personal-system"
+							class="font-style-medium-title-dark page-header ">Sistema de
+							Personal</h1>
+						<ul>
+							<li><a href="#">Decreto Legislativo N° 276 - Ley de Bases de la
+									Carrera Administrativa y de Remuneraciones del Sector Público</a></li>
+							<li><a href="#">Decreto Supremo N° 005-90-PCM - Reglamento de la
+									Ley de Bases de la Carrera Administrativa y de Remuneraciones
+									del Sector Público</a></li>
+							<li><a href="#">Ley N° 26771 - Ley de Nepotismo</a></li>
+							<li><a href="#">Reglamento del Año Sabático de la Universidad
+									Nacional Mayor de San Marcos</a></li>
+							<li><a href="#">Reglamento de Licencias Docentes por
+									Perfeccionamiento</a></li>
+							<li><a href="#">Directivas de la Oficina General de Recursos
+									Humanos de la Universidad Nacional Mayor de San Marcos</a></li>
+						</ul>
 					</div>
 
 					<div class="bs-docs-section">
@@ -67,24 +84,12 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					<div class="bs-docs-section">
 						<h1 id="organization-chart"
 							class="font-style-medium-title-dark page-header ">Autoridades</h1>
-						<p>
-							Jefe de la Oficina General de Recursos Humanos
-						</p>
-						<p>
-							Jefe de la Oficina de Gestión y Escalafón
-						</p>
-						<p>
-							Jefe de la Oficina de Remuneraciones
-						</p>
-						<p>
-							Jefe de la Oficina de Pensiones y Beneficios Sociales
-						</p>
-						<p>
-							Jefe de la Oficina de Bienestar y Capacitación
-						</p>
-						<p>
-							Jefe de la Oficina de Modernización e Informatización
-						</p>
+						<p>Jefe de la Oficina General de Recursos Humanos</p>
+						<p>Jefe de la Oficina de Gestión y Escalafón</p>
+						<p>Jefe de la Oficina de Remuneraciones</p>
+						<p>Jefe de la Oficina de Pensiones y Beneficios Sociales</p>
+						<p>Jefe de la Oficina de Bienestar y Capacitación</p>
+						<p>Jefe de la Oficina de Modernización e Informatización</p>
 					</div>
 					<div class="bs-docs-section">
 						<h1 id="mof" class="font-style-medium-title-dark page-header ">MOF</h1>

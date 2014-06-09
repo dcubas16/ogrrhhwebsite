@@ -5,21 +5,14 @@
 		<!-- 	<div class="row" -->
 		<!-- 		style="height: 160px; background-color: rgb(109, 21, 21);"> -->
 		<div class="col-md-2" style="text-align: center; padding-top: 20px;">
-			<a href="home.htm"> <img alt=""
-				src="resources/images/logo_unmsm.png" height="120" width="130"
-				style="">
+			<a href="index.php"> <img alt="" src="resources/images/logo_unmsm.png"
+				height="120" width="130" style="">
 			</a>
 		</div>
-		<div class="col-md-6">
-			<div class="row">
-				<div class="col-md-12">OGRRHH</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">Oficina General de Recursos Humanos</div>
-			</div>
-			<div class="row">
-				<div class="col-md-12">UNMSM</div>
-			</div>
+		<div class="col-md-6 logo-style-container">
+			<a href="index.php"> <img class="logo-style"
+				src="resources/images/ogrrhh-logo.png">
+			</a>
 		</div>
 		<div class="col-md-4">
 			<div class="input-group" style="padding-top: 105;">
@@ -44,16 +37,16 @@
 					class=""><a href="aboutus.php">NOSOTROS</a></li>
 				<li
 					data-bind="attr: { class: (mainMenuSelected() == 2)? 'active' : '' }"
-					class=""><a href="#">OFICINAS</a></li>
+					class=""><a href="offices.php">OFICINAS</a></li>
 				<li
 					data-bind="attr: { class: (mainMenuSelected() == 3)? 'active' : '' }"
-					class=""><a href="#">NORMAS LEGALES</a></li>
+					class=""><a href="legislation.php">NORMAS LEGALES</a></li>
 				<li
 					data-bind="attr: { class: (mainMenuSelected() == 4)? 'active' : '' }"
-					class=""><a href="#">DE INTERES PUBLICO</a></li>
+					class=""><a href="ofpublicinterest.php">DE INTERES PUBLICO</a></li>
 				<li
 					data-bind="attr: { class: (mainMenuSelected() == 5)? 'active' : '' }"
-					class=""><a href="#">UBICACION</a></li>
+					class=""><a href="ubication.php">UBICACION</a></li>
 			</ul>
 		</div>
 	</div>

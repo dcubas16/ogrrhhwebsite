@@ -21,17 +21,18 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 						role="complementary">
 						<ul class="nav bs-docs-sidenav">
 							<li class="active"><a class="vertical-navbar-font-style"
-								href="#mission-and-goals">Misión y Visión</a></li>
+								href="#gestion-office">Oficina de Gestión y Escalafón</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
-								href="#history">Historia</a></li>
+								href="#salary-office">Oficina de Remuneraciones y Obligaciones
+									Sociales</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
-								href="#organization-chart">Organigrama</a></li>
+								href="#pension-office">Oficina de Pensiones y Beneficios
+									Sociales</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
-								href="#authorities">Autoridades</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#mof">MOF</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#rof">ROF</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#tupa">TUPA</a></li>
-							<li class=""><a class="vertical-navbar-font-style" href="#mapro">MAPRO</a></li>
+								href="#social-benefies-office">Oficia de Desarrollo y Bienestar
+									Social</a></li>
+							<li class=""><a class="vertical-navbar-font-style"
+								href="#modern-office">Oficia de Modernización e Informatización</a></li>
 						</ul>
 						<a class="back-to-top" href="#top">Retornar al inicio</a>
 					</div>
@@ -39,75 +40,35 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
-						<h1 id="mision-and-goals"
-							class="font-style-medium-title-dark page-header ">Misión y Visión</h1>
-						<h3 id="overview-doctype">Misión</h3>
+						<h1 id="gestion-office"
+							class="font-style-medium-title-dark page-header ">Oficina de Gestión y Escalafón</h1>
 						<p>Bootstrap makes use of certain HTML elements and CSS properties
 							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects.</p>
-						<h3 id="overview-doctype">Visión</h3>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects.</p>
+							beginning of all your projects<a href="#"> ...Leer mas</a></p>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="history" class="font-style-medium-title-dark page-header ">Historia</h1>
+						<h1 id="salary-office" class="font-style-medium-title-dark page-header ">Oficina de Remuneraciones y Obligaciones Sociales</h1>
 						<p>Bootstrap makes use of certain HTML elements and CSS properties
 							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects.</p>
+							beginning of all your projects<a href="#"> ...Leer mas</a></p>
 					</div>
 
 					<div class="bs-docs-section">
-						<h1 id="organization-chart"
-							class="font-style-medium-title-dark page-header ">Organigrama</h1>
+						<h1 id="pension-office"
+							class="font-style-medium-title-dark page-header ">Oficina de Pensiones y Beneficios Sociales</h1>
 						<p>
-							Descargue el organigrama de la OGRRHH <a href="#">Link</a>
+							Descargue el organigrama de la OGRRHH<a href="#"> ...Leer mas</a>
 						</p>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="organization-chart"
-							class="font-style-medium-title-dark page-header ">Autoridades</h1>
-						<p>
-							Jefe de la Oficina General de Recursos Humanos
-						</p>
-						<p>
-							Jefe de la Oficina de Gestión y Escalafón
-						</p>
-						<p>
-							Jefe de la Oficina de Remuneraciones
-						</p>
-						<p>
-							Jefe de la Oficina de Pensiones y Beneficios Sociales
-						</p>
-						<p>
-							Jefe de la Oficina de Bienestar y Capacitación
-						</p>
-						<p>
-							Jefe de la Oficina de Modernización e Informatización
-						</p>
+						<h1 id="social-benefies-office"
+							class="font-style-medium-title-dark page-header ">Oficia de Desarrollo y Bienestar Social</h1>
+						<p>Jefe de la Oficina de Modernización e Informatización<a href="#"> ...Leer mas</a></p>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="mof" class="font-style-medium-title-dark page-header ">MOF</h1>
+						<h1 id="modern-office" class="font-style-medium-title-dark page-header ">Oficia de Modernización e Informatización</h1>
 						<p>
-							Descargue el MOF de la OGRRHH <a href="#">Link</a>
-						</p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="rof" class="font-style-medium-title-dark page-header ">ROF</h1>
-						<p>
-							Descargue el ROF de la OGRRHH <a href="#">Link</a>
-						</p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="tupa" class="font-style-medium-title-dark page-header ">TUPA</h1>
-						<p>
-							Descargue el TUPA de la OGRRHH <a href="#">Link</a>
-						</p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="mapro" class="font-style-medium-title-dark page-header ">MAPRO</h1>
-						<p>
-							Descargue el MAPRO de la OGRRHH <a href="#">Link</a>
+							Descargue el MOF de la OGRRHH<a href="#"> ...Leer mas</a>
 						</p>
 					</div>
 					

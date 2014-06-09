@@ -56,13 +56,16 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 			</div>
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<div class="col-md-3 background-image-style"
-					style="background: url('resources/pages-styles/body-left-panel.jpeg') no-repeat center; height: 800px;">
+					style="background: url('resources/pages-styles/body-left-panel.jpeg') no-repeat center; height: 850px;">
 					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
+						<div class="col-md-11">
 							<div class="row" style="height: 30;"></div>
-							<div class="row font-style-short-title-white">ULTIMAS</div>
-							<div class="row font-style-tall-title-white">NOTICIAS</div>
+							<div class="row font-style-short-title-white">
+								<div class="col-md-12">ULTIMAS</div>
+							</div>
+							<div class="row font-style-tall-title-white">
+								<div class="col-md-12">NOTICIAS</div>
+							</div>
 						</div>
 						<div class="col-md-1"></div>
 					</div>
@@ -71,29 +74,96 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 						<div class="col-md-10">
 							<div class="row" style="height: 30;"></div>
 							<div class="row">
-								<div class="col-md-12">
+								<div class="col-md-11">
 									<div class="row">
-										<div class="col-md-1"></div>
-										<div class="col-md-10">
-											<div
-												style="background: url('resources/images/recursos-humanos_1_210_110.jpg') no-repeat center;"
-												style="wi"></div>
+										<div class="col-md-12 news-image-container-style">
+											<a href="#"> <img class="news-image-style"
+												src="resources/images/recursos-humanos_1_210_110.jpg">
+											</a>
 										</div>
-										<div class="col-md-1"></div>
 									</div>
-									<div class="row">5 de Junio del 2014</div>
-									<div class="row">Aqui va el subtitulo del contenido de la noticia</div>
+									<div class="row">
+										<div class="col-md-10 news-date">5 de Junio del 2014</div>
+										<div class="col-md-2"></div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
+											contenido de la noticia</div>
+									</div>
 								</div>
+								<div class="col-md-1"></div>
 							</div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<div class="row" style="height: 30;"></div>
+							<div class="row">
+								<div class="col-md-11">
+									<div class="row">
+										<div class="col-md-12 news-image-container-style">
+											<a href="#"> <img class="news-image-style"
+												src="resources/images/recursos-humanos_1_210_110.jpg">
+											</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-10 news-date">5 de Junio del 2014</div>
+										<div class="col-md-2"></div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
+											contenido de la noticia</div>
+									</div>
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10">
+							<div class="row" style="height: 30;"></div>
+							<div class="row">
+								<div class="col-md-11">
+									<div class="row">
+										<div class="col-md-12 news-image-container-style">
+											<a href="#"> <img class="news-image-style"
+												src="resources/images/recursos-humanos_1_210_110.jpg">
+											</a>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-10 news-date">5 de Junio del 2014</div>
+										<div class="col-md-2"></div>
+									</div>
+									<div class="row">
+										<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
+											contenido de la noticia</div>
+									</div>
+								</div>
+								<div class="col-md-1"></div>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+					<div class="row">
+						<div class="col-md-1"></div>
+						<div class="col-md-10 link-font-style">
+							<a href="#"> Ver todas las Noticias...</a>
 						</div>
 						<div class="col-md-1"></div>
 					</div>
 				</div>
 				<div class="col-md-9"
-					style="background-color: white; height: 800px;">
+					style="background-color: white; height: 850px;">
 					<div class="row">
 						<div class="col-md-12"
-							style="padding-left: 35px; padding-top: 15px;">
+							style="padding-left: 30px; padding-top: 15px;">
 						<?php
 						// Create connection
 						

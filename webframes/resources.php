@@ -1,7 +1,7 @@
 <title>minerquim</title>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-
+<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  -->
+<!-- <meta charset="UTF-8"> -->
 <link href="resources/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="resources/css/carousel.css" rel="stylesheet">
 <link href="resources/bootstrapformhelpers/css/bootstrap-formhelpers.min.css" rel="stylesheet" media="screen">
