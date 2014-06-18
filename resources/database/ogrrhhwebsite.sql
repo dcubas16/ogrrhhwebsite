@@ -60,7 +60,7 @@ CREATE TABLE `detail_web_page_contain` (
 
 LOCK TABLES `detail_web_page_contain` WRITE;
 /*!40000 ALTER TABLE `detail_web_page_contain` DISABLE KEYS */;
-INSERT INTO `detail_web_page_contain` VALUES (1,1);
+INSERT INTO `detail_web_page_contain` VALUES (1,1),(2,2),(3,2),(4,2),(5,2),(4,2),(5,2);
 /*!40000 ALTER TABLE `detail_web_page_contain` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,7 +104,7 @@ CREATE TABLE `web_page_contains` (
   `id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
   `subtitle` varchar(100) DEFAULT NULL,
-  `contain` varchar(500) NOT NULL,
+  `contain` longtext NOT NULL,
   `document_url` varchar(100) DEFAULT NULL,
   `publication_date` datetime NOT NULL,
   `contain_type_id` int(11) NOT NULL,
@@ -119,7 +119,7 @@ CREATE TABLE `web_page_contains` (
 
 LOCK TABLES `web_page_contains` WRITE;
 /*!40000 ALTER TABLE `web_page_contains` DISABLE KEYS */;
-INSERT INTO `web_page_contains` VALUES (1,'BIENVENIDO',' a la Oficina General de Recursos Humanos de la UNMSM','Ser adipiscing elit sed diam nonummy nibh euismod. Dolore magnaorem ipsum dolor ser adipiscing elit sed diam nonummy nibh euismod. Dolore magnaorem ipsum dolor ser adipiscing. Dolore magnaorem ipsum dolor ser adipiscing elit sed diam nonummy nibh euismod.',NULL,'2014-05-06 00:00:00',1,NULL);
+INSERT INTO `web_page_contains` VALUES (1,'BIENVENIDO',' a la Oficina General de Recursos Humanos de la UNMSM','Aquí va la bienvenida',NULL,'2014-05-06 00:00:00',1,NULL),(2,'MISIÓN','Misión','La Oficina General de Recursos Humanos, plenamente identificada con la misión, visión y los valores universitarios, es la responsable de gestionar el talento humano para la Universidad Nacional Mayor de San Marcos, a traves de los procesos de ingreso, incentivos, estímulos del Personal Administrativo en sus distintas modalidades, requerido por las facultades y dependencias. De esta manera, contribuye a la presencia de un adecuado entorno laboral y bienestar a los trabajadores, sustentándose en el mejoramiento integral de procesos y en su personal de alta calidad humana y profesional.',NULL,'2014-05-18 00:00:00',1,NULL),(3,'VISIÓN','Visión','Aquí va la visión',NULL,'2014-05-18 00:00:00',1,NULL),(4,'HISTORIA','Historia','La Oficina General de Recursos Humanos es el órgano de apoyo, dependiente de la Dirección General de Administración, encargado de planificar, normar y ejecutar los procesos técnicos en materia de gestión del recurso humano de la Institución.\n\nLas funciones que desarrolla en esta oficina son:\n\na) Planificar, normar, organizar, conducir y controlar las acciones del Sistema de Recursos Humanos de la Universidad Nacional Mayor de San Marcos.\nb) Proponer a la Alta Dirección las normas, planes, programas y acciones para la gestión del Sistema de Recursos Humanos.\nc) Aplicar las normas, instrumentos de gestión y procesos técnicos en materia de desarrollo integral de los recursos humanos, en concordancia con las necesidades institucionales y de acuerdo a la normatividad vigente.\nd) Fomentar una actitud proactiva en los servidores docentes, administrativos y obreros y desarrollo del liderazgo de los directivos de la Universidad a través de acciones sostenidas de mejoramiento de su calidad personal y profesional.\ne) Coordinar sus acciones con otras entidades públicas en asuntos vinculados a sus funciones.\nf) Formular el Presupuesto Analítico de Personal (PAP), en coordinación con la Oficina General de Planificación.\ng) Coordinar, asesorar y supervisar las acciones descentralizadas del Sistema de Recursos Humanos con las diversas dependencias de la Universidad.\nh) Resolver, por delegación de Facultades, los asuntos de su competencia.\ni) Proponer a la Alta Dirección políticas y programas específicos de planificación, organización, acceso, evaluación de rendimiento, compensación y desarrollo de los recursos humanos, acorde con los procesos establecidos por ley.\nj) Promover el desarrollo personal, social y laboral así como la capacitación técnica de los servidores, orientados al logro de las metas y objetivos institucionales, en función de las necesidades de la entidad y los resultados de la evaluación de desempeño.\nk) Proponer y coordinar la celebración de convenios nacionales e internacionales orientados al mejoramiento de la calidad del servicio y la capacitación y desarrollo de competencias de los servidores.\nl) Realizar investigaciones y desarrollar estrategias prospectivas en materia de productividad, con el fin de hacer mas eficiente la función pública en la Universidad.\nm) Elaborar y proponer la normatividad para el otorgamiento de reconocimientos, incentivos y estímulos al desempeño desatacado de los servidores de la Universidad.\nn) Mantener actualizado el archivo de Legajos de servidores y ex servidores docentes, administrativos y obreros de la Universidad.\no) Elaborar la Planilla Única de Remuneraciones y de Pensiones, de acuerdo con los dispositivos legales vigentes, vigilando registrar en ella únicamente a los servidores que cumplan labores efectivas, así como consignar los conceptos que legalmente correspondan abonarse.\np) Establecer estrategias para aprovechar los conocimientos y experiencia de ex servidores docentes, administrativos y obreros en beneficio del mejoramiento de la calidad del servicio.\nq) Llevar el registro de los cargos públicos que califican como funcionario público y empleado de confianza e informar periódicamente a las autoridades del Gobierno Central.\nr) Asesorar a la Alta Dirección en los asuntos de su competencia.\ns) Otras que le asigne la Dirección General de Administración.\nLa Oficina General de Recursos Humanos tiene la estructura orgánica siguiente :\n- Oficina de Gestión y Escalafón\n- Oficina de Remuneraciones y Obligaciones Sociales\n- Oficina de Pensiones y Beneficios sociales\n- Oficina de Desarrollo y Bienestar Social\n- Oficina de Modernización e Informatización',NULL,'2014-05-18 00:00:00',1,NULL),(5,'ORGANIGRAMA','Organigrama','Aquí va el organigrama','/docs/otros/organigrama.pdf','2014-05-18 00:00:00',2,NULL);
 /*!40000 ALTER TABLE `web_page_contains` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,4 +158,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-05 16:20:11
+-- Dump completed on 2014-06-18 16:23:28

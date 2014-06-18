@@ -1,5 +1,5 @@
 <?php
-$page_id = 2;
+$page_id = 3;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 ?>
 <html lang="es_PE">

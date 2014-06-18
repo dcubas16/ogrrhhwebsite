@@ -1,5 +1,5 @@
 <?php
-$page_id = 2;
+$page_id = 4;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 ?>
 <html lang="es_PE">
@@ -36,6 +36,8 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 									Pública</a></li>
 							<li class=""><a class="vertical-navbar-font-style"
 								href="#public-gestion">Gestión Pública</a></li>
+							<li class=""><a class="vertical-navbar-font-style"
+								href="#CAS-legislation">Normatividad CAS</a></li>
 						</ul>
 						<a class="back-to-top" href="#top">Retornar al inicio</a>
 					</div>
@@ -47,10 +49,14 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 							class="font-style-medium-title-dark page-header ">Legislación
 							Universitaria</h1>
 						<ul>
-							<li><a href="#">Ley N° 23733 - Ley Universitaria</a></li>
-							<li><a href="#">Estatuto de la Universidad Nacional Mayor de San
+							<li><a
+								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf"
+								target="_blank">Ley N° 23733 - Ley Universitaria</a></li>
+							<li><a href="resources/docs/otros/Estatuto_UNMSM.pdf"
+								target="_blank">Estatuto de la Universidad Nacional Mayor de San
 									Marcos</a></li>
-							<li><a href="#">Reglamento de Organización y Funciones de la
+							<li><a href="resources/docs/otros/ROF_UNMSM_2011.pdf"
+								target="_blank">Reglamento de Organización y Funciones de la
 									Universidad Nacional Mayor de San Marcos</a></li>
 						</ul>
 					</div>
@@ -59,12 +65,17 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 							class="font-style-medium-title-dark page-header ">Sistema de
 							Personal</h1>
 						<ul>
-							<li><a href="#">Decreto Legislativo N° 276 - Ley de Bases de la
+							<li><a
+								href="resources/docs/decretos/DL_276_1984.pdf"
+								target="_blank">Decreto Legislativo N° 276 - Ley de Bases de la
 									Carrera Administrativa y de Remuneraciones del Sector Público</a></li>
-							<li><a href="#">Decreto Supremo N° 005-90-PCM - Reglamento de la
+							<li><a
+								href="resources/docs/decretos/DS_005_90_PCM_2013.pdf"
+								target="_blank">Decreto Supremo N° 005-90-PCM - Reglamento de la
 									Ley de Bases de la Carrera Administrativa y de Remuneraciones
 									del Sector Público</a></li>
-							<li><a href="#">Ley N° 26771 - Ley de Nepotismo</a></li>
+							<li><a href="resources/docs/leyes/ROF_UNMSM_2011.pdf"
+								target="_blank">Ley N° 26771 - Ley de Nepotismo</a></li>
 							<li><a href="#">Reglamento del Año Sabático de la Universidad
 									Nacional Mayor de San Marcos</a></li>
 							<li><a href="#">Reglamento de Licencias Docentes por
@@ -75,47 +86,74 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					</div>
 
 					<div class="bs-docs-section">
-						<h1 id="organization-chart"
-							class="font-style-medium-title-dark page-header ">Organigrama</h1>
-						<p>
-							Descargue el organigrama de la OGRRHH <a href="#">Link</a>
-						</p>
+						<h1 id="admiistrative-simplification"
+							class="font-style-medium-title-dark page-header ">Simplificación
+							Administrativa</h1>
+						<ul>
+							<li><a href="#">Ley N° 25035 - Ley De Simplificación
+									Administrativa (Derogada - se incluye para consulta en caso de
+									expedientes en trámite iniciados bajo su vigencia)</a></li>
+							<li><a href="#">Decreto Supremo N° 070 - Reglamento De La Ley De
+									Simplificación Administrativa(Derogado - se incluye para
+									consulta en caso de expedientes en trámite iniciados bajo su
+									vigencia)</a></li>
+							<li><a href="#">Decreto Supremo N° 002-94-Jus - Texto Único
+									Ordenado De La Ley De Normas Generales De Procedimientos
+									Administrativos(derogado - se incluye para consulta en caso de
+									expedientes en trámite iniciados bajo su vigencia)</a></li>
+							<li><a href="#">Ley N° 27444 - Ley Del Procedimiento
+									Administrativo General</a></li>
+						</ul>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="organization-chart"
-							class="font-style-medium-title-dark page-header ">Autoridades</h1>
-						<p>Jefe de la Oficina General de Recursos Humanos</p>
-						<p>Jefe de la Oficina de Gestión y Escalafón</p>
-						<p>Jefe de la Oficina de Remuneraciones</p>
-						<p>Jefe de la Oficina de Pensiones y Beneficios Sociales</p>
-						<p>Jefe de la Oficina de Bienestar y Capacitación</p>
-						<p>Jefe de la Oficina de Modernización e Informatización</p>
+						<h1 id="supply-system"
+							class="font-style-medium-title-dark page-header ">Sistema de
+							Abastecimiento</h1>
+						<ul>
+							<li><a href="#">CONSUCODE</a></li>
+							<li><a href="#">Decreto Supremo N° 012-2001-Pcm - Texto Único
+									Ordenado De La Ley De Contrataciones Y Adquisiciones Del Estado</a></li>
+							<li><a href="#">Decreto Supremo N° 013-2001-Pcm Reglamento De La
+									Ley De Contrataciones Y Adquisiciones Del Estado</a></li>
+						</ul>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="mof" class="font-style-medium-title-dark page-header ">MOF</h1>
-						<p>
-							Descargue el MOF de la OGRRHH <a href="#">Link</a>
-						</p>
+						<h1 id="control-legislation"
+							class="font-style-medium-title-dark page-header ">Normas de
+							Control</h1>
+						<ul>
+							<li><a href=#>RESOLUCIÓN DE CONTRALORÍA N° 072-2000 - CG - NORMAS
+									DE CONTROL INTERNO PARA EL SECTOR PÚBLICO</a></li>
+							<li><a href=#>RESOLUCIÓN DE CONTRALORÍA N° 123 -2000 - CG -
+									NORMAS TÉCNICAS DE CONTROL INTERNO PARA UNA CULTURA DE
+									INTEGRIDAD, TRANSPARENCIA Y RESPONSABILIDAD EN LA
+									ADMINISTRACIÓN PÚBLICA</a></li>
+						</ul>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="rof" class="font-style-medium-title-dark page-header ">ROF</h1>
-						<p>
-							Descargue el ROF de la OGRRHH <a href="#">Link</a>
-						</p>
+						<h1 id="public-administration"
+							class="font-style-medium-title-dark page-header ">Delitos Contra
+							la Administración Pública</h1>
+						<ul>
+							<li><a href=#>Decreto Legislativo N° 635 - Delitos Contra La
+									Administración Pública</a></li>
+						</ul>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="tupa" class="font-style-medium-title-dark page-header ">TUPA</h1>
-						<p>
-							Descargue el TUPA de la OGRRHH <a href="#">Link</a>
-						</p>
+						<h1 id="public-gestion"
+							class="font-style-medium-title-dark page-header ">Gestión Pública</h1>
+						<ul>
+							<li><a href=#>Ley De Modernización De La Gestión Del Estado</a></li>
+						</ul>
 					</div>
 					<div class="bs-docs-section">
-						<h1 id="mapro" class="font-style-medium-title-dark page-header ">MAPRO</h1>
-						<p>
-							Descargue el MAPRO de la OGRRHH <a href="#">Link</a>
-						</p>
+						<h1 id="CAS-legislation"
+							class="font-style-medium-title-dark page-header ">Normatividad CAS</h1>
+						<ul>
+							<li><a href=#>Ley De Modernización De La Gestión Del Estado</a></li>
+						</ul>
 					</div>
-					
+				
 					<?php
 					// Create connection
 					$con = mysql_connect ( 'localhost', 'root', 'root' );
