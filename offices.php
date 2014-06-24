@@ -4,7 +4,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 ?>
 <html lang="es_PE">
 <head>
-<?php include('./webframes/resources.php');?>
+<?php include('webframes/resources.php');?>
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -13,7 +13,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat center; margin-right: 0px; margin-left: 0px;">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
-			<?php include('./webframes/header.php');?>
+			<?php include('webframes/header.php');?>
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<div class="col-md-3 background-image-style"
 					style="background: url('resources/pages-styles/body-left-panel.jpeg') repeat center; height: 1550">
@@ -95,7 +95,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					
 					</div>
 			</div>
-			<?php include('./webframes/footer.php');?>
+			<?php include('webframes/footer.php');?>
 			
 		</div>
 		<div class="col-md-2"></div>

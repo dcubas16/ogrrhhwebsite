@@ -203,7 +203,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 		ko.applyBindings(viewModel, $('body')[0]);
 
 		$('.carousel').carousel({
-			interval : 2000
+			interval : 1000
 		})
 	});
 </script>

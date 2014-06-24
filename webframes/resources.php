@@ -5,7 +5,7 @@
 <link href="resources/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
 <link href="resources/css/carousel.css" rel="stylesheet">
 <link href="resources/bootstrapformhelpers/css/bootstrap-formhelpers.min.css" rel="stylesheet" media="screen">
-<link href="resources/css/minerquimStyles.css" rel="stylesheet">
+<link href="resources/css/ogrrhh-website.css" rel="stylesheet">
 <link href="resources/css/docs.min.css" rel="stylesheet">
 
 <script	src="resources/js/jquery-1.11.0/jquery-1.11.0.min.js"></script>

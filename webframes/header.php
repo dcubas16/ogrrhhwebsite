@@ -3,8 +3,9 @@
 	<div class="row background-image-style"
 		style="height: 160px; background: url('resources/pages-styles/header-background.jpeg') no-repeat center;">
 		<div class="col-md-2" style="text-align: center; padding-top: 20px;">
-			<a href="index.php"> <img alt="" src="resources/images/logo_unmsm.png"
-				height="120" width="100" style="">
+			<a href="index.php"> <img alt=""
+				src="resources/images/logo_unmsm.png" height="120" width="100"
+				style="">
 			</a>
 		</div>
 		<div class="col-md-6 logo-style-container">
@@ -30,24 +31,55 @@
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 1)? 'active' : '' }"
 					class="active"><a href="index.php">INICIO</a></li>
+				<li data-bind="attr: { class: (<?php echo $page_id?> == 2)? 'active dropdown' : 'dropdown' }">
+					<a href="aboutus.php" >NOSOTROS</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Misión y Visión</a></li>
+						<li><a href="#">Historia</a></li>
+						<li><a href="#">Organigrama</a></li>
+						<li><a href="#">Autoridades</a></li>
+						<li><a href="#">Directorio</a></li>
+						<li><a href="#">MOF</a></li>
+						<li><a href="#">ROF</a></li>
+						<li><a href="#">TUPA</a></li>
+						<li><a href="#">MAPRO</a></li>
+					</ul></li>
 				<li
-					data-bind="attr: { class: (<?php echo $page_id?> == 2)? 'active' : '' }"
-					class=""><a href="aboutus.php">NOSOTROS</a></li>
+					data-bind="attr: { class: (<?php echo $page_id?> == 3)? 'active dropdown' : 'dropdown' }"
+					class=""><a href="offices.php">OFICINAS</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Gestión y Escalafón</a></li>
+						<li><a href="#">Remuneraciones y Obligaciones Sociales</a></li>
+						<li><a href="#">Pensiones y Beneficios Sociales</a></li>
+						<li><a href="#">Desarrollo y Bienestar Social</a></li>
+						<li><a href="#">Moderización e Informatización</a></li>
+					</ul>
+					</li>
 				<li
-					data-bind="attr: { class: (<?php echo $page_id?> == 3)? 'active' : '' }"
-					class=""><a href="offices.php">OFICINAS</a></li>
+					data-bind="attr: { class: (<?php echo $page_id?> == 4)? 'active dropdown' : 'dropdown' }"
+					class=""><a href="legislation.php">NORMATIVIDAD</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Resoluciones Emitidas</a></li>
+						<li><a href="#">Leyes y Decretos</a></li>
+						<li><a href="#">Directivas</a></li>
+						<li><a href="#">Normatividad OGRRHH</a></li>
+					</ul>
+					</li>
 				<li
-					data-bind="attr: { class: (<?php echo $page_id?> == 4)? 'active' : '' }"
-					class=""><a href="legislation.php">NORMATIVIDAD</a></li>
+					data-bind="attr: { class: (<?php echo $page_id?> == 5)? 'active dropdown' : 'dropdown' }"
+					class=""><a href="ofpublicinterest.php">PUBLICO</a>
+					<ul class="dropdown-menu" role="menu">
+						<li><a href="#">Resoluciones Emitidas</a></li>
+						<li><a href="#">Remuneraciones y Obligaciones Sociales</a></li>
+						<li><a href="#">Pensiones y Beneficios Sociales</a></li>
+						<li><a href="#">Desarrollo y Bienestar Social</a></li>
+						<li><a href="#">Moderización e Informatización</a></li>
+					</ul>
+					</li>
 				<li
-					data-bind="attr: { class: (<?php echo $page_id?> == 5)? 'active' : '' }"
-					class=""><a href="ofpublicinterest.php">PUBLICO</a></li>
-				<li
-					data-bind="attr: { class: (<?php echo $page_id?> == 6)? 'active' : '' }"
-					class=""><a href="ubication.php">UBICACION</a></li>
-<!-- 				<li -->
-<!-- 					data-bind="attr: { class: (mainMenuSelected() == 5)? 'active' : '' }" -->
-<!-- 					class=""><a href="ubication.php">TRABAJA CON NOSOTROS</a></li>					 -->
+					data-bind="attr: { class: (<?php echo $page_id?> == 6)? 'active dropdown' : 'dropdown' }"
+					class=""><a href="ubication.php">CONTACTANOS</a>
+					</li>
 			</ul>
 		</div>
 	</div>
@@ -56,3 +88,28 @@
 			style="background-color: rgb(213, 213, 213); height: 12px;"></div>
 	</div>
 </header>
+<script type="text/javascript">
+
+// $(function () {
+//     $('.dropdown').on({
+//         "shown.bs.dropdown": function() {
+//             $(this).data('closable', false);
+//         },
+//         "click": function() {
+//             $(this).data('closable', true);
+//         },
+//         "mouseover": function() {
+// //             alert("HI");
+// //         	$(this).find('[data-toggle=dropdown]').dropdown('toggle');
+//             $(this).data('closable', true);
+//         },
+//         "hide.bs.dropdown": function() {
+//             return $(this).data('closable');
+//         }
+//     });
+// });
+// 	$(".dropdown").mouseover(function(){
+// 		$(this).find('[data-toggle=dropdown]').dropdown('toggle');
+// 		$('.dropdown-menu').show();
+// 	})
+</script>
