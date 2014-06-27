@@ -15,33 +15,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 		<div class="col-md-8">
 			<?php include('webframes/header.php');?>
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
-				<div class="col-md-3 background-image-style"
-					style="background: url('resources/pages-styles/body-left-panel.jpeg') repeat center; height: 1550">
-					<div class="bs-docs-sidebar hidden-print affix-top vertical-navbar"
-						role="complementary">
-						<ul class="nav bs-docs-sidenav">
-							<li class="active"><a class="vertical-navbar-font-style"
-								href="#universitary-legislation">Legislación Universitaria</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#personal-system">Sistema de Personal</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#admiistrative-simplification">Simplificación
-									Administrativa</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#supply-system">Sistema de Abastecimiento</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#control-legislation">Normas de Control</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#public-administration">Delitos Contra la Administración
-									Pública</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#public-gestion">Gestión Pública</a></li>
-							<li class=""><a class="vertical-navbar-font-style"
-								href="#CAS-legislation">Normatividad CAS</a></li>
-						</ul>
-						<a class="back-to-top" href="#top">Retornar al inicio</a>
-					</div>
-				</div>
+				<?php include('webframes/leftnavbar-legislation.php');?>
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">

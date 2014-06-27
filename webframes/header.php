@@ -34,15 +34,14 @@
 				<li data-bind="attr: { class: (<?php echo $page_id?> == 2)? 'active dropdown' : 'dropdown' }">
 					<a href="aboutus.php" >NOSOTROS</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Misión y Visión</a></li>
-						<li><a href="#">Historia</a></li>
-						<li><a href="#">Organigrama</a></li>
-						<li><a href="#">Autoridades</a></li>
-						<li><a href="#">Directorio</a></li>
-						<li><a href="#">MOF</a></li>
-						<li><a href="#">ROF</a></li>
-						<li><a href="#">TUPA</a></li>
-						<li><a href="#">MAPRO</a></li>
+						<li><a href="aboutus-vision-and-goals.php">Misión y Visión</a></li>
+						<li><a href="aboutus-history.php">Historia</a></li>
+						<li><a href="aboutus-organization-chart.php">Organigrama</a></li>
+						<li><a href="aboutus-authorities.php">Autoridades</a></li>
+						<li><a href="aboutus-directory.php">Directorio</a></li>
+						<li><a href="aboutus-mof.php">MOF</a></li>
+						<li><a href="aboutus-rof.php">ROF</a></li>
+						<li><a href="aboutus-tupa.php">TUPA</a></li>
 					</ul></li>
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 3)? 'active dropdown' : 'dropdown' }"
@@ -62,18 +61,14 @@
 						<li><a href="#">Resoluciones Emitidas</a></li>
 						<li><a href="#">Leyes y Decretos</a></li>
 						<li><a href="#">Directivas</a></li>
-						<li><a href="#">Normatividad OGRRHH</a></li>
+						<li><a href="#">Normatividad OGRRHH y UNMSM</a></li>
 					</ul>
 					</li>
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 5)? 'active dropdown' : 'dropdown' }"
-					class=""><a href="ofpublicinterest.php">PUBLICO</a>
+					class=""><a href="ofpublicinterest.php">TRABAJA CON NOSOTROS</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Resoluciones Emitidas</a></li>
-						<li><a href="#">Remuneraciones y Obligaciones Sociales</a></li>
-						<li><a href="#">Pensiones y Beneficios Sociales</a></li>
-						<li><a href="#">Desarrollo y Bienestar Social</a></li>
-						<li><a href="#">Moderización e Informatización</a></li>
+						<li><a href="#">Convocatorias</a></li>
 					</ul>
 					</li>
 				<li
@@ -88,28 +83,4 @@
 			style="background-color: rgb(213, 213, 213); height: 12px;"></div>
 	</div>
 </header>
-<script type="text/javascript">
 
-// $(function () {
-//     $('.dropdown').on({
-//         "shown.bs.dropdown": function() {
-//             $(this).data('closable', false);
-//         },
-//         "click": function() {
-//             $(this).data('closable', true);
-//         },
-//         "mouseover": function() {
-// //             alert("HI");
-// //         	$(this).find('[data-toggle=dropdown]').dropdown('toggle');
-//             $(this).data('closable', true);
-//         },
-//         "hide.bs.dropdown": function() {
-//             return $(this).data('closable');
-//         }
-//     });
-// });
-// 	$(".dropdown").mouseover(function(){
-// 		$(this).find('[data-toggle=dropdown]').dropdown('toggle');
-// 		$('.dropdown-menu').show();
-// 	})
-</script>

@@ -1,5 +1,6 @@
 <?php
 $page_id = 2;
+$sub_page_id =6;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 $goals = "";
 $vision = "";
@@ -57,7 +58,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="">
 						<h1 id="mision-and-goals"
-							class="font-style-medium-title-dark page-header ">Nosotros</h1>
+							class="font-style-medium-title-dark page-header ">MOF</h1>
 						<p><?php print($vision)?></p>
 					</div>
 				</div>

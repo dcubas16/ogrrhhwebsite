@@ -1,5 +1,6 @@
 <?php
-$page_id = 3;
+$page_id = 4;
+$sub_page_id = 2;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 ?>
 <html lang="es_PE">
@@ -15,42 +16,25 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 		<div class="col-md-8">
 			<?php include('webframes/header.php');?>
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
-				<?php include('webframes/leftnavbar-offices.php');?>
+				<?php include('webframes/leftnavbar-legislation.php');?>
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
-						<h1 id="gestion-office"
-							class="font-style-medium-title-dark page-header ">Oficina de Gestión y Escalafón</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects<a href="#"> ...Leer mas</a></p>
+						<h1 id="universitary-legislation"
+							class="font-style-medium-title-dark page-header ">Legislación
+							Universitaria</h1>
+						<ul>
+							<li><a
+								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf"
+								target="_blank">Ley N° 23733 - Ley Universitaria</a></li>
+							<li><a href="resources/docs/otros/Estatuto_UNMSM.pdf"
+								target="_blank">Estatuto de la Universidad Nacional Mayor de San
+									Marcos</a></li>
+							<li><a href="resources/docs/otros/ROF_UNMSM_2011.pdf"
+								target="_blank">Reglamento de Organización y Funciones de la
+									Universidad Nacional Mayor de San Marcos</a></li>
+						</ul>
 					</div>
-					<div class="bs-docs-section">
-						<h1 id="salary-office" class="font-style-medium-title-dark page-header ">Oficina de Remuneraciones y Obligaciones Sociales</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects<a href="#"> ...Leer mas</a></p>
-					</div>
-
-					<div class="bs-docs-section">
-						<h1 id="pension-office"
-							class="font-style-medium-title-dark page-header ">Oficina de Pensiones y Beneficios Sociales</h1>
-						<p>
-							Descargue el organigrama de la OGRRHH<a href="#"> ...Leer mas</a>
-						</p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="social-benefies-office"
-							class="font-style-medium-title-dark page-header ">Oficia de Desarrollo y Bienestar Social</h1>
-						<p>Jefe de la Oficina de Modernización e Informatización<a href="#"> ...Leer mas</a></p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="modern-office" class="font-style-medium-title-dark page-header ">Oficia de Modernización e Informatización</h1>
-						<p>
-							Descargue el MOF de la OGRRHH<a href="#"> ...Leer mas</a>
-						</p>
-					</div>
-					
 					<?php
 					// Create connection
 					$con = mysql_connect ( 'localhost', 'root', 'root' );
