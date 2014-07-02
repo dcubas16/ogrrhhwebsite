@@ -1,6 +1,6 @@
 <?php
 $page_id = 2;
-$sub_page_id =3;
+$sub_page_id = 3;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 $goals = "";
 $vision = "";
@@ -59,8 +59,8 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Organigrama</h1>
-						
-						<p><?php print($vision)?></p>
+						<img alt="" src="resources/images/organigrama_ogrrhh.jpeg"
+							style="width: 98%;">
 					</div>
 				</div>
 			</div>

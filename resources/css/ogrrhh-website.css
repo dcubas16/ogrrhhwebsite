@@ -229,3 +229,8 @@
 	padding-bottom: 0px;
 	background-color: rgb(243, 245, 248);
 }
+
+.authorities-title {
+	text-align: right;
+	font-weight: bold;
+}

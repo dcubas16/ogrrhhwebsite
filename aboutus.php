@@ -58,7 +58,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Nosotros</h1>
-						<p><?php print($vision)?></p>
+						<p>La Oficina General de Recursos Humanos es el órgano de apoyo, dependiente de la Dirección General de Administración, encargado de planificar, normar y ejecutar los procesos técnicos en materia de gestión del recurso humano de la Institución.</p>
 					</div>
 				</div>
 			</div>

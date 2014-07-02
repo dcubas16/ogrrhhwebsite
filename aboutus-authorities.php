@@ -1,6 +1,6 @@
 <?php
 $page_id = 2;
-$sub_page_id =4;
+$sub_page_id = 4;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 $goals = "";
 $vision = "";
@@ -59,7 +59,30 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Autoridades</h1>
-						<p><?php print($vision)?></p>
+						<div class="row">
+						<div class="col-md-6 authorities-title"><p>Jefe de la OGRRHH</p></div>
+						<div class="col-md-6"><p>Dr. Héctor Elvis Martinez Flores</p></div>
+						</div>
+						<div class="row">
+						<div class="col-md-6 authorities-title"><p>Jefe de la Oficina de Gestión y Escalafón</p></div>
+						<div class="col-md-6"><p>Juana Sulca Brancacho</p></div>
+						</div>
+						<div class="row">
+						<div class="col-md-6 authorities-title"><p>Jefe de la Oficina de Remuneraciones y Obligaciones Sociales</p></div>
+						<div class="col-md-6"><p>Sr. Bladimir Reyes Campos</p></div>
+						</div>
+						<div class="row">
+						<div class="col-md-6 authorities-title"><p>Jefe de la Oficina de Pensiones y Beneficios Sociales</p></div>
+						<div class="col-md-6"><p>Sra. María Esperanza Moncada Alfaro</p></div>
+						</div>
+						<div class="row">
+						<div class="col-md-6 authorities-title"><p>Jefe de la Oficina de Desarrollo y Bienestar Social</p></div>
+						<div class="col-md-6"><p>Lic. Norma Huiza Luna</p></div>
+						</div>
+						<div class="row">
+						<div class="col-md-6 authorities-title"><p>Jefe de la Oficina de Modernización e Informatización</p></div>
+						<div class="col-md-6"><p>Sr. Diego Antonio Núñez Cubas</p></div>
+						</div>
 					</div>
 				</div>
 			</div>
