@@ -15,10 +15,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 		<div class="col-md-8">
 			<?php include('webframes/header.php');?>
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
-				<div class="col-md-3 background-image-style"
-					style="background: url('resources/pages-styles/body-left-panel.jpeg') repeat center; height: 1550">
-					
-				</div>
+				<?php include('webframes/leftnavbar-work-with-us.php');?>
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					

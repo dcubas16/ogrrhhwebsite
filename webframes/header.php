@@ -47,10 +47,10 @@
 					data-bind="attr: { class: (<?php echo $page_id?> == 3)? 'active dropdown' : 'dropdown' }"
 					class=""><a href="offices.php">OFICINAS</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Gestión y Escalafón</a></li>
-						<li><a href="#">Remuneraciones y Obligaciones Sociales</a></li>
-						<li><a href="#">Pensiones y Beneficios Sociales</a></li>
-						<li><a href="#">Desarrollo y Bienestar Social</a></li>
+						<li><a href="offices-gestion.php">Gestión y Escalafón</a></li>
+						<li><a href="offices-remuneration.php">Remuneraciones y Obligaciones Sociales</a></li>
+						<li><a href="offices-pension.php">Pensiones y Beneficios Sociales</a></li>
+						<li><a href="offices-development.php">Desarrollo y Bienestar Social</a></li>
 						<li><a href="#">Moderización e Informatización</a></li>
 					</ul>
 					</li>
@@ -58,15 +58,15 @@
 					data-bind="attr: { class: (<?php echo $page_id?> == 4)? 'active dropdown' : 'dropdown' }"
 					class=""><a href="legislation.php">NORMATIVIDAD</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Resoluciones Emitidas</a></li>
-						<li><a href="#">Leyes y Decretos</a></li>
-						<li><a href="#">Directivas</a></li>
-						<li><a href="#">Normatividad OGRRHH y UNMSM</a></li>
+						<li><a href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
+						<li><a href="legislation-laws.php">Leyes y Decretos</a></li>
+						<li><a href="legislation-directives.php">Directivas</a></li>
+						<li><a href="legislation-ogrrhh-legislation.php">Normatividad OGRRHH y UNMSM</a></li>
 					</ul>
 					</li>
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 5)? 'active dropdown' : 'dropdown' }"
-					class=""><a href="ofpublicinterest.php">TRABAJA CON NOSOTROS</a>
+					class=""><a href="work-with-us.php">TRABAJA CON NOSOTROS</a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="#">Convocatorias</a></li>
 					</ul>

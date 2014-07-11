@@ -21,8 +21,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
 						<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Legislación
-							Universitaria</h1>
+							class="font-style-medium-title-dark page-header ">Normatividad de la OGRRHH y la UNMSM</h1>
 						<ul>
 							<li><a
 								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf"

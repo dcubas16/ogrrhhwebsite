@@ -59,7 +59,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">ROF</h1>
-						<p><?php print($vision)?></p>
+						<p><a href="#">Haga click aquí para descargar el ROF de la OGRRHH</a></p>
 					</div>
 				</div>
 			</div>
