@@ -21,7 +21,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 						<div class="col-md-11">
 							<div class="row" style="height: 30;"></div>
 							<div class="row font-style-tall-title-white">
-								<div class="col-md-12">DIRECCION</div>
+								<div class="col-md-12">DIRECCIÓN</div>
 							</div>
 						</div>
 						<div class="col-md-1"></div>

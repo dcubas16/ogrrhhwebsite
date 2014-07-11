@@ -1,6 +1,6 @@
 <?php
 $page_id = 2;
-$sub_page_id =6;
+$sub_page_id = 6;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 $goals = "";
 $vision = "";
@@ -55,11 +55,24 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<?php include('webframes/leftnavbar-aboutus.php');?>
 				<div class="col-md-9"
-					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
+					style="background-color: #F7F7F7; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">MOF</h1>
-						<p><a href="#">Haga click aquí para descargar el MOF de la OGRRHH</a></p>
+						<p>El manual de organización y funciones (MOF) es un documento
+							formal que las empresas elaboran para plasmar parte de la forma
+							de la organización que han adoptado, y que sirve como guía para
+							todo el personal.</p>
+						<p>El MOF contiene, esencialmente las estructura organizacional,
+							comúnmente llamada organigrama y la descripción de las funciones
+							de todos los puestos en la empresa. Tambien se suelen incluir en
+							la descripción de cada puesto el perfíl y los indicadores de
+							evaluación.</p>
+						<p>
+							<a
+								href="resources/docs/otros/MOF_OGRRHH.pdf"
+								target="_blank">Haga click aquí para descargar el MOF de la OGRRHH</a>
+						</p>
 					</div>
 				</div>
 			</div>

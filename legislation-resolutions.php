@@ -21,17 +21,12 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
 						<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Resoluciones Emitidas</h1>
+							class="font-style-medium-title-dark page-header ">Resoluciones
+							Emitidas</h1>
 						<ul>
-							<li><a
-								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf"
-								target="_blank">Ley N° 23733 - Ley Universitaria</a></li>
-							<li><a href="resources/docs/otros/Estatuto_UNMSM.pdf"
-								target="_blank">Estatuto de la Universidad Nacional Mayor de San
-									Marcos</a></li>
-							<li><a href="resources/docs/otros/ROF_UNMSM_2011.pdf"
-								target="_blank">Reglamento de Organización y Funciones de la
-									Universidad Nacional Mayor de San Marcos</a></li>
+							<li><a href="resources/docs/decretos/DL_276_1984.pdf"
+								target="_blank">Decreto Legislativo N° 276 - Ley de Bases de la
+									Carrera Administrativa y de Remuneraciones del Sector Público</a></li>
 						</ul>
 					</div>
 					<?php

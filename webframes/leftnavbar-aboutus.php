@@ -15,9 +15,9 @@
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
 				class="vertical-navbar-font-style"
 				href="aboutus-organization-chart.php">Organigrama</a></li>
-			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 4)? 'active' : '' }"><a
-				class="vertical-navbar-font-style" href="aboutus-authorities.php">Autoridades</a></li>
+<!-- 			<li class="" -->
+<!--				data-bind="attr: { class: (<?php echo $sub_page_id?> == 4)? 'active' : '' }"><a -->
+<!-- 				class="vertical-navbar-font-style" href="aboutus-authorities.php">Autoridades</a></li> -->
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 5)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-directory.php">Directorio</a></li>

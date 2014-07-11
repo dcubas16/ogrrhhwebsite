@@ -179,12 +179,21 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 							// echo $row ['id'] . '</br>';
 							echo "<h1 class=' font-style-tall-title-dark'>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
 							// echo "<small>" . $row ['subtitle'] . "</small>" . '</br>';
-							echo "<p>" . $row ['contain'] . "</p>" . '</br>';
+							// echo "<p>" . $row ['contain'] . "</p>" . '</br>';
 							// echo $row ['publication_date'] . '</br>';
 						}
 						
 						?>
-						
+						<p>El Jefe de la Oficina General de Recursos Humanos (OGRRHH) de
+								la Universidad Nacional Mayor de San Marcos (UNMSM), el Doctor
+								Hector Elvis Martinez Flores le da la bienvenida al sitio web
+								oficial de la OGRRHH.</p>
+							<p>En nuestro sitio web Usted podrá encontrar diversa información
+								sobre la OGRRHH y la UNMSM, dentro de cuales puede encontrar el
+								directorio, MOF, ROF; así mismo, se tiene información específica
+								de cada Oficina dependiente de la OGRRHH, las normas y
+								directivas concernientes a la OGRRHH, y las convocatorias de
+								trabajo que realiza la OGRRHH</p>
 						</div>
 					</div>
 				</div>

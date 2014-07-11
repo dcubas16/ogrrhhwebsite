@@ -55,11 +55,11 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<?php include('webframes/leftnavbar-aboutus.php');?>
 				<div class="col-md-9"
-					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
+					style="background-color: #F7F7F7; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Organigrama</h1>
-						<img alt="" src="resources/images/organigrama_ogrrhh.jpeg"
+						<img alt="" src="resources/images/organization-chart-ogrrhh.png"
 							style="width: 98%;">
 					</div>
 				</div>

@@ -24,14 +24,20 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 							class="font-style-medium-title-dark page-header ">Normatividad de la OGRRHH y la UNMSM</h1>
 						<ul>
 							<li><a
-								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf"
-								target="_blank">Ley N° 23733 - Ley Universitaria</a></li>
-							<li><a href="resources/docs/otros/Estatuto_UNMSM.pdf"
-								target="_blank">Estatuto de la Universidad Nacional Mayor de San
-									Marcos</a></li>
-							<li><a href="resources/docs/otros/ROF_UNMSM_2011.pdf"
-								target="_blank">Reglamento de Organización y Funciones de la
-									Universidad Nacional Mayor de San Marcos</a></li>
+								href="resources/docs/otros/ESTATUTO UNMSM.pdf"
+								target="_blank">Estatuto de la UNMSM - 1984</a></li>
+								<li><a
+								href="resources/docs/otros/modificacion_art_estatuto_rr_3028-r-04.pdf"
+								target="_blank">Modificación del Estatuto de la UNMSM - 2004</a></li>
+								<li><a
+								href="resources/docs/otros/CAP_UNMSM_2013.pdf"
+								target="_blank">Cuadro para Asignación de Personal (CAP) - 2013</a></li>
+								<li><a
+								href="resources/docs/otros/Clasificador_de_Cargos_UNMSM.pdf"
+								target="_blank">Clasificador de Cargos - 2011</a></li>
+								<li><a
+								href="resources/docs/otros/Manual_Usuario_OGRRHH.pdf"
+								target="_blank">Manual de Usuario de la OGRRHH - 2014</a></li>
 						</ul>
 					</div>
 					

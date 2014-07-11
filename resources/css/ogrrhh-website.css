@@ -85,14 +85,15 @@
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
-	background-size: auto;
+	background-size: cover;
+
 }
 
 .font-style-tall-title-white {
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
 		Geneva, Verdana, sans-serif;
 	color: #FFFFFF;
-	font-size: 47;
+	font-size: 37;
 	padding: 5;
 	font-weight: bold;
 	letter-spacing: 0.2px;

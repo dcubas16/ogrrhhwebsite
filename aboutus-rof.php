@@ -1,6 +1,6 @@
 <?php
 $page_id = 2;
-$sub_page_id =7;
+$sub_page_id = 7;
 $con = mysql_connect ( 'localhost', 'root', 'root' );
 $goals = "";
 $vision = "";
@@ -55,11 +55,25 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<?php include('webframes/leftnavbar-aboutus.php');?>
 				<div class="col-md-9"
-					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
+					style="background-color: #F7F7F7; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">ROF</h1>
-						<p><a href="#">Haga click aquí para descargar el ROF de la OGRRHH</a></p>
+						<p>El ROF es el Reglamento de Organización y Funciones de una
+							entidad, que se constituye en un documento técnico normativo de
+							gestión institucional que establece: La estructura orgánica de la
+							entidad, Las funciones generales y específicas de la entidad y de
+							cada uno de sus órganos y unidades orgánicas, Las relaciones de
+							coordinación y control entre órganos, unidades orgánicas y
+							entidades cuando corresponda. Este instrumento de gestión
+							formaliza las competencias de cada área dentro de la organización
+							y en función a ello se puede determinar las responsabilidades que
+							le corresponde en el logro de los objetivos institucionales.</p>
+						<p>
+							<a
+								href="resources/docs/otros/ROF_UNMSM_2011.pdf"
+								target="_blank">Haga click aquí para descargar el ROF de la UNMSM</a>
+						</p>
 					</div>
 				</div>
 			</div>
