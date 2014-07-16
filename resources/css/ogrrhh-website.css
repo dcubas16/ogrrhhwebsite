@@ -235,3 +235,11 @@
 	text-align: right;
 	font-weight: bold;
 }
+
+a{
+	color:#d10a0a;
+}
+
+a:hover{
+	color:#d10a0a;
+}

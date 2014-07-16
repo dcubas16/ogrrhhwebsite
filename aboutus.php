@@ -58,7 +58,17 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Nosotros</h1>
-						<p>La Oficina General de Recursos Humanos es el órgano de apoyo, dependiente de la Dirección General de Administración, encargado de planificar, normar y ejecutar los procesos técnicos en materia de gestión del recurso humano de la Institución.</p>
+						<p>En esta sección Usted podra encontrar información referente a
+							la Oficina General de Recursos Humanos de la Universidad Nacional
+							Mayor de San Marcos; dentro de lo más relevante se tiene:</p>
+						<ul>
+							<li><a href="aboutus-vision-and-goals.php">Misión y Visión</a></li>
+							<li><a href="aboutus-organization-chart.php">Organigrama</a></li>
+							<li><a href="aboutus-directory.php">Directorio</a></li>
+							<li><a href="aboutus-mof.php">MOF</a></li>
+							<li><a href="aboutus-rof.php">ROF</a></li>
+							<li><a href="aboutus-tupa.php">TUPA</a></li>
+						</ul>
 					</div>
 				</div>
 			</div>

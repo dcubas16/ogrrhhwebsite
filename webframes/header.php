@@ -35,7 +35,7 @@
 					<a href="aboutus.php" >NOSOTROS</a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="aboutus-vision-and-goals.php">Misión y Visión</a></li>
-						<li><a href="aboutus-history.php">Historia</a></li>
+<!-- 						<li><a href="aboutus-history.php">Historia</a></li> -->
 						<li><a href="aboutus-organization-chart.php">Organigrama</a></li>
 <!-- 						<li><a href="aboutus-authorities.php">Autoridades</a></li> -->
 						<li><a href="aboutus-directory.php">Directorio</a></li>

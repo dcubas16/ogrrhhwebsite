@@ -8,9 +8,9 @@
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-vision-and-goals.php">Misión
 					y Visión</a></li>
-			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
-				class="vertical-navbar-font-style" href="aboutus-history.php">Historia</a></li>
+<!-- 			<li class="" -->
+<!-- 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a -->
+<!-- 				class="vertical-navbar-font-style" href="aboutus-history.php">Historia</a></li> -->
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
 				class="vertical-navbar-font-style"
