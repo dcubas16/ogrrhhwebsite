@@ -22,9 +22,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					<div class="bs-docs-section">
 						<h1 id="gestion-office"
 							class="font-style-medium-title-dark page-header ">Oficina de Gestión y Escalafón</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects<a href="#"> ...Leer mas</a></p>
+						<p></p>
 					</div>
 					<?php
 					// Create connection

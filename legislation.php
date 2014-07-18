@@ -20,11 +20,21 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
 						<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Legislación
-							Universitaria</h1>
-						
+							class="font-style-medium-title-dark page-header ">Normatividad</h1>
+						<p>En esta sección Usted podrá encotrar la normatividad vigente
+							bajo la cual se ríge la Oficina General de Recursos Humanos de la
+							Universidad Nacional Mayor de San Marcos, además de la
+							normatividad que regula a las universidades y la gestión de
+							recursos humanos</p>
+						<p>Para mayor comodidad se clasificó la normatividad vigente así:</p>
+						<ul>
+							<li><a href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
+							<li><a href="legislation-laws.php">Leyes y Decretos</a></li>
+							<li><a href="legislation-directives.php">Directivas</a></li>
+							<li><a href="legislation-ogrrhh-legislation.php">Normatividad
+									OGRRHH y UNMSM</a></li>
+						</ul>
 					</div>
-					
 				
 					<?php
 					// Create connection

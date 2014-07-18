@@ -22,7 +22,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					<div class="bs-docs-section">
 						<h1 id="social-benefies-office"
 							class="font-style-medium-title-dark page-header ">Oficia de Desarrollo y Bienestar Social</h1>
-						<p>Jefe de la Oficina de Modernización e Informatización<a href="#"> ...Leer mas</a></p>
+						<p></p>
 					</div>
 
 					

@@ -20,37 +20,18 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
 						<h1 id="gestion-office"
-							class="font-style-medium-title-dark page-header ">Oficina de Gestión y Escalafón</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects<a href="#"> ...Leer mas</a></p>
+							class="font-style-medium-title-dark page-header ">Oficinas</h1>
+						<p>La Oficina General de Recursos Humanos de la Universidad
+							Nacional de San Marcos cuenta con varias Oficinas dependientes, y
+							segun el MOF vigente a la fecha, la OGRRHH esta constituida por
+							las siguientes oficinas:</p>
+						<ul>
+							<li><a href="offices-gestion.php">Oficina de Gestión y Escalafón</a></li>
+							<li><a href="offices-remuneration.php">Oficina de Remuneraciones y Obligaciones Sociales</a></li>
+							<li><a href="offices-pension.php">Oficina de Pensiones y Beneficios Sociales</a></li>
+							<li><a href="offices-development.php">Oficina de Desarrollo y Bienestar Social</a></li>
+						</ul>
 					</div>
-					<div class="bs-docs-section">
-						<h1 id="salary-office" class="font-style-medium-title-dark page-header ">Oficina de Remuneraciones y Obligaciones Sociales</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects<a href="#"> ...Leer mas</a></p>
-					</div>
-
-					<div class="bs-docs-section">
-						<h1 id="pension-office"
-							class="font-style-medium-title-dark page-header ">Oficina de Pensiones y Beneficios Sociales</h1>
-						<p>
-							Descargue el organigrama de la OGRRHH<a href="#"> ...Leer mas</a>
-						</p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="social-benefies-office"
-							class="font-style-medium-title-dark page-header ">Oficia de Desarrollo y Bienestar Social</h1>
-						<p>Jefe de la Oficina de Modernización e Informatización<a href="#"> ...Leer mas</a></p>
-					</div>
-					<div class="bs-docs-section">
-						<h1 id="modern-office" class="font-style-medium-title-dark page-header ">Oficia de Modernización e Informatización</h1>
-						<p>
-							Descargue el MOF de la OGRRHH<a href="#"> ...Leer mas</a>
-						</p>
-					</div>
-					
 					<?php
 					// Create connection
 					$con = mysql_connect ( 'localhost', 'root', 'root' );

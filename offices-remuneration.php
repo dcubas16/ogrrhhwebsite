@@ -21,9 +21,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
 						<h1 id="salary-office" class="font-style-medium-title-dark page-header ">Oficina de Remuneraciones y Obligaciones Sociales</h1>
-						<p>Bootstrap makes use of certain HTML elements and CSS properties
-							that require the use of the HTML5 doctype. Include it at the
-							beginning of all your projects<a href="#"> ...Leer mas</a></p>
+						<p></p>
 					</div>
 					<?php
 					// Create connection

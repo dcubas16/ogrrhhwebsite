@@ -22,9 +22,7 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					<div class="bs-docs-section">
 						<h1 id="pension-office"
 							class="font-style-medium-title-dark page-header ">Oficina de Pensiones y Beneficios Sociales</h1>
-						<p>
-							Descargue el organigrama de la OGRRHH<a href="#"> ...Leer mas</a>
-						</p>
+						<p></p>
 					</div>
 					
 					<?php

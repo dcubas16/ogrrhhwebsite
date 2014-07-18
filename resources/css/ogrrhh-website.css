@@ -212,8 +212,9 @@
 }
 
 .dropdown>.dropdown-menu>li>a:hover {
-	background: url(../pages-styles/navbar-button-background.jpeg) top left
-		repeat-x;
+	background-color: #a81a1a;
+/* 	background: url(../pages-styles/navbar-button-background.jpeg) top left */
+/* 		repeat-x; */
 	font-weight: bold;
 	color: white;
 }
