@@ -7,7 +7,7 @@
 					<a href="#">Retornar Arriba</a>
 				</p>
 				<p>
-					Desarrollado por  <a href="#">GreyPower</a>2014
+					Desarrollado por  <a href="#">GreyPower </a>2014
 				</p>
 			</div>
 			<div class="col-md-1"></div>

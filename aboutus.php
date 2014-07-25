@@ -46,7 +46,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 ================================================== -->
 <body class="body-style">
 	<div class="row background-image-style"
-		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat center; margin-right: 0px; margin-left: 0px;">
+		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat; background-size: cover; margin-right: 0px; margin-left: 0px;">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
 			<?php include('webframes/header.php');?>
@@ -54,7 +54,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 			<div class="row" style="margin-left: 0px; margin-right: 0px;">
 				<?php include('webframes/leftnavbar-aboutus.php');?>
 				<div class="col-md-9"
-					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
+					style="background-color: #F7F7F7; padding-left: 30px; padding-top: 15px;">
 					<div class="">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Nosotros</h1>

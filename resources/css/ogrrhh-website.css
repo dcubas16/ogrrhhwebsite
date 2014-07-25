@@ -244,14 +244,19 @@
 }
 
 a {
-	color: #d10a0a;
+	color: #B40000;
 }
 
 a:hover {
-	color: #d10a0a;
+	color: #D1420A;
 }
 
 p {
 	color: black;
 	font-size: 16;
+}
+
+.breadcrumbs-ogrrhh-style{
+	margin-bottom: 0px;
+	background-color: rgb(241, 231, 231);
 }

@@ -19,6 +19,11 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
+						<ol class="breadcrumb breadcrumbs-ogrrhh-style">
+							<li class="active">Normatividad</li>
+<!-- 							<li><a href="#">Library</a></li> -->
+<!-- 							<li class="active">Data</li> -->
+						</ol>
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Normatividad</h1>
 						<p>En esta sección Usted podrá encotrar la normatividad vigente

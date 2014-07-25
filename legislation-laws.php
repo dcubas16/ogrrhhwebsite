@@ -20,9 +20,16 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 				<div class="col-md-9"
 					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 					<div class="bs-docs-section">
+						<ol class="breadcrumb breadcrumbs-ogrrhh-style">
+							<li><a href="#">Normatividad</a></li>
+							<li  class="active">Leyes</li>
+						</ol>
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Leyes</h1>
 						<ul>
+							<li><a
+								href="resources/docs/leyes/Constitucion_Politica_Peru_1993.pdf"
+								target="_blank">Constitución Política del Perú - 1993</a></li>
 							<li><a
 								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf"
 								target="_blank">Ley N° 23733 - Ley Universitaria - 1980</a></li>
@@ -35,6 +42,9 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 								target="_blank">Ley N° 29849 - Eliminación Progresiva del
 									Régimen Especial del Decreto Legislativo 1057 y Otorga Derechos
 									Laborales</a></li>
+							<li><a
+								href="resources/docs/leyes/Ley_27806_Transparencia_y_Acceso_Informacion_Publica.pdf"
+								target="_blank">Ley N° 27806 - Ley de Transparencia y Acceso a la Información Pública - 1993</a></li>
 						</ul>
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Decretos</h1>

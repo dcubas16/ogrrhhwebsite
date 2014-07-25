@@ -47,7 +47,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 ================================================== -->
 <body class="body-style">
 	<div class="row background-image-style"
-		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat; background-size: cover;; margin-right: 0px; margin-left: 0px;">
+		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat; background-size: cover; margin-right: 0px; margin-left: 0px;">
 		<div class="col-md-2"></div>
 		<div class="col-md-8">
 			<?php include('webframes/header.php');?>
@@ -67,7 +67,7 @@ while ( $row = mysql_fetch_assoc ( $result ) ) {
 							6197000, y seguido marcar el anexo de la oficina que corresponda</p>
 						<table class="table table-bordered">
 							<thead>
-								<tr style="background-color: rgb(112, 42, 42); color: white;">
+								<tr style="background-color: rgb(99, 30, 30); color: white;">
 									<th
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA</th>
 									<th
