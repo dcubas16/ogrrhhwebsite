@@ -19,8 +19,9 @@ $sub_page_id = 0;
 				<?php include('webframes/left-navbar.php');?>
 				<div class="col-md-9 text-content-style">
 						<h1 id="mision-and-goals"
-							class="font-style-medium-title-dark page-header ">Trabaja con Nosotros</h1>
-							<p>La Oficina General de Recursos Humanos es el órgano de apoyo,
+							class="font-style-medium-title-dark page-header ">Trabaja con
+							Nosotros</h1>
+						<p>La Oficina General de Recursos Humanos es el órgano de apoyo,
 							dependiente de la Dirección General de Administración, encargado
 							de planificar, normar y ejecutar los procesos técnicos en materia
 							de gestión del recurso humano de la Institución.</p>
