@@ -1,222 +1,98 @@
 <?php
 $page_id = 1;
-$con = mysql_connect ( 'localhost', 'root', 'root' );
+$sub_page_id = 0;
 ?>
 <html lang="es_PE">
-<head>
 <?php include('./webframes/resources.php');?>
-</head>
-<!-- NAVBAR
-================================================== -->
 <body class="body-style">
-	<div class="row background-image-style"
-		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat center; margin-right: 0px; margin-left: 0px;">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+	<div class="container-fluid">
+		<div class="row background-image-style">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
 			<?php include('./webframes/header.php');?>
-			<div class="row" style="margin-left: 0px; margin-right: 0px;">
-				<div class="col-md-12"
-					style="padding-right: 0px; padding-left: 0px;">
-					<div id="carousel-example-generic" class="carousel slide"
-						data-ride="carousel" style="margin-bottom: 0px;">
-						<!-- Indicators -->
-						<ol class="carousel-indicators">
-							<li data-target="#carousel-example-generic" data-slide-to="0"
-								class=""></li>
-							<li data-target="#carousel-example-generic" data-slide-to="1"
-								class="active"></li>
-							<li data-target="#carousel-example-generic" data-slide-to="2"
-								class=""></li>
-						</ol>
+			<div class="row">
+					<div class="col-md-12"
+						style="padding-right: 0px; padding-left: 0px;">
+						<div id="carousel-example-generic" class="carousel slide"
+							data-ride="carousel" style="margin-bottom: 0px;">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0"
+									class=""></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"
+									class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"
+									class=""></li>
+							</ol>
 
-						<!-- Wrapper for slides -->
-						<div class="carousel-inner">
-							<div class="item">
-								<img src="resources/images/recursos-humanos_1.jpg" alt="...">
-								<div class="carousel-caption"></div>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner">
+								<div class="item">
+									<img src="resources/images/recursos-humanos_1.jpg" alt="...">
+									<div class="carousel-caption"></div>
+								</div>
+								<div class="item active">
+									<img src="resources/images/recursos-humanos_2.jpg" alt="...">
+									<div class="carousel-caption">...</div>
+								</div>
+								<div class="item">
+									<img src="resources/images/recursos-humanos_3.jpg" alt="...">
+									<div class="carousel-caption">...</div>
+								</div>
 							</div>
-							<div class="item active">
-								<img src="resources/images/recursos-humanos_2.jpg" alt="...">
-								<div class="carousel-caption">...</div>
-							</div>
-							<div class="item">
-								<img src="resources/images/recursos-humanos_3.jpg" alt="...">
-								<div class="carousel-caption">...</div>
-							</div>
+							<!-- Controls -->
+							<a class="left carousel-control" href="#carousel-example-generic"
+								data-slide="prev"> <span
+								class="glyphicon glyphicon-chevron-left"></span>
+							</a> <a class="right carousel-control"
+								href="#carousel-example-generic" data-slide="next"> <span
+								class="glyphicon glyphicon-chevron-right"></span>
+							</a>
 						</div>
-						<!-- Controls -->
-						<a class="left carousel-control" href="#carousel-example-generic"
-							data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span>
-						</a> <a class="right carousel-control"
-							href="#carousel-example-generic" data-slide="next"> <span
-							class="glyphicon glyphicon-chevron-right"></span>
-						</a>
 					</div>
 				</div>
-			</div>
-			<div class="row" style="margin-left: 0px; margin-right: 0px;">
-				<div class="col-md-3 background-image-style"
-					style="background: url('resources/pages-styles/body-left-panel.jpeg') no-repeat center; height: 850px;">
-					<div class="row">
-						<div class="col-md-11">
-							<div class="row" style="height: 30;"></div>
-							<div class="row font-style-short-title-white">
-								<div class="col-md-12">ULTIMAS</div>
-							</div>
-							<div class="row font-style-tall-title-white">
-								<div class="col-md-12">NOTICIAS</div>
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<div class="row" style="height: 30;"></div>
-							<div class="row">
-								<div class="col-md-11">
-									<div class="row">
-										<div class="col-md-12 news-image-container-style">
-											<a href="#"> <img class="news-image-style"
-												src="resources/images/recursos-humanos_1_210_110.jpg">
-											</a>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-10 news-date">5 de Junio del 2014</div>
-										<div class="col-md-2"></div>
-									</div>
-									<div class="row">
-										<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
-											contenido de la noticia</div>
-									</div>
-								</div>
-								<div class="col-md-1"></div>
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<div class="row" style="height: 30;"></div>
-							<div class="row">
-								<div class="col-md-11">
-									<div class="row">
-										<div class="col-md-12 news-image-container-style">
-											<a href="#"> <img class="news-image-style"
-												src="resources/images/recursos-humanos_1_210_110.jpg">
-											</a>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-10 news-date">5 de Junio del 2014</div>
-										<div class="col-md-2"></div>
-									</div>
-									<div class="row">
-										<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
-											contenido de la noticia</div>
-									</div>
-								</div>
-								<div class="col-md-1"></div>
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10">
-							<div class="row" style="height: 30;"></div>
-							<div class="row">
-								<div class="col-md-11">
-									<div class="row">
-										<div class="col-md-12 news-image-container-style">
-											<a href="#"> <img class="news-image-style"
-												src="resources/images/recursos-humanos_1_210_110.jpg">
-											</a>
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-10 news-date">5 de Junio del 2014</div>
-										<div class="col-md-2"></div>
-									</div>
-									<div class="row">
-										<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
-											contenido de la noticia</div>
-									</div>
-								</div>
-								<div class="col-md-1"></div>
-							</div>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-					<div class="row">
-						<div class="col-md-1"></div>
-						<div class="col-md-10 link-font-style">
-							<a href="#"> Ver todas las Noticias...</a>
-						</div>
-						<div class="col-md-1"></div>
-					</div>
-				</div>
-				<div class="col-md-9"
-					style="background-color: white; height: 850px;">
-					<div class="row">
-						<div class="col-md-12"
-							style="padding-left: 30px; padding-top: 15px;">
-						<?php
-						// Create connection
-						
-						mysql_select_db ( 'ogrrhhwebsitedb', $con );
-						
-						$query = "	SELECT WPC.*
-								FROM WEB_PAGE_CONTAINS WPC
-								INNER JOIN DETAIL_WEB_PAGE_CONTAIN DWP ON WPC.ID = DWP.WEB_PAGE_CONTAIN_ID
-								WHERE DWP.PAGE_ID = " . $page_id;
-						
-						$result = mysql_query ( $query, $con );
-						while ( $row = mysql_fetch_assoc ( $result ) ) {
-							// echo $row ['id'] . '</br>';
-							echo "<h1 class=' font-style-tall-title-dark'>" . $row ['title'] . "<small>" . $row ['subtitle'] . "</small>" . "</h1>";
-							// echo "<small>" . $row ['subtitle'] . "</small>" . '</br>';
-							// echo "<p>" . $row ['contain'] . "</p>" . '</br>';
-							// echo $row ['publication_date'] . '</br>';
-						}
-						
-						?>
+				<div class="row" id="content-div">
+					<?php include('webframes/left-navbar.php');?>
+					<div class="col-md-9 text-content-style" style="height: 400px">
+						<h1 id="mision-and-goals"
+							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
 						<p>El Jefe de la Oficina General de Recursos Humanos (OGRRHH) de
-								la Universidad Nacional Mayor de San Marcos (UNMSM), el Doctor
-								Hector Elvis Martinez Flores le da la bienvenida al sitio web
-								oficial de la OGRRHH.</p>
-							<p>En nuestro sitio web Usted podrá encontrar diversa información
-								sobre la OGRRHH y la UNMSM, dentro de cuales puede encontrar el
-								directorio, MOF, ROF; así mismo, se tiene información específica
-								de cada Oficina dependiente de la OGRRHH, las normas y
-								directivas concernientes a la OGRRHH, y las convocatorias de
-								trabajo que realiza la OGRRHH</p>
-						</div>
+							la Universidad Nacional Mayor de San Marcos (UNMSM), el Doctor
+							Hector Elvis Martinez Flores le da la bienvenida al sitio web
+							oficial de la OGRRHH.</p>
+						<p>En nuestro sitio web Usted podrá encontrar diversa información
+							sobre la OGRRHH y la UNMSM, dentro de cuales puede encontrar el
+							directorio, MOF, ROF; así mismo, se tiene información específica
+							de cada Oficina dependiente de la OGRRHH, las normas y directivas
+							concernientes a la OGRRHH, y las convocatorias de trabajo que
+							realiza la OGRRHH</p>
 					</div>
+
 				</div>
-			</div>
 			<?php include('./webframes/footer.php');?>
 		</div>
-		<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+		</div>
 	</div>
 </body>
 <script>
 	$(function() {
-		var viewModel = {
-			mainMenuSelected : ko.observable(1),
-		};
-
-		ko.applyBindings(viewModel, $('body')[0]);
-
 		$('.carousel').carousel({
-			interval : 2000
+			interval : 3000
 		})
 	});
+
+	var viewModel = {
+		mainMenuSelected : ko.observable(1),
+		pageId : ko.observable(<?php echo $page_id;?>),
+		subPageId : ko.observable(<?php echo $sub_page_id;?>)
+	};
+
+
+	$(function() {
+		ko.applyBindings(viewModel, $("body")[0]);
+		$(".left-navbar").height($("#content-div").height());
+	});
+
 </script>
 </html>
-<?php
-mysql_close ( $con );
-?>

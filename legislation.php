@@ -21,8 +21,8 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 					<div class="bs-docs-section">
 						<ol class="breadcrumb breadcrumbs-ogrrhh-style">
 							<li class="active">Normatividad</li>
-<!-- 							<li><a href="#">Library</a></li> -->
-<!-- 							<li class="active">Data</li> -->
+							<!-- 							<li><a href="#">Library</a></li> -->
+							<!-- 							<li class="active">Data</li> -->
 						</ol>
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Normatividad</h1>
@@ -39,6 +39,11 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 							<li><a href="legislation-ogrrhh-legislation.php">Normatividad
 									OGRRHH y UNMSM</a></li>
 						</ul>
+						<button type="button" class="btn btn-info btn-xs"
+							data-toggle="modal" data-target="#add-new-legislation-modal" >
+							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
+							Normatividad
+						</button>
 					</div>
 				
 					<?php
@@ -70,12 +75,13 @@ $con = mysql_connect ( 'localhost', 'root', 'root' );
 		<div class="col-md-2"></div>
 	</div>
 </body>
+<?php include('webframes/add-new-legislation-modal.php');?>
 <script>
+	var viewModel = {
+		filePath : 	ko.observable("")
+	};
+						
 	$(function() {
-		var viewModel = {
-			mainMenuSelected : ko.observable(1),
-		};
-
 		ko.applyBindings(viewModel, $('body')[0]);
 
 		$('.carousel').carousel({
