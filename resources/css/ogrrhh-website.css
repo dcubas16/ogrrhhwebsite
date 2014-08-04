@@ -3,7 +3,6 @@
 .header-style {
 	background: url('../pages-styles/website-header-background.fw.png')
 		center;
-	height: 160px;
 	background-size: cover;
 }
 
@@ -259,6 +258,7 @@ p {
 	background-color: #F7F7F7; 
 	padding-left: 30px; 
 	padding-top: 15px;
+	min-height: 600px;
 }
 
 
