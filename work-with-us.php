@@ -37,7 +37,7 @@ $sub_page_id = 0;
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	<?php include('webframes/add-new-convocatory-modal.php');?>
+	
 </body>
 <script>
 		var viewModel = {

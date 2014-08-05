@@ -6,10 +6,15 @@
 	<link href="resources/bootstrapformhelpers/css/bootstrap-formhelpers.min.css" rel="stylesheet" media="screen">
 	<link href="resources/css/ogrrhh-website.css" rel="stylesheet">
 	<link href="resources/css/docs.min.css" rel="stylesheet">
+	<link href="resources/telerik.kendoui.2014.1.416.core/styles/kendo.common.min.css" rel="stylesheet" />
+	<link href="resources/telerik.kendoui.2014.1.416.core/styles/kendo.silver.min.css" rel="stylesheet" />
+	
 	
 	<script	src="resources/js/jquery-1.11.0/jquery-1.11.0.min.js"></script>
 	<script src="resources/bootstrap-3.1.1/js/bootstrap.min.js"></script>
 	<script src="resources/bootstrapformhelpers/js/bootstrap-formhelpers.js"></script>
 	<script src="resources/js/docs.min.js"></script>
 	<script src='resources/knockout/knockout-3.1.0.js'></script>
+	<script src="resources/telerik.kendoui.2014.1.416.core/js/kendo.all.min.js"></script>
+	<script src="resources/telerik.kendoui.2014.1.416.core/js/cultures/kendo.culture.es.min.js"></script>
 </head>

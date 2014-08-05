@@ -20,6 +20,9 @@ $sub_page_id = 3;
 				<div class="col-md-9 text-content-style">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Organigrama</h1>
+						<p>Según el Manual de Organización y Funciones (MOF) del 2005 y
+							vigente hasta la fecha, la Oficina General de Recursos Humanos
+							esta organizado según el organigrama que se muestra a continuación:</p>
 						<img alt="" src="resources/images/organization-chart-ogrrhh.png"
 							style="width: 98%;">
 					</div>

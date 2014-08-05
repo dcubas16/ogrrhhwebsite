@@ -31,6 +31,13 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Promulgación</label>
+						<div class="col-sm-10">
+							<input type="text" id="inputLegislatioDate" data-bind="editableText: false">
+						</div>
+					</div>
+					
+					<div class="form-group">
 						<label for="inputPassword3" class="col-sm-2 control-label">Seleccione Archivo</label>
 						<div class="col-sm-10">
  							<div class="input-group">
@@ -55,3 +62,19 @@
 	</div>
 </div>
 <?php include("choose-file.php");?>
+<script>
+$(document).ready(function() {
+    // create DatePicker from input HTML element
+    kendo.culture("es");
+    var datepicker = $("#inputLegislatioDate").kendoDatePicker({
+    	format: kendo.culture().calendar.patterns.d,
+//     	min: new Date(1950, 0, 1),
+    	culture: "es",
+//     	editable: false
+    });
+
+//     datepicker.readonly();
+});
+
+
+</script>

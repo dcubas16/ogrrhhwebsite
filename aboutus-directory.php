@@ -24,8 +24,8 @@ $sub_page_id = 5;
 						<p>Actualmente la Oficina General de Recursos Humanos, incluyendo
 							sus Oficias dependientes, consta del directorio que se muestra a
 							continuación:</p>
-						<p>Nota: Para comunicarse con nosotros Usted debe llamar al
-							6197000, y seguido marcar el anexo de la oficina que corresponda</p>
+						<p><strong>Nota: </strong>Para comunicarse con nosotros Usted debe llamar a la central telefóica 
+							619-7000, y seguido marcar el anexo de la oficina que corresponda</p>
 						<table class="table table-bordered">
 							<thead>
 								<tr style="background-color: rgb(99, 30, 30); color: white;">
@@ -45,10 +45,10 @@ $sub_page_id = 5;
 							</thead>
 							<tbody>
 								<tr class="success text-align-center">
-									<td rowspan="10"
+									<td rowspan="9"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">JEFATURA
 										DE LA OFICINA GENERAL DE RECURSOS HUMANOS</td>
-									<td>Martínez Flores, Héctor Elvis</td>
+									<td>Dr. Martínez Flores, Héctor Elvis</td>
 									<td>Docente Permanente</td>
 									<td>Jefe de Oficina General</td>
 									<td>7605</td>
@@ -90,12 +90,6 @@ $sub_page_id = 5;
 									<td></td>
 								</tr>
 								<tr class="success">
-									<td>Colcas Salas, Sheyla Irayda</td>
-									<td>CAS</td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr class="success">
 									<td>Carpio Ponce, Giovanna Marion</td>
 									<td>CAS</td>
 									<td>Recepción y Mesa de Partes</td>
@@ -108,7 +102,7 @@ $sub_page_id = 5;
 									<td></td>
 								</tr>
 								<tr class="info">
-									<td rowspan="9"
+									<td rowspan="8"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA
 										DE REMUNERACIONES Y OBLIGACIONES SOCIALES</td>
 									<td>Reyes Campos, Bladimir Flavio</td>
@@ -125,13 +119,13 @@ $sub_page_id = 5;
 								</tr>
 								<tr class="info">
 									<td>Dejo Egusquiza, John Carlos</td>
-									<td>Docente Permanente</td>
+									<td>Administrativo Permanente</td>
 									<td>Jefe de la Unidad de Análisis y Control de Planillas</td>
 									<td></td>
 								</tr>
 								<tr class="info">
 									<td>Martínez Ramos, Julio Cesar</td>
-									<td>Docente Permanente</td>
+									<td>Administrativo Permanente</td>
 									<td></td>
 									<td></td>
 								</tr>
@@ -143,12 +137,6 @@ $sub_page_id = 5;
 								</tr>
 								<tr class="info">
 									<td>Ramírez Cueva, Mary Yolanda</td>
-									<td>CAS</td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr class="info">
-									<td>Azorsa Salazar, Luis Tulio</td>
 									<td>CAS</td>
 									<td></td>
 									<td></td>
@@ -166,7 +154,7 @@ $sub_page_id = 5;
 									<td></td>
 								</tr>
 								<tr class="warning">
-									<td rowspan="15"
+									<td rowspan="16"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA
 										DE GESTIÓN Y ESCALAFÓN</td>
 									<td>Sulca Brancacho, Juana Mercedes</td>
@@ -217,6 +205,12 @@ $sub_page_id = 5;
 									<td></td>
 								</tr>
 								<tr class="warning">
+									<td>Colcas Salas, Sheyla Irayda</td>
+									<td>CAS</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr class="warning">
 									<td>Vilaxa Loayza, Miguel Ángel</td>
 									<td>CAS</td>
 									<td></td>
@@ -224,7 +218,7 @@ $sub_page_id = 5;
 								</tr>
 								<tr class="warning">
 									<td>Jaque Llanos Lisbet Teresa</td>
-									<td>ADM. DES.</td>
+									<td>Administrativo Designado</td>
 									<td>Jefe de la Unidad de Control de Asistencia</td>
 									<td>7422</td>
 								</tr>
@@ -259,7 +253,7 @@ $sub_page_id = 5;
 									<td></td>
 								</tr>
 								<tr class="danger">
-									<td rowspan="16"
+									<td rowspan="15"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA
 										DE PENSIONES Y BENEFICIOS SOCIALES</td>
 									<td>Moncada Alfaro María Esperanza</td>
@@ -351,12 +345,6 @@ $sub_page_id = 5;
 									<td></td>
 									<td></td>
 								</tr>
-								<tr class="danger">
-									<td>Vega Machado, Miguel Ángel</td>
-									<td>CAS</td>
-									<td></td>
-									<td></td>
-								</tr>
 								<tr class="success">
 									<td rowspan="3"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA
@@ -388,6 +376,8 @@ $sub_page_id = 5;
 			<div class="col-md-2"></div>
 		</div>
 	</div>
+	<iframe >
+	</iframe>
 </body>
 <script>
 		var viewModel = {

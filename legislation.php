@@ -27,11 +27,11 @@ $sub_page_id = 0;
 							recursos humanos</p>
 						<p>Para mayor comodidad se clasificó la normatividad vigente así:</p>
 						<ul>
-							<li><a href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
 							<li><a href="legislation-laws.php">Leyes y Decretos</a></li>
-							<li><a href="legislation-directives.php">Directivas</a></li>
 							<li><a href="legislation-ogrrhh-legislation.php">Normatividad
 									OGRRHH y UNMSM</a></li>
+							<li><a href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
+							<li><a href="legislation-directives.php">Directivas</a></li>
 						</ul>
 						<button type="button" class="btn btn-info btn-xs"
 							data-toggle="modal" data-target="#add-new-legislation-modal">
