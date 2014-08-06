@@ -38,7 +38,6 @@ $sub_page_id = 0;
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
-
 					</div>
 				</div>
 			<?php include('webframes/footer.php');?>
