@@ -65,6 +65,82 @@ INSERT INTO `detail_web_page_contain` VALUES (1,1),(2,2),(3,2),(4,2),(5,2),(4,2)
 UNLOCK TABLES;
 
 --
+-- Table structure for table `legislation_type`
+--
+
+DROP TABLE IF EXISTS `legislation_type`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `legislation_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `legislation_type`
+--
+
+LOCK TABLES `legislation_type` WRITE;
+/*!40000 ALTER TABLE `legislation_type` DISABLE KEYS */;
+/*!40000 ALTER TABLE `legislation_type` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `legislations`
+--
+
+DROP TABLE IF EXISTS `legislations`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `legislations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(500) NOT NULL,
+  `publication_date` date NOT NULL,
+  `pathFile` varchar(500) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `legislation_type_id` int(11) NOT NULL,
+  `office_id` int(11) NOT NULL,
+  `update_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `legislations`
+--
+
+LOCK TABLES `legislations` WRITE;
+/*!40000 ALTER TABLE `legislations` DISABLE KEYS */;
+INSERT INTO `legislations` VALUES (1,'hi','1982-11-01','hi',1,1,1,'1982-11-01'),(2,'asd','2014-08-08','Embarque.pdf',1,1,1,'2014-08-08'),(3,'asd','2014-08-07','Embarque.pdf',1,1,1,'2014-08-07'),(4,'asdfg','2014-08-15','fop_actions.pdf',1,1,1,'2014-08-07'),(5,'asdfg','2014-08-09','doc.pdf',1,1,1,'2014-08-08'),(6,'afs','2014-08-31','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08'),(7,'rrrr','2014-08-01','fop_actions.pdf',1,1,1,'2014-08-08'),(8,'eee','2014-08-17','doc.pdf',1,1,1,'2014-08-08'),(9,'qqq','2014-08-09','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08');
+/*!40000 ALTER TABLE `legislations` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `offices`
+--
+
+DROP TABLE IF EXISTS `offices`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `offices` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `offices`
+--
+
+LOCK TABLES `offices` WRITE;
+/*!40000 ALTER TABLE `offices` DISABLE KEYS */;
+/*!40000 ALTER TABLE `offices` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `pages`
 --
 
@@ -94,6 +170,29 @@ INSERT INTO `pages` VALUES (1,'INICIO','/home',NULL,1,NULL,1),(2,'NOSOTROS','/ab
 UNLOCK TABLES;
 
 --
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `web_page_contains`
 --
 
@@ -119,7 +218,7 @@ CREATE TABLE `web_page_contains` (
 
 LOCK TABLES `web_page_contains` WRITE;
 /*!40000 ALTER TABLE `web_page_contains` DISABLE KEYS */;
-INSERT INTO `web_page_contains` VALUES (1,'BIENVENIDO',' a la Oficina General de Recursos Humanos de la UNMSM','Aquí va la bienvenida',NULL,'2014-05-06 00:00:00',1,NULL),(2,'MISIÓN','Misión','La Oficina General de Recursos Humanos, plenamente identificada con la misión, visión y los valores universitarios, es la responsable de gestionar el talento humano para la Universidad Nacional Mayor de San Marcos, a traves de los procesos de ingreso, incentivos, estímulos del Personal Administrativo en sus distintas modalidades, requerido por las facultades y dependencias. De esta manera, contribuye a la presencia de un adecuado entorno laboral y bienestar a los trabajadores, sustentándose en el mejoramiento integral de procesos y en su personal de alta calidad humana y profesional.',NULL,'2014-05-18 00:00:00',1,NULL),(3,'VISIÓN','Visión','Aquí va la visión',NULL,'2014-05-18 00:00:00',1,NULL),(4,'HISTORIA','Historia','La Oficina General de Recursos Humanos es el órgano de apoyo, dependiente de la Dirección General de Administración, encargado de planificar, normar y ejecutar los procesos técnicos en materia de gestión del recurso humano de la Institución.\n\nLas funciones que desarrolla en esta oficina son:\n\na) Planificar, normar, organizar, conducir y controlar las acciones del Sistema de Recursos Humanos de la Universidad Nacional Mayor de San Marcos.\nb) Proponer a la Alta Dirección las normas, planes, programas y acciones para la gestión del Sistema de Recursos Humanos.\nc) Aplicar las normas, instrumentos de gestión y procesos técnicos en materia de desarrollo integral de los recursos humanos, en concordancia con las necesidades institucionales y de acuerdo a la normatividad vigente.\nd) Fomentar una actitud proactiva en los servidores docentes, administrativos y obreros y desarrollo del liderazgo de los directivos de la Universidad a través de acciones sostenidas de mejoramiento de su calidad personal y profesional.\ne) Coordinar sus acciones con otras entidades públicas en asuntos vinculados a sus funciones.\nf) Formular el Presupuesto Analítico de Personal (PAP), en coordinación con la Oficina General de Planificación.\ng) Coordinar, asesorar y supervisar las acciones descentralizadas del Sistema de Recursos Humanos con las diversas dependencias de la Universidad.\nh) Resolver, por delegación de Facultades, los asuntos de su competencia.\ni) Proponer a la Alta Dirección políticas y programas específicos de planificación, organización, acceso, evaluación de rendimiento, compensación y desarrollo de los recursos humanos, acorde con los procesos establecidos por ley.\nj) Promover el desarrollo personal, social y laboral así como la capacitación técnica de los servidores, orientados al logro de las metas y objetivos institucionales, en función de las necesidades de la entidad y los resultados de la evaluación de desempeño.\nk) Proponer y coordinar la celebración de convenios nacionales e internacionales orientados al mejoramiento de la calidad del servicio y la capacitación y desarrollo de competencias de los servidores.\nl) Realizar investigaciones y desarrollar estrategias prospectivas en materia de productividad, con el fin de hacer mas eficiente la función pública en la Universidad.\nm) Elaborar y proponer la normatividad para el otorgamiento de reconocimientos, incentivos y estímulos al desempeño desatacado de los servidores de la Universidad.\nn) Mantener actualizado el archivo de Legajos de servidores y ex servidores docentes, administrativos y obreros de la Universidad.\no) Elaborar la Planilla Única de Remuneraciones y de Pensiones, de acuerdo con los dispositivos legales vigentes, vigilando registrar en ella únicamente a los servidores que cumplan labores efectivas, así como consignar los conceptos que legalmente correspondan abonarse.\np) Establecer estrategias para aprovechar los conocimientos y experiencia de ex servidores docentes, administrativos y obreros en beneficio del mejoramiento de la calidad del servicio.\nq) Llevar el registro de los cargos públicos que califican como funcionario público y empleado de confianza e informar periódicamente a las autoridades del Gobierno Central.\nr) Asesorar a la Alta Dirección en los asuntos de su competencia.\ns) Otras que le asigne la Dirección General de Administración.\nLa Oficina General de Recursos Humanos tiene la estructura orgánica siguiente :\n- Oficina de Gestión y Escalafón\n- Oficina de Remuneraciones y Obligaciones Sociales\n- Oficina de Pensiones y Beneficios sociales\n- Oficina de Desarrollo y Bienestar Social\n- Oficina de Modernización e Informatización',NULL,'2014-05-18 00:00:00',1,NULL),(5,'ORGANIGRAMA','Organigrama','Aquí va el organigrama','/docs/otros/organigrama.pdf','2014-05-18 00:00:00',2,NULL);
+INSERT INTO `web_page_contains` VALUES (1,'BIENVENIDO',' a la Oficina General de Recursos Humanos de la UNMSM','Aquí va la bienvenida',NULL,'2014-05-06 00:00:00',1,NULL),(2,'MISIÓN','Misión','La Oficina General de Recursos Humanos, plenamente identificada con la misión, visión y los valores universitarios, es la responsable de gestionar el talento humano para la Universidad Nacional Mayor de San Marcos, a traves de los procesos de ingreso, incentivos, estímulos del Personal Administrativo en sus distintas modalidades, requerido por las facultades y dependencias. De esta manera, contribuye a la presencia de un adecuado entorno laboral y bienestar a los trabajadores, sustentándose en el mejoramiento integral de procesos y en su personal de alta calidad humana y profesional.',NULL,'2014-05-18 00:00:00',1,NULL),(3,'VISIÓN','Visión','La Oficina General de Recursos Humanos, plenamente identificada con la misión, visión y los valores universitarios, es la responsable de gestionar el talento humano para la Universidad Nacional Mayor de San Marcos, a traves de los procesos de ingreso, incentivos, estímulos del Personal Administrativo en sus distintas modalidades, requerido por las facultades y dependencias. De esta manera, contribuye a la presencia de un adecuado entorno laboral y bienestar a los trabajadores, sustentándose en el mejoramiento integral de procesos y en su personal de alta calidad humana y profesional.',NULL,'2014-05-18 00:00:00',1,NULL),(4,'HISTORIA','Historia','La Oficina General de Recursos Humanos es el órgano de apoyo, dependiente de la Dirección General de Administración, encargado de planificar, normar y ejecutar los procesos técnicos en materia de gestión del recurso humano de la Institución.\n\nLas funciones que desarrolla en esta oficina son:\n\na) Planificar, normar, organizar, conducir y controlar las acciones del Sistema de Recursos Humanos de la Universidad Nacional Mayor de San Marcos.\nb) Proponer a la Alta Dirección las normas, planes, programas y acciones para la gestión del Sistema de Recursos Humanos.\nc) Aplicar las normas, instrumentos de gestión y procesos técnicos en materia de desarrollo integral de los recursos humanos, en concordancia con las necesidades institucionales y de acuerdo a la normatividad vigente.\nd) Fomentar una actitud proactiva en los servidores docentes, administrativos y obreros y desarrollo del liderazgo de los directivos de la Universidad a través de acciones sostenidas de mejoramiento de su calidad personal y profesional.\ne) Coordinar sus acciones con otras entidades públicas en asuntos vinculados a sus funciones.\nf) Formular el Presupuesto Analítico de Personal (PAP), en coordinación con la Oficina General de Planificación.\ng) Coordinar, asesorar y supervisar las acciones descentralizadas del Sistema de Recursos Humanos con las diversas dependencias de la Universidad.\nh) Resolver, por delegación de Facultades, los asuntos de su competencia.\ni) Proponer a la Alta Dirección políticas y programas específicos de planificación, organización, acceso, evaluación de rendimiento, compensación y desarrollo de los recursos humanos, acorde con los procesos establecidos por ley.\nj) Promover el desarrollo personal, social y laboral así como la capacitación técnica de los servidores, orientados al logro de las metas y objetivos institucionales, en función de las necesidades de la entidad y los resultados de la evaluación de desempeño.\nk) Proponer y coordinar la celebración de convenios nacionales e internacionales orientados al mejoramiento de la calidad del servicio y la capacitación y desarrollo de competencias de los servidores.\nl) Realizar investigaciones y desarrollar estrategias prospectivas en materia de productividad, con el fin de hacer mas eficiente la función pública en la Universidad.\nm) Elaborar y proponer la normatividad para el otorgamiento de reconocimientos, incentivos y estímulos al desempeño desatacado de los servidores de la Universidad.\nn) Mantener actualizado el archivo de Legajos de servidores y ex servidores docentes, administrativos y obreros de la Universidad.\no) Elaborar la Planilla Única de Remuneraciones y de Pensiones, de acuerdo con los dispositivos legales vigentes, vigilando registrar en ella únicamente a los servidores que cumplan labores efectivas, así como consignar los conceptos que legalmente correspondan abonarse.\np) Establecer estrategias para aprovechar los conocimientos y experiencia de ex servidores docentes, administrativos y obreros en beneficio del mejoramiento de la calidad del servicio.\nq) Llevar el registro de los cargos públicos que califican como funcionario público y empleado de confianza e informar periódicamente a las autoridades del Gobierno Central.\nr) Asesorar a la Alta Dirección en los asuntos de su competencia.\ns) Otras que le asigne la Dirección General de Administración.\nLa Oficina General de Recursos Humanos tiene la estructura orgánica siguiente :\n- Oficina de Gestión y Escalafón\n- Oficina de Remuneraciones y Obligaciones Sociales\n- Oficina de Pensiones y Beneficios sociales\n- Oficina de Desarrollo y Bienestar Social\n- Oficina de Modernización e Informatización',NULL,'2014-05-18 00:00:00',1,NULL),(5,'ORGANIGRAMA','Organigrama','Aquí va el organigrama','/docs/otros/organigrama.pdf','2014-05-18 00:00:00',2,NULL);
 /*!40000 ALTER TABLE `web_page_contains` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -158,4 +257,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-06-18 16:23:28
+-- Dump completed on 2014-08-07 19:33:24

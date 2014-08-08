@@ -1,50 +1,42 @@
 <?php
 $page_id = 5;
-$sub_page_id = 1;
-$con = mysql_connect ( 'localhost', 'root', 'root' );
+$sub_page_id = 0;
 ?>
 <html lang="es_PE">
-<head>
 <?php include('webframes/resources.php');?>
-</head>
-<!-- NAVBAR
-================================================== -->
 <body class="body-style">
-	<div class="row background-image-style"
-		style="background: url('resources/pages-styles/page-background.jpeg') no-repeat center; margin-right: 0px; margin-left: 0px;">
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
+	<div class="container-fluid">
+		<div class="row background-image-style">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
 			<?php include('webframes/header.php');?>
-			<div class="row" style="margin-left: 0px; margin-right: 0px;">
-				<?php include('webframes/leftnavbar-work-with-us.php');?>
-				<div class="col-md-9"
-					style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
-					
+			<div id="content-div" class="row">
+				<?php include('webframes/left-navbar.php');?>
+				<div class="col-md-9 text-content-style">
 					<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Convocatorias de Personal</h1>
-						
+							class="font-style-medium-title-dark page-header ">Convocatorias CAS</h1>
+							<ul>
+							<li><a href="resources/docs/leyes/Ley_29849_CAS.pdf"
+								target="_blank">Convocatoria N°123 Para un personal tecnico (Publicado el 07/08/2014 - Vigente hasta el 30/08/2014)</a></li>
+							</ul>
 					</div>
-			</div>
+				</div>
 			<?php include('webframes/footer.php');?>
-			
 		</div>
-		<div class="col-md-2"></div>
+			<div class="col-md-2"></div>
+		</div>
 	</div>
 </body>
+
 <script>
+	var viewModel = {
+		pageId : ko.observable(<?php echo $page_id;?>),
+		subPageId : ko.observable(<?php echo $sub_page_id;?>)
+	};
+						
 	$(function() {
-		var viewModel = {
-			mainMenuSelected : ko.observable(1),
-		};
-
 		ko.applyBindings(viewModel, $('body')[0]);
-
-		$('.carousel').carousel({
-			interval : 2000
-		})
+		$(".left-navbar").height($("#content-div").height());
 	});
 </script>
 </html>
-<?php
-mysql_close ( $con );
-?>

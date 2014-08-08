@@ -1,5 +1,10 @@
 <?php
-include 'php_files/ConnectionManager.php';
+ini_set('upload_max_filesize', '10M');
+ini_set('post_max_size', '10M');
+ini_set('max_input_time', 3000);
+ini_set('max_execution_time', 3000);
+
+// include 'php_files/ConnectionManager.php';
 // $connectionManager = new ConnectionManager();
 // $menus = $connectionManager->doQuery("SELECT * FROM MENUS");
 // $connectionManager->closeConnection();
@@ -50,7 +55,7 @@ $sub_page_id = 0;
 
 <script>
 	var viewModel = {
-		filePath : 	ko.observable(""),
+		fileToUpload : 	ko.observable(""),
 		pageId : ko.observable(<?php echo $page_id;?>),
 		subPageId : ko.observable(<?php echo $sub_page_id;?>)
 	};
