@@ -24,19 +24,18 @@ $sub_page_id = 0;
 								<li data-target="#carousel-example-generic" data-slide-to="2"
 									class=""></li>
 							</ol>
-
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner">
 								<div class="item">
-									<img src="resources/images/recursos-humanos_1.jpg" alt="...">
+									<img src="resources/images/simulacro_unmsm.jpg" alt="...">
 									<div class="carousel-caption"></div>
 								</div>
 								<div class="item active">
-									<img src="resources/images/recursos-humanos_2.jpg" alt="...">
+									<img src="resources/images/unmsm_ogrrhh.jpg" alt="...">
 									<div class="carousel-caption">...</div>
 								</div>
 								<div class="item">
-									<img src="resources/images/recursos-humanos_3.jpg" alt="...">
+									<img src="resources/images/unmsm_3.jpg" alt="...">
 									<div class="carousel-caption">...</div>
 								</div>
 							</div>
@@ -48,6 +47,12 @@ $sub_page_id = 0;
 								href="#carousel-example-generic" data-slide="next"> <span
 								class="glyphicon glyphicon-chevron-right"></span>
 							</a>
+							<div class="container-fluid"
+								style="position: absolute; top: 63%; text-align: center; width: 100%; font-family: Montserrat, sans-serif;">
+								<div class="row homepage-title"><div class="col-md-12">La Oficina General de Recursos Humanos</div></div>
+								<div class="row homepage-subtitle"><div class="col-md-12">de la Universidad Nacional Mayor de San Marcos</div></div><br>
+								<div class="row homepage-subtitle"><div class="col-md-12">le da la bienvenida a su sitio web oficial</div></div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -78,7 +83,7 @@ $sub_page_id = 0;
 <script>
 	$(function() {
 		$('.carousel').carousel({
-			interval : 3000
+			interval : 5000
 		})
 	});
 

@@ -41,7 +41,7 @@ $sub_page_id = 0;
 </body>
 <script>
 		var viewModel = {
-			mainMenuSelected : ko.observable(1),
+			fileToUpload : 	ko.observable(""),
 			pageId : ko.observable(<?php echo $page_id;?>),
 			subPageId : ko.observable(<?php echo $sub_page_id;?>)
 		};
@@ -51,5 +51,8 @@ $sub_page_id = 0;
 			ko.applyBindings(viewModel, $("body")[0]);
 			$(".left-navbar").height($("#content-div").height());
 		});
+
+
+				
 </script>
 </html>

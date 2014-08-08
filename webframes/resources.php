@@ -1,5 +1,5 @@
 <head>
-	<title>ogrrhh</title>
+	<title>Oficina General de Recursos Humanos</title>
 	
 	<link href="resources/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
 	<link href="resources/css/carousel.css" rel="stylesheet">
@@ -8,6 +8,7 @@
 	<link href="resources/css/docs.min.css" rel="stylesheet">
 	<link href="resources/telerik.kendoui.2014.1.416.core/styles/kendo.common.min.css" rel="stylesheet" />
 	<link href="resources/telerik.kendoui.2014.1.416.core/styles/kendo.silver.min.css" rel="stylesheet" />
+	<link href="resources/bootstrapvalidator-dist-0.4.5/dist/css/bootstrapValidator.min.css" rel="stylesheet">
 	
 	
 	<script	src="resources/js/jquery-1.11.0/jquery-1.11.0.min.js"></script>
@@ -17,4 +18,5 @@
 	<script src='resources/knockout/knockout-3.1.0.js'></script>
 	<script src="resources/telerik.kendoui.2014.1.416.core/js/kendo.all.min.js"></script>
 	<script src="resources/telerik.kendoui.2014.1.416.core/js/cultures/kendo.culture.es.min.js"></script>
+	<script src="resources/bootstrapvalidator-dist-0.4.5/dist/js/bootstrapValidator.min.js"></script>
 </head>

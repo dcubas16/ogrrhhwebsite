@@ -27,10 +27,11 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">Nombre</label>
+						<label for="inputPassword3" class="col-sm-2 control-label">Título</label>
 						<div class="col-sm-10">
-							<input type="text" class="form-control" id="legislationName"
-								name="legislationName" placeholder="Nombre">
+							<textarea id="legislationName" name="legislationName" class="form-control" rows="3" placeholder="Titulo"></textarea>
+<!-- 							<input type="text" class="form-control" id="legislationName" -->
+<!-- 								name="legislationName" placeholder="Nombre"> -->
 						</div>
 					</div>
 					<div class="form-group form-group-sm">

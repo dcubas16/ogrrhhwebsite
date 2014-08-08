@@ -265,6 +265,27 @@ p {
 	margin-top: 5px;
 }
 
+.homepage-title {
+	font-size: 38px;
+	font-family: Montserrat, sans-serif;
+	padding: 0 15px;
+	letter-spacing: -2px;
+	background: rgba(52, 48, 45, .8);
+	color: #f1f1f1;
+	display: inline-block;
+}
+
+.homepage-subtitle {
+	font-size: 22px;
+	padding: 8px 19px 8px;
+	background: rgba(52, 48, 45, .8);
+	color: #f1f1f1;
+	display: inline-block;
+	padding-top: 1px;
+    padding-bottom: 1px;
+	
+}
+
 /****************************************************************** LEFT NAVBAR'S STYLES ********************************************/
 .vertical-navbar {
 	padding-top: 10px;
