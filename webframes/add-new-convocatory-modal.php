@@ -47,7 +47,7 @@
 					<div class="form-group" data-toggle="tooltip"
 						title="Esta fecha corresponde al último día que se reciben los C.V.">
 						<label class="col-md-3 control-label">Vigencia Convocatoria</label>
-						<div class="col-md-9">
+						<div class="col-md-5">
 							<input type="text" name="callLife" id="callLife"
 								class="form-control" data-bind="editableText: false" />
 						</div>

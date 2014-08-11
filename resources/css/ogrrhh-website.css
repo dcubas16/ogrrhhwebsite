@@ -1,5 +1,4 @@
 /****************************************************************** HEADER'S STYLES ********************************************/
-
 .header-style {
 	background: url('../pages-styles/website-header-background.fw.png')
 		center;
@@ -27,10 +26,7 @@
 	padding-top: 30px;
 }
 
-
-
 /****************************************************************** NAVBAR'S STYLES ********************************************/
-
 .nav-pills>li>a {
 	border-radius: 0px;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -112,21 +108,21 @@
 	background-color: rgb(243, 245, 248);
 }
 
-.navbar-background-style{
+.navbar-background-style {
 	background-color: rgb(243, 245, 248);
-	padding-left: 0px; 
+	padding-left: 0px;
 	padding-right: 0px;
 }
 
-.menu-style{
-	font-weight: bold; 
+.menu-style {
+	font-weight: bold;
 	line-height: 45px;
 }
 
-.navbar-separator-style{
-	background-color: rgb(213, 213, 213); height: 6px;
+.navbar-separator-style {
+	background-color: rgb(213, 213, 213);
+	height: 6px;
 }
-
 
 /****************************************************************** GENERAL'S STYLES ********************************************/
 .body-style {
@@ -230,7 +226,6 @@
 	font-weight: bolder;
 }
 
-
 .authorities-title {
 	text-align: right;
 	font-weight: bold;
@@ -254,14 +249,14 @@ p {
 	background-color: rgb(241, 231, 231);
 }
 
-.text-content-style{
-	background-color: #F7F7F7; 
-	padding-left: 30px; 
+.text-content-style {
+	background-color: #F7F7F7;
+	padding-left: 30px;
 	padding-top: 15px;
 	min-height: 600px;
 }
 
-.k-icon{
+.k-icon {
 	margin-top: 5px;
 }
 
@@ -282,8 +277,7 @@ p {
 	color: #f1f1f1;
 	display: inline-block;
 	padding-top: 1px;
-    padding-bottom: 1px;
-	
+	padding-bottom: 1px;
 }
 
 /****************************************************************** LEFT NAVBAR'S STYLES ********************************************/
@@ -297,22 +291,30 @@ p {
 	background-size: contain;
 }
 
-
 /****************************************************************** FOOTER'S STYLES ********************************************/
-.footer-style{
-	margin-bottom: 0px; 
+.footer-style {
+	margin-bottom: 0px;
 	margin-top: 10px;
 }
 
-.contain-footer-style{
+.contain-footer-style {
 	padding-top: 25px;
-	background:	url("../pages-styles/website-footer-background.fw.png") center;
+	background: url("../pages-styles/website-footer-background.fw.png")
+		center;
 	background-size: cover;
 	padding-bottom: 20px;
 }
 
-.footer-font{
-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-font-size: 13px;
-color: rgb(44, 44, 44);
+.footer-font {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 13px;
+	color: rgb(44, 44, 44);
+}
+
+/****************************************************************** KENDO UI STYLES ********************************************/
+.k-datepicker {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
