@@ -8,15 +8,15 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel">Agregar Nueva Normatividad</h4>
 			</div>
-			<form class="form-horizontal" role="form" method="post"
-				enctype="multipart/form-data" action="upload-file-FTP.php">
+			<form id="addNewLegislation" method="post" enctype="multipart/form-data"
+				action="upload-file-FTP.php" class="form-horizontal">
 				<div class="modal-body">
 					<div class="form-group">
-						<label for="inputEmail3" class="col-sm-2 control-label">Tipo</label>
-						<div class="col-sm-10">
+						<label class="col-md-3 control-label">Tipo</label>
+						<div class="col-md-9 selectContainer">
 							<select class="form-control" name="legislationType"
 								id="legislationType">
-								<option value="0" selected="selected">Seleccione</option>
+								<option value="">Seleccione</option>
 								<option value="1">Leyes</option>
 								<option value="2">Decretos</option>
 								<option value="3">Reglamentos</option>
@@ -27,32 +27,31 @@
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">Título</label>
-						<div class="col-sm-10">
-							<textarea id="legislationName" name="legislationName" class="form-control" rows="3" placeholder="Titulo"></textarea>
-<!-- 							<input type="text" class="form-control" id="legislationName" -->
-<!-- 								name="legislationName" placeholder="Nombre"> -->
+						<label class="col-md-3 control-label">Título</label>
+						<div class="col-md-9">
+							<textarea id="legislationName" name="legislationName"
+								class="form-control" rows="9" placeholder="Título"></textarea>
 						</div>
 					</div>
-					<div class="form-group form-group-sm">
-						<label for="inputPassword3" class="col-sm-2 control-label">Promulgación</label>
-						<div class="col-sm-10">
+					<div class="form-group" data-toggle="tooltip"
+						title="Esta fecha corresponde a la publicación de la Normativa">
+						<label class="col-md-3 control-label">Promulgación</label>
+						<div class="col-md-9">
 							<input type="text" id="legislationDate" name="legislationDate"
 								data-bind="editableText: false">
 						</div>
 					</div>
-					<div class="form-group">
-						<label for="inputPassword3" class="col-sm-2 control-label">Seleccione
-							Archivo</label>
-						<div class="col-sm-10">
+					<div class="form-group" data-toggle="tooltip"
+						title="Seleccione un archivo de tipo PDF">
+						<label class="col-md-3 control-label">Seleccione Archivo</label>
+						<div class="col-md-8">
 							<div class="input-group">
 								<input type="file" accept="application/pdf" id="fileToUpload"
 									name="fileToUpload" hidden="true"
-									data-bind="visible:false, value:fileToUpload"> 
-								<input
+									data-bind="visible:false, value:fileToUpload" /> <input
 									id="fileInputText" name="fileInputText" type="text"
 									class="form-control" placeholder="Archivo"
-									data-bind="value:fileToUpload, enable:false"> <span
+									data-bind="value:fileToUpload" readonly /> <span
 									class="input-group-btn">
 									<button id="chooseFile" class="btn btn-default" type="button">
 										<i class="glyphicon glyphicon-file"></i> Seleccione
@@ -81,4 +80,66 @@ $(document).ready(function() {
     });
 });
 
+$('div[data-toggle="tooltip"]').tooltip({
+    animated: 'fade',
+    placement: 'top',
+});
+
+$(document).ready(function() {
+    $('#addNewLegislation').bootstrapValidator({
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+        	legislationType: {
+                group: '.col-md-1',
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es requerido'
+                    }
+                }
+            },
+            legislationName: {
+                group: '.col-md-1',
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es requerido'
+                    },
+                    stringLength: {
+                        max: 80,
+                        message: 'The director name must be less than 80 characters long'
+                    }
+                }
+            },
+            legislationDate: {
+                group: '.col-md-1',
+                trigger: 'change',
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es requerido'
+                    },
+                    stringLength: {
+                        max: 10,
+                        message: 'The director name must be less than 80 characters long'
+                    }
+                }
+            },
+            fileInputText: {
+                group: '.col-md-1',
+                trigger: 'change',
+                validators: {
+                	notEmpty: {
+                        message: 'Este campo es requerido'
+                    }
+                }
+            }
+        }
+    });
+});
+
+$(function(){
+	$("span.k-datepicker").css({"height": "31px", "padding-right": "0px"});
+});
 </script>

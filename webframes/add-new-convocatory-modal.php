@@ -1,4 +1,4 @@
-<div class="modal fade" id="add-new-legislation-modal" tabindex="-1"
+<div class="modal fade" id="add-new-convocatory-modal" tabindex="-1"
 	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -49,19 +49,20 @@
 						<label class="col-md-3 control-label">Vigencia Convocatoria</label>
 						<div class="col-md-5">
 							<input type="text" name="callLife" id="callLife"
-								class="form-control" data-bind="editableText: false" />
+								class="form-control" data-bind="editableText: false"/>
 						</div>
 					</div>
-					<div class="form-group">
+					<div class="form-group"  data-toggle="tooltip"
+						title="Seleccione un archivo de tipo PDF">
 						<label class="col-md-3 control-label">Seleccione Archivo</label>
-						<div class="col-md-9">
+						<div class="col-md-8">
 							<div class="input-group">
 								<input type="file" accept="application/pdf" id="fileToUpload"
 									name="fileToUpload" hidden="true"
 									data-bind="visible:false, value:fileToUpload"/> 
 								<input id="fileInputText" name="fileInputText" type="text"
 									class="form-control" placeholder="Archivo"
-									data-bind="value:fileToUpload, enable:false"/> 
+									data-bind="value:fileToUpload" readonly/> 
 								<span class="input-group-btn">
 									<button id="chooseFile" class="btn btn-default" type="button">
 										<i class="glyphicon glyphicon-file"></i> Seleccione
@@ -70,11 +71,11 @@
 							</div>
 						</div>
 					</div>
-
-					<button type="submit" class="btn btn-default">Validate</button>
-
 				</div>
-
+				<div class="modal-footer">
+					<button type="submit" class="btn btn-primary">Guardar</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -108,7 +109,7 @@ $(document).ready(function() {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
-                        message: 'The genre is required'
+                        message: 'Este campo es requerido'
                     }
                 }
             },
@@ -116,7 +117,7 @@ $(document).ready(function() {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
-                        message: 'The genre is required'
+                        message: 'Este campo es requerido'
                     }
                 }
             },
@@ -124,7 +125,7 @@ $(document).ready(function() {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
-                        message: 'The director name is required'
+                        message: 'Este campo es requerido'
                     },
                     stringLength: {
                         max: 80,
@@ -133,10 +134,9 @@ $(document).ready(function() {
                 }
             },
             title: {
-                // The group will be set as default (.form-group)
                 validators: {
                 	 notEmpty: {
-                         message: 'The description is required'
+                         message: 'Este campo es requerido'
                      },
                     stringLength: {
                         max: 500,
@@ -146,29 +146,33 @@ $(document).ready(function() {
             },
             callLife: {
                 group: '.col-md-1',
+                trigger: 'change',
                 validators: {
                     notEmpty: {
-                        message: 'The director name is required'
+                        message: 'Este campo es requerido'
                     },
                     stringLength: {
-                        max: 80,
+                        max: 10,
                         message: 'The director name must be less than 80 characters long'
                     }
                 }
             },
             fileInputText: {
                 group: '.col-md-1',
+                trigger: 'change',
                 validators: {
-                    notEmpty: {
-                        message: 'The director name is required'
-                    },
-                    stringLength: {
-                        max: 300,
-                        message: 'The director name must be less than 80 characters long'
+                	notEmpty: {
+                        message: 'Este campo es requerido'
                     }
                 }
             }
         }
     });
 });
+
+$(function(){
+	$("span.k-datepicker").css({"height": "31px", "padding-right": "0px"});
+});
+
+
 </script>

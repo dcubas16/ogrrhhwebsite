@@ -1,5 +1,6 @@
 <?php
 include 'php_files/ResultMessage.php';
+include 'php_files/Constants.php';
 class FTPConnectionManager {
 	public $url = "ftp.ogrrhh.unmsm.edu.pe";
 	public $userName = "recursoshumanos";
@@ -8,9 +9,12 @@ class FTPConnectionManager {
 	public $login;
 	public $tempFilePath = "";
 	public $fileName = "";
-	public function __construct($tempFilePath, $fileName) {
+	public $remoteFilePath = "";
+	
+	public function __construct($tempFilePath, $fileName, $remoteFilePath) {
 		$this->tempFilePath = $tempFilePath;
 		$this->fileName = $fileName;
+		$this->remoteFilePath = $remoteFilePath;
 		$this->createConnection ();
 	}
 	public function setFilePath($stringFilePath) {
@@ -24,7 +28,8 @@ class FTPConnectionManager {
 		}
 	}
 	public function uploadFile() {
-		if (ftp_put ( $this->connection, "../ogrrhh.unmsm.edu.pe/public_html/files/" . $this->fileName, $this->tempFilePath, FTP_BINARY )) {
+		$constant = new Constants();
+		if (ftp_put ( $this->connection, $constant::ogrrhhUrl ."". $this->remoteFilePath ."". $this->fileName, $this->tempFilePath, FTP_BINARY )) {
 			$this->closeConnection ();
 			return new ResultMessage ( 1, "Se ha cargado con éxito el el archivo " . $this->fileName );
 		} else {

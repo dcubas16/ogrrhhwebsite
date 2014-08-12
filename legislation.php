@@ -1,13 +1,8 @@
 <?php
-ini_set('upload_max_filesize', '10M');
-ini_set('post_max_size', '10M');
-ini_set('max_input_time', 3000);
-ini_set('max_execution_time', 3000);
-
-// include 'php_files/ConnectionManager.php';
-// $connectionManager = new ConnectionManager();
-// $menus = $connectionManager->doQuery("SELECT * FROM MENUS");
-// $connectionManager->closeConnection();
+ini_set ( 'upload_max_filesize', '10M' );
+ini_set ( 'post_max_size', '10M' );
+ini_set ( 'max_input_time', 3000 );
+ini_set ( 'max_execution_time', 3000 );
 
 $page_id = 4;
 $sub_page_id = 0;
@@ -23,6 +18,13 @@ $sub_page_id = 0;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				<div class="col-md-9 text-content-style">
+						<div class="alert alert-success fade in" role="alert">
+							<button type="button" class="close" data-dismiss="alert">
+								<span aria-hidden="true">×</span><span class="sr-only">Close</span>
+							</button>
+							<strong>Holy guacamole!</strong> Best check yo self, you're not
+							looking too good.
+						</div>
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Normatividad</h1>
 						<p>En esta sección Usted podrá encotrar la normatividad vigente

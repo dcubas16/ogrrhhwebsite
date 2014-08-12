@@ -26,7 +26,7 @@ $sub_page_id = 0;
 							de planificar, normar y ejecutar los procesos técnicos en materia
 							de gestión del recurso humano de la Institución.</p>
 						<button type="button" class="btn btn-info btn-xs"
-							data-toggle="modal" data-target="#add-new-legislation-modal">
+							data-toggle="modal" data-target="#add-new-convocatory-modal">
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Convocatoria
 						</button>

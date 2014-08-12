@@ -4,9 +4,10 @@ include "php_files/LegislationDAO.php";
 
 $tempFilePath = $_FILES ["fileToUpload"] ["tmp_name"];
 $filename = $_FILES ["fileToUpload"] ["name"];
-$legislationType = $_POST ["legislationType"];
-$legislationName = $_POST ["legislationName"];
-$publicationDate = $_POST ["legislationDate"];
+$legislationType = $_POST ["workCallKind"];
+$legislationName = $_POST ["dependency"];
+$publicationDate = $_POST ["callWorkNumber"];
+
 $remoteFilePath = setRemotePath ( $legislationType ) . "/";
 
 function setRemotePath($legislationType) {
