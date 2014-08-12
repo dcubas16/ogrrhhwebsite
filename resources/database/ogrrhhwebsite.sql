@@ -42,6 +42,37 @@ INSERT INTO `contain_type` VALUES (1,'texto'),(2,'documento_descarga');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `convocatories`
+--
+
+DROP TABLE IF EXISTS `convocatories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `convocatories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `convocatory_type_id` int(11) NOT NULL,
+  `dependency_id` int(11) NOT NULL,
+  `number` int(11) NOT NULL,
+  `title` varchar(500) NOT NULL,
+  `life_date` date NOT NULL,
+  `file_path` varchar(500) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `office_id` int(11) NOT NULL,
+  `update_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `convocatories`
+--
+
+LOCK TABLES `convocatories` WRITE;
+/*!40000 ALTER TABLE `convocatories` DISABLE KEYS */;
+/*!40000 ALTER TABLE `convocatories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `detail_web_page_contain`
 --
 
@@ -75,7 +106,7 @@ CREATE TABLE `legislation_type` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -84,6 +115,7 @@ CREATE TABLE `legislation_type` (
 
 LOCK TABLES `legislation_type` WRITE;
 /*!40000 ALTER TABLE `legislation_type` DISABLE KEYS */;
+INSERT INTO `legislation_type` VALUES (1,'ley'),(2,'decreto'),(3,'reglamento'),(4,'directiva'),(5,'resolución'),(6,'otro');
 /*!40000 ALTER TABLE `legislation_type` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -104,7 +136,7 @@ CREATE TABLE `legislations` (
   `office_id` int(11) NOT NULL,
   `update_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -113,7 +145,7 @@ CREATE TABLE `legislations` (
 
 LOCK TABLES `legislations` WRITE;
 /*!40000 ALTER TABLE `legislations` DISABLE KEYS */;
-INSERT INTO `legislations` VALUES (1,'hi','1982-11-01','hi',1,1,1,'1982-11-01'),(2,'asd','2014-08-08','Embarque.pdf',1,1,1,'2014-08-08'),(3,'asd','2014-08-07','Embarque.pdf',1,1,1,'2014-08-07'),(4,'asdfg','2014-08-15','fop_actions.pdf',1,1,1,'2014-08-07'),(5,'asdfg','2014-08-09','doc.pdf',1,1,1,'2014-08-08'),(6,'afs','2014-08-31','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08'),(7,'rrrr','2014-08-01','fop_actions.pdf',1,1,1,'2014-08-08'),(8,'eee','2014-08-17','doc.pdf',1,1,1,'2014-08-08'),(9,'qqq','2014-08-09','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08');
+INSERT INTO `legislations` VALUES (1,'hi','1982-11-01','hi',1,1,1,'1982-11-01'),(2,'asd','2014-08-08','Embarque.pdf',1,1,1,'2014-08-08'),(3,'asd','2014-08-07','Embarque.pdf',1,1,1,'2014-08-07'),(4,'asdfg','2014-08-15','fop_actions.pdf',1,1,1,'2014-08-07'),(5,'asdfg','2014-08-09','doc.pdf',1,1,1,'2014-08-08'),(6,'afs','2014-08-31','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08'),(7,'rrrr','2014-08-01','fop_actions.pdf',1,1,1,'2014-08-08'),(8,'eee','2014-08-17','doc.pdf',1,1,1,'2014-08-08'),(9,'qqq','2014-08-09','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08'),(10,'1','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(11,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(12,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(13,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(14,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(15,'Decreto 1','2014-08-15','decretos/PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,2,1,'2014-08-12'),(16,'Reglamento','2014-08-11','reglamentos/PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,3,1,'2014-08-12');
 /*!40000 ALTER TABLE `legislations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -257,4 +289,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-07 19:33:24
+-- Dump completed on 2014-08-11 20:13:34
