@@ -376,8 +376,6 @@ $sub_page_id = 5;
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	<iframe >
-	</iframe>
 </body>
 <script>
 		var viewModel = {

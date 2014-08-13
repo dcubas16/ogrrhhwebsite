@@ -1,4 +1,10 @@
 <?php
+include 'php_files/ConvocatoryDAO.php';
+
+$convocatoryDAO = new ConvocatoryDAO();
+$queryResult = $convocatoryDAO->select ();
+$rowCounter = 0;
+
 $page_id = 5;
 $sub_page_id = 0;
 ?>
@@ -13,12 +19,24 @@ $sub_page_id = 0;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				<div class="col-md-9 text-content-style">
-					<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Convocatorias CAS</h1>
-							<ul>
-							<li><a href="resources/docs/leyes/Ley_29849_CAS.pdf"
-								target="_blank">Convocatoria N°123 Para un personal tecnico (Publicado el 07/08/2014 - Vigente hasta el 30/08/2014)</a></li>
-							</ul>
+						<h1 id="universitary-legislation"
+							class="font-style-medium-title-dark page-header ">Convocatorias
+							CAS</h1>
+						<ul>
+							<?php
+							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
+								print("<li><a href='".$row ['file_path']."' 
+ 								target='blank'>Convocatoria ". $row ['convocatory_type_name'] ." N° ".$row ['number']." - ". $row ['title'] ."
+ 									(Publicado el". $row ['update_date'] . " - Vigente hasta el ". $row ['life_date'] .")</a></li>");
+								
+								$rowCounter ++;
+							}
+							?>
+							
+<!-- 							<li><a href="resources/docs/leyes/Ley_29849_CAS.pdf" -->
+							<!-- 								target="_blank">Convocatoria N°123 Para un personal tecnico -->
+							<!-- 									(Publicado el 07/08/2014 - Vigente hasta el 30/08/2014)</a></li> -->
+						</ul>
 					</div>
 				</div>
 			<?php include('webframes/footer.php');?>

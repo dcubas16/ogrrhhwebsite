@@ -18,13 +18,13 @@ $sub_page_id = 0;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				<div class="col-md-9 text-content-style">
-						<div class="alert alert-success fade in" role="alert">
-							<button type="button" class="close" data-dismiss="alert">
-								<span aria-hidden="true">×</span><span class="sr-only">Close</span>
-							</button>
-							<strong>Holy guacamole!</strong> Best check yo self, you're not
-							looking too good.
-						</div>
+<!-- 						<div class="alert alert-success fade in" role="alert"> -->
+<!-- 							<button type="button" class="close" data-dismiss="alert"> -->
+<!-- 								<span aria-hidden="true">×</span><span class="sr-only">Close</span> -->
+<!-- 							</button> -->
+<!-- 							<strong>Holy guacamole!</strong> Best check yo self, you're not -->
+<!-- 							looking too good. -->
+<!-- 						</div> -->
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Normatividad</h1>
 						<p>En esta sección Usted podrá encotrar la normatividad vigente
@@ -35,13 +35,14 @@ $sub_page_id = 0;
 						<p>Para mayor comodidad se clasificó la normatividad vigente así:</p>
 						<ul>
 							<li><a href="legislation-laws.php">Leyes y Decretos</a></li>
+							<li><a href="legislation-laws.php">Reglamentos</a></li>
+							<li><a href="legislation-directives.php">Directivas</a></li>
+							<li><a href="legislation-resolutions.php">Resoluciones</a></li>
 							<li><a href="legislation-ogrrhh-legislation.php">Normatividad
 									OGRRHH y UNMSM</a></li>
-							<li><a href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
-							<li><a href="legislation-directives.php">Directivas</a></li>
 						</ul>
 						<button type="button" class="btn btn-info btn-xs"
-							data-toggle="modal" data-target="#add-new-legislation-modal">
+							data-toggle="modal" data-target="#add-new-legislation-modal" >
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
@@ -57,6 +58,8 @@ $sub_page_id = 0;
 
 <script>
 	var viewModel = {
+		userId : ko.observable(null),
+		userName : ko.observable(null),
 		fileToUpload : 	ko.observable(""),
 		pageId : ko.observable(<?php echo $page_id;?>),
 		subPageId : ko.observable(<?php echo $sub_page_id;?>)
@@ -66,5 +69,12 @@ $sub_page_id = 0;
 		ko.applyBindings(viewModel, $('body')[0]);
 		$(".left-navbar").height($("#content-div").height());
 	});
+
+	$(function() {
+		setTimeout(function(){
+			$("div[class='alert alert-success fade in']").css({'display':'none'});
+	    }, 10000);
+	});	
+	
 </script>
 </html>

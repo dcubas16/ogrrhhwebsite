@@ -8,12 +8,13 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel">Agregar Nueva Convocatoria</h4>
 			</div>
-			<form id="addNewWorkCall" method="post" class="form-horizontal">
+			<form id="addNewWorkCall" method="post" class="form-horizontal"
+				enctype="multipart/form-data" action="upload-convocatory-FTP.php">
 				<div class="modal-body">
 					<div class="form-group">
 						<label class="col-md-3 control-label">Tipo</label>
 						<div class="col-md-9 selectContainer">
-							<select name="workCallKind" id="workCallKind"
+							<select name="convocatory_type_id" id="convocatory_type_id"
 								class="form-control">
 								<option value="">Seleccione</option>
 								<option value="1">CAS</option>
@@ -24,7 +25,8 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Dependencia</label>
 						<div class="col-md-9 selectContainer">
-							<select name="dependency" id="dependency" class="form-control">
+							<select name="dependency_id" id="dependency_id"
+								class="form-control">
 								<option value="">Seleccione</option>
 								<option value="1">Adm. Central</option>
 								<option value="2">Facultades</option>
@@ -34,7 +36,7 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Número</label>
 						<div class="col-md-4">
-							<input type="number" name="callWorkNumber" id="callWorkNumber"
+							<input type="number" name="number" id="number"
 								class="form-control" />
 						</div>
 					</div>
@@ -48,22 +50,22 @@
 						title="Esta fecha corresponde al último día que se reciben los C.V.">
 						<label class="col-md-3 control-label">Vigencia Convocatoria</label>
 						<div class="col-md-5">
-							<input type="text" name="callLife" id="callLife"
-								class="form-control" data-bind="editableText: false"/>
+							<input type="text" name="life_date" id="life_date"
+								class="form-control" data-bind="editableText: false" />
 						</div>
 					</div>
-					<div class="form-group"  data-toggle="tooltip"
+					<div class="form-group" data-toggle="tooltip"
 						title="Seleccione un archivo de tipo PDF">
 						<label class="col-md-3 control-label">Seleccione Archivo</label>
 						<div class="col-md-8">
 							<div class="input-group">
 								<input type="file" accept="application/pdf" id="fileToUpload"
 									name="fileToUpload" hidden="true"
-									data-bind="visible:false, value:fileToUpload"/> 
-								<input id="fileInputText" name="fileInputText" type="text"
+									data-bind="visible:false, value:fileToUpload" /> <input
+									id="fileInputText" name="fileInputText" type="text"
 									class="form-control" placeholder="Archivo"
-									data-bind="value:fileToUpload" readonly/> 
-								<span class="input-group-btn">
+									data-bind="value:fileToUpload" readonly /> <span
+									class="input-group-btn">
 									<button id="chooseFile" class="btn btn-default" type="button">
 										<i class="glyphicon glyphicon-file"></i> Seleccione
 									</button>
@@ -84,7 +86,7 @@
 <script>
 $(document).ready(function() {
     kendo.culture("es");
-    var datepicker = $("#callLife").kendoDatePicker({
+    var datepicker = $("#life_date").kendoDatePicker({
     	format: kendo.culture().calendar.patterns.d,
 
     	culture: "es",
@@ -105,7 +107,7 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-        	workCallKind: {
+        	convocatory_type_id: {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
@@ -113,7 +115,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            dependency: {
+            dependency_id: {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
@@ -121,7 +123,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            callWorkNumber: {
+            number: {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
@@ -144,7 +146,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            callLife: {
+            life_date: {
                 group: '.col-md-1',
                 trigger: 'change',
                 validators: {

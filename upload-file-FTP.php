@@ -32,19 +32,22 @@ function setRemotePath($legislationType) {
 	}
 }
 
-$ftpConnectionManager = new FTPConnectionManager ( $tempFilePath, $filename, $remoteFilePath );
+$ftpConnectionManager = new FTPConnectionManager ( $tempFilePath, $filename, Constants::ogrrhhUrl . Constants::normativasPath . $remoteFilePath );
 $resultFTP = $ftpConnectionManager->uploadFile ();
 
-$legislationDAO = new LegislationDAO ( $legislationType, $legislationName, $publicationDate, $remoteFilePath.$filename, 1, 1, date ( 'd/m/Y' ) );
+$legislationDAO = new LegislationDAO ();
+$legislationDAO->setProperties($legislationType, $legislationName, $publicationDate, $remoteFilePath.$filename, 1, 1, date ( 'd/m/Y' ) );
 $errores = 0;
 
 if ($resultFTP->type != 0) {
 	$queryResult = $legislationDAO->insert ();
 	if (! $queryResult) {
 		$errores ++;
+		echo "Entro Aqui 1 ";
 	}
 } else {
 	$errores ++;
+	echo "Entro Aqui 2 ";
 }
 $page_id = 4;
 $sub_page_id = 0;

@@ -92,26 +92,33 @@
 		<ul class="nav bs-docs-sidenav" data-bind="visible: pageId() == 4">
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
-				class="vertical-navbar-font-style" href="legislation-laws.php">Leyes
+				class="vertical-navbar-font-style" href="legislation-laws-decree.php">Leyes
 					y Decretos</a></li>	
+			<li class=""
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
+				class="vertical-navbar-font-style" href="legislation-rules.php">Reglamentos</a></li>
+			<li class=""
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
+				class="vertical-navbar-font-style" href="legislation-directives.php">Directivas</a></li>
+			<li class=""
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
+				class="vertical-navbar-font-style"
+				href="legislation-resolutions.php">Resoluciones</a></li>
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 4)? 'active' : '' }"><a
 				class="vertical-navbar-font-style"
 				href="legislation-ogrrhh-legislation.php">Normatividad OGRRHH y
 					UNMSM</a></li>
-			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
-				class="vertical-navbar-font-style"
-				href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
-			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
-				class="vertical-navbar-font-style" href="legislation-directives.php">Directivas</a></li>
+			
 			
 		</ul>
 		<ul class="nav bs-docs-sidenav" data-bind="visible: pageId() == 5">
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="work-with-us-calls.php">Convocatorias CAS</a></li>
+			<li class=""
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
+				class="vertical-navbar-font-style" href="work-with-us-calls.php">Convocatorias 276</a></li>
 		</ul>
 		<div data-bind="visible: pageId() == 6">
 			<div class="row">

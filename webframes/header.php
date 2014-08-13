@@ -1,6 +1,3 @@
-<?php
-// global $menus;
-?>
 <header>
 	<div class="row header-style">
 		<div class="col-md-7">
@@ -20,15 +17,17 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 search-button">
-					<div class="input-group" data-toggle="tooltip"
-						title="La búsqueda se realiza en el contenido de Normatividad">
-						<input type="text" class="form-control input-sm"> <span
-							class="input-group-btn">
-							<button class="btn btn-danger btn-sm" type="button">
-								<span class="glyphicon glyphicon-search"></span><strong> Buscar</strong>
-							</button>
-						</span>
-					</div>
+					<form action="search-results.php">
+						<div class="input-group" data-toggle="tooltip"
+							title="La búsqueda se realiza en el contenido de Normatividad">
+							<input type="text" class="form-control input-sm"> <span
+								class="input-group-btn">
+								<button class="btn btn-danger btn-sm" type="submit">
+									<span class="glyphicon glyphicon-search"></span><strong> Buscar</strong>
+								</button>
+							</span>
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
@@ -67,9 +66,10 @@
 					data-bind="attr: { class: (<?php echo $page_id?> == 4)? 'active dropdown' : 'dropdown' }"
 					class=""><a href="legislation.php">NORMATIVIDAD</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="legislation-resolutions.php">Resoluciones Emitidas</a></li>
-						<li><a href="legislation-laws.php">Leyes y Decretos</a></li>
+						<li><a href="legislation-laws-decree.php">Leyes y Decretos</a></li>
+						<li><a href="legislation-rules.php">Reglamentos</a></li>
 						<li><a href="legislation-directives.php">Directivas</a></li>
+						<li><a href="legislation-resolutions.php">Resoluciones</a></li>
 						<li><a href="legislation-ogrrhh-legislation.php">Normatividad
 								OGRRHH y UNMSM</a></li>
 					</ul></li>
@@ -96,4 +96,6 @@ $('div[data-toggle="tooltip"]').tooltip({
     animated: 'fade',
     placement: 'top',
 });
+
+
 </script>

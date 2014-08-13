@@ -29,7 +29,9 @@ class FTPConnectionManager {
 	}
 	public function uploadFile() {
 		$constant = new Constants();
-		if (ftp_put ( $this->connection, $constant::ogrrhhUrl ."". $this->remoteFilePath ."". $this->fileName, $this->tempFilePath, FTP_BINARY )) {
+// 		echo $this->remoteFilePath ."". $this->fileName ."</br>";
+// 		echo $this->tempFilePath ."</br>";
+		if (ftp_put ( $this->connection, $this->remoteFilePath ."". $this->fileName, $this->tempFilePath, FTP_BINARY )) {
 			$this->closeConnection ();
 			return new ResultMessage ( 1, "Se ha cargado con éxito el el archivo " . $this->fileName );
 		} else {
