@@ -6,6 +6,15 @@ ini_set ( 'max_execution_time', 3000 );
 
 $page_id = 4;
 $sub_page_id = 0;
+
+if( isset($_SESSION['userName']) && isset($_SESSION['password'])){
+// 	echo $_SESSION['userName'];
+	echo("I'm Fine");	
+}else {
+// 	echo $_SESSION['userName'];
+	echo("I'm wrong");
+}
+
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -18,13 +27,13 @@ $sub_page_id = 0;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				<div class="col-md-9 text-content-style">
-<!-- 						<div class="alert alert-success fade in" role="alert"> -->
-<!-- 							<button type="button" class="close" data-dismiss="alert"> -->
-<!-- 								<span aria-hidden="true">×</span><span class="sr-only">Close</span> -->
-<!-- 							</button> -->
-<!-- 							<strong>Holy guacamole!</strong> Best check yo self, you're not -->
-<!-- 							looking too good. -->
-<!-- 						</div> -->
+						<!-- 						<div class="alert alert-success fade in" role="alert"> -->
+						<!-- 							<button type="button" class="close" data-dismiss="alert"> -->
+						<!-- 								<span aria-hidden="true">×</span><span class="sr-only">Close</span> -->
+						<!-- 							</button> -->
+						<!-- 							<strong>Holy guacamole!</strong> Best check yo self, you're not -->
+						<!-- 							looking too good. -->
+						<!-- 						</div> -->
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Normatividad</h1>
 						<p>En esta sección Usted podrá encotrar la normatividad vigente
@@ -42,7 +51,8 @@ $sub_page_id = 0;
 									OGRRHH y UNMSM</a></li>
 						</ul>
 						<button type="button" class="btn btn-info btn-xs"
-							data-toggle="modal" data-target="#add-new-legislation-modal" data-bind="visible: logedUser()">
+							data-toggle="modal" data-target="#add-new-legislation-modal"
+							data-bind="visible: logedUser()">
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
@@ -57,28 +67,52 @@ $sub_page_id = 0;
 </body>
 
 <script>
+
 	var viewModel = {
+/*********************** 		Login variables ****************/
 		userId : ko.observable(null),
 		userName : ko.observable(null),
 		password : ko.observable(null),
-		fileToUpload : 	ko.observable(null),
 		logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
 		loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>),
 		users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
 		loginUser : function(){
-			if($.trim(viewModel.userName()) == viewModel.users()[0].userName && $.trim(viewModel.password()) == viewModel.users()[0].password){
-				viewModel.logedUser(true);
-				viewModel.loginError(false);
-				$('#login').modal('hide');
-			}else{
-// 				alert("Entro aqui 2");
-				viewModel.logedUser(false);
-				viewModel.loginError(true);
-			}
-		}
+			login(viewModel.userName(), viewModel.password());
+		},
+
+/*********************** Form variables ****************/
+		fileToUpload : 	ko.observable(null),
+
+/*********************** Page control variables ****************/		
+		pageId : ko.observable(<?php echo $page_id;?>),
+		subPageId : ko.observable(<?php echo $sub_page_id;?>)
 	};
+
+	function login(userName, password){
+		$.ajax({
+			  type: "POST",
+			  url: "login-user.php",
+			  data: {"userName":userName, "password":password},
+			  async: false,
+			  success: function(data){
+				  setLogInState(data)
+			  },
+			  error: function(){
+				  setLogInState(false);
+				}
+			});
+	}
+
+	function setLogInState(state){
+		if(state){
+			viewModel.logedUser(state);
+			viewModel.loginError(!state);
+			$('#login').modal('hide');
+		}else{
+			viewModel.logedUser(!state);
+			viewModel.loginError(state);
+		}
+	}	
 						
 	$(function() {
 		ko.applyBindings(viewModel, $('body')[0]);
