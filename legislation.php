@@ -42,7 +42,7 @@ $sub_page_id = 0;
 									OGRRHH y UNMSM</a></li>
 						</ul>
 						<button type="button" class="btn btn-info btn-xs"
-							data-toggle="modal" data-target="#add-new-legislation-modal" >
+							data-toggle="modal" data-target="#add-new-legislation-modal" data-bind="visible: logedUser()">
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
@@ -60,9 +60,24 @@ $sub_page_id = 0;
 	var viewModel = {
 		userId : ko.observable(null),
 		userName : ko.observable(null),
-		fileToUpload : 	ko.observable(""),
+		password : ko.observable(null),
+		fileToUpload : 	ko.observable(null),
+		logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
+		loginError : ko.observable(false),//Determina si no se logeo bien el usuario
 		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
+		subPageId : ko.observable(<?php echo $sub_page_id;?>),
+		users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
+		loginUser : function(){
+			if($.trim(viewModel.userName()) == viewModel.users()[0].userName && $.trim(viewModel.password()) == viewModel.users()[0].password){
+				viewModel.logedUser(true);
+				viewModel.loginError(false);
+				$('#login').modal('hide');
+			}else{
+// 				alert("Entro aqui 2");
+				viewModel.logedUser(false);
+				viewModel.loginError(true);
+			}
+		}
 	};
 						
 	$(function() {

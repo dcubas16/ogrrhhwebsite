@@ -8,10 +8,16 @@
 		<div class="col-md-1"></div>
 		<div class="col-md-4">
 			<div class="row">
-				<div class="col-md-12 login-button">
+				<div class="col-md-12 login-button" data-bind="visible: !logedUser()">
 					<button type="button" class="btn btn-success btn-sm"
 						data-toggle="modal" data-target="#login">
 						<strong>Ingresar </strong><span class="glyphicon glyphicon-user"></span>
+					</button>
+				</div>
+				<div class="col-md-12 login-button" data-bind="visible: logedUser()">
+					<button type="button" class="btn btn-success btn-sm"
+						data-toggle="modal" data-target="#login">
+						<strong data-bind="text: userName()"></strong><span class="glyphicon glyphicon-user"></span>
 					</button>
 				</div>
 			</div>
@@ -97,5 +103,20 @@ $('div[data-toggle="tooltip"]').tooltip({
     placement: 'top',
 });
 
+// var users = [{
+// 	{"id":1, "userName":"1" ,"password":"1"}, 
+// 	{"id":2, "userName":"2" ,"password":"2"}, 
+// 	{"id":3, "userName":"3" ,"password":"3"}, 
+// 	{"id":4, "userName":"4" ,"password":"4"}, 
+// 	{"id":5, "userName":"5" ,"password":"5"}, 
+// 	{"id":6, "userName":"6" ,"password":"6"}, 
+// }]
+
+var userName = "admin";
+var password = "admin";
+
+function validateUser(){
+	
+}
 
 </script>
