@@ -1,4 +1,5 @@
 <?php
+session_start();
 ini_set ( 'upload_max_filesize', '10M' );
 ini_set ( 'post_max_size', '10M' );
 ini_set ( 'max_input_time', 3000 );
@@ -77,7 +78,7 @@ if( isset($_SESSION['userName']) && isset($_SESSION['password'])){
 		loginError : ko.observable(false),//Determina si no se logeo bien el usuario
 		users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
 		loginUser : function(){
-			login(viewModel.userName(), viewModel.password());
+// 			login(viewModel.userName(), viewModel.password());
 		},
 
 /*********************** Form variables ****************/

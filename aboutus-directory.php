@@ -24,8 +24,11 @@ $sub_page_id = 5;
 						<p>Actualmente la Oficina General de Recursos Humanos, incluyendo
 							sus Oficias dependientes, consta del directorio que se muestra a
 							continuación:</p>
-						<p><strong>Nota: </strong>Para comunicarse con nosotros Usted debe llamar a la central telefóica 
-							619-7000, y seguido marcar el anexo de la oficina que corresponda</p>
+						<p>
+							<strong>Nota: </strong>Para comunicarse con nosotros Usted debe
+							llamar a la central telefóica 619-7000, y seguido marcar el anexo
+							de la oficina que corresponda
+						</p>
 						<table class="table table-bordered">
 							<thead>
 								<tr style="background-color: rgb(99, 30, 30); color: white;">
@@ -379,6 +382,15 @@ $sub_page_id = 5;
 </body>
 <script>
 		var viewModel = {
+				userId : ko.observable(null),
+				userName : ko.observable(null),
+				password : ko.observable(null),
+				logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
+				loginError : ko.observable(false),//Determina si no se logeo bien el usuario
+				users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
+				loginUser : function(){
+//		 			login(viewModel.userName(), viewModel.password());
+				},
 			mainMenuSelected : ko.observable(1),
 			pageId : ko.observable(<?php echo $page_id;?>),
 			subPageId : ko.observable(<?php echo $sub_page_id;?>)
