@@ -1,6 +1,5 @@
+<?php include('webframes/verify-login.php');?>
 <?php
-
-
 require_once 'php_libs/swiftmailer-master/lib/swift_required.php';
 
 $emailName = $_POST["name"];

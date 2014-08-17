@@ -1,21 +1,8 @@
+<?php include('webframes/verify-login.php');?>
+<?php include('webframes/upload-ftp-settings.php');?>
 <?php
-session_start();
-ini_set ( 'upload_max_filesize', '10M' );
-ini_set ( 'post_max_size', '10M' );
-ini_set ( 'max_input_time', 3000 );
-ini_set ( 'max_execution_time', 3000 );
-
 $page_id = 4;
 $sub_page_id = 0;
-
-if( isset($_SESSION['userName']) && isset($_SESSION['password'])){
-// 	echo $_SESSION['userName'];
-	echo("I'm Fine");	
-}else {
-// 	echo $_SESSION['userName'];
-	echo("I'm wrong");
-}
-
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -27,7 +14,8 @@ if( isset($_SESSION['userName']) && isset($_SESSION['password'])){
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
-				<div class="col-md-9 text-content-style">
+				<!-- ko stopBinding: true -->
+				<div id="contentSection" class="col-md-9 text-content-style">
 						<!-- 						<div class="alert alert-success fade in" role="alert"> -->
 						<!-- 							<button type="button" class="close" data-dismiss="alert"> -->
 						<!-- 								<span aria-hidden="true">×</span><span class="sr-only">Close</span> -->
@@ -53,78 +41,30 @@ if( isset($_SESSION['userName']) && isset($_SESSION['password'])){
 						</ul>
 						<button type="button" class="btn btn-info btn-xs"
 							data-toggle="modal" data-target="#add-new-legislation-modal"
-							data-bind="visible: logedUser()">
+							data-bind="visible: headerViewModel.logedUser()">
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
 					</div>
+					<?php include('webframes/add-new-legislation-modal.php');?>
+					<!-- /ko -->
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	<?php include('webframes/add-new-legislation-modal.php');?>
+	
 </body>
 
 <script>
+	var contentViewModel = {
+		fileToUpload : 	ko.observable(null)			
+	};	
 
-	var viewModel = {
-/*********************** 		Login variables ****************/
-		userId : ko.observable(null),
-		userName : ko.observable(null),
-		password : ko.observable(null),
-		logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
-		loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-		users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
-		loginUser : function(){
-// 			login(viewModel.userName(), viewModel.password());
-		},
-
-/*********************** Form variables ****************/
-		fileToUpload : 	ko.observable(null),
-
-/*********************** Page control variables ****************/		
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
-	};
-
-	function login(userName, password){
-		$.ajax({
-			  type: "POST",
-			  url: "login-user.php",
-			  data: {"userName":userName, "password":password},
-			  async: false,
-			  success: function(data){
-				  setLogInState(data)
-			  },
-			  error: function(){
-				  setLogInState(false);
-				}
-			});
-	}
-
-	function setLogInState(state){
-		if(state){
-			viewModel.logedUser(state);
-			viewModel.loginError(!state);
-			$('#login').modal('hide');
-		}else{
-			viewModel.logedUser(!state);
-			viewModel.loginError(state);
-		}
-	}	
-						
 	$(function() {
-		ko.applyBindings(viewModel, $('body')[0]);
-		$(".left-navbar").height($("#content-div").height());
+		ko.applyBindings(contentViewModel, $('#contentSection')[0]);
 	});
-
-	$(function() {
-		setTimeout(function(){
-			$("div[class='alert alert-success fade in']").css({'display':'none'});
-	    }, 10000);
-	});	
-	
 </script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

@@ -1,3 +1,4 @@
+<?php include('webframes/verify-login.php');?>
 <?php
 include 'php_files/ConvocatoryDAO.php';
 
@@ -6,7 +7,7 @@ $queryResult = $convocatoryDAO->select ();
 $rowCounter = 0;
 
 $page_id = 5;
-$sub_page_id = 0;
+$sub_page_id = 1;
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -18,6 +19,7 @@ $sub_page_id = 0;
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
+				<!-- ko stopBinding: true -->
 				<div class="col-md-9 text-content-style">
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Convocatorias
@@ -32,12 +34,9 @@ $sub_page_id = 0;
 								$rowCounter ++;
 							}
 							?>
-							
-<!-- 							<li><a href="resources/docs/leyes/Ley_29849_CAS.pdf" -->
-							<!-- 								target="_blank">Convocatoria N°123 Para un personal tecnico -->
-							<!-- 									(Publicado el 07/08/2014 - Vigente hasta el 30/08/2014)</a></li> -->
 						</ul>
 					</div>
+					<!-- /ko -->
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
@@ -45,25 +44,5 @@ $sub_page_id = 0;
 		</div>
 	</div>
 </body>
-
-<script>
-	var viewModel = {
-			userId : ko.observable(null),
-			userName : ko.observable(null),
-			password : ko.observable(null),
-			logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
-			loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-			users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
-			loginUser : function(){
-//	 			login(viewModel.userName(), viewModel.password());
-			},
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
-	};
-						
-	$(function() {
-		ko.applyBindings(viewModel, $('body')[0]);
-		$(".left-navbar").height($("#content-div").height());
-	});
-</script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

@@ -1,4 +1,6 @@
+<?php include('webframes/verify-login.php');?>
 <?php
+
 $page_id = 1;
 $sub_page_id = 0;
 ?>
@@ -10,7 +12,8 @@ $sub_page_id = 0;
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 			<?php include('./webframes/header.php');?>
-			<div class="row">
+			<!-- ko stopBinding: true -->
+				<div id="webPageContent" class="row">
 					<div class="col-md-12"
 						style="padding-right: 0px; padding-left: 0px;">
 						<div id="carousel-example-generic" class="carousel slide"
@@ -49,15 +52,26 @@ $sub_page_id = 0;
 							</a>
 							<div class="container-fluid"
 								style="position: absolute; top: 63%; text-align: center; width: 100%; font-family: Montserrat, sans-serif;">
-								<div class="row homepage-title"><div class="col-md-12">La Oficina General de Recursos Humanos</div></div>
-								<div class="row homepage-subtitle"><div class="col-md-12">de la Universidad Nacional Mayor de San Marcos</div></div><br>
-								<div class="row homepage-subtitle"><div class="col-md-12">le da la bienvenida a su sitio web oficial</div></div>
+								<div class="row homepage-title">
+									<div class="col-md-12">La Oficina General de Recursos Humanos</div>
+								</div>
+								<div class="row homepage-subtitle">
+									<div class="col-md-12">de la Universidad Nacional Mayor de San
+										Marcos</div>
+								</div>
+								<br>
+								<div class="row homepage-subtitle">
+									<div class="col-md-12">le da la bienvenida a su sitio web
+										oficial</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				<!-- /ko -->
 				<div class="row" id="content-div">
 					<?php include('webframes/left-navbar.php');?>
+					<!-- ko stopBinding: true -->
 					<div class="col-md-9 text-content-style" style="height: 400px">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
@@ -72,8 +86,9 @@ $sub_page_id = 0;
 							concernientes a la OGRRHH, y las convocatorias de trabajo que
 							realiza la OGRRHH</p>
 					</div>
-
+					<!-- /ko -->
 				</div>
+				
 			<?php include('./webframes/footer.php');?>
 		</div>
 			<div class="col-md-2"></div>
@@ -86,27 +101,6 @@ $sub_page_id = 0;
 			interval : 5000
 		})
 	});
-
-	var viewModel = {
-			userId : ko.observable(null),
-			userName : ko.observable(null),
-			password : ko.observable(null),
-			logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
-			loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-			users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
-			loginUser : function(){
-//	 			login(viewModel.userName(), viewModel.password());
-			},
-		mainMenuSelected : ko.observable(1),
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
-	};
-
-
-	$(function() {
-		ko.applyBindings(viewModel, $("body")[0]);
-		$(".left-navbar").height($("#content-div").height());
-	});
-
 </script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

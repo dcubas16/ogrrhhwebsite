@@ -1,8 +1,7 @@
+<?php include('webframes/verify-login.php');?>
 <?php
+
 include 'php_files/ConnectionManager.php';
-// $connectionManager = new ConnectionManager();
-// $menus = $connectionManager->doQuery("SELECT * FROM MENUS");
-// $connectionManager->closeConnection();
 
 $page_id = 2;
 $sub_page_id = 8;
@@ -17,7 +16,8 @@ $sub_page_id = 8;
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
-				<div class="col-md-9 text-content-style">
+				<!-- ko stopBinding: true -->
+					<div class="col-md-9 text-content-style">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">TUPA</h1>
 						<p>El TUPA es un documento de gestión que contiene toda la
@@ -31,7 +31,8 @@ $sub_page_id = 8;
 								target="_blank">Haga click aquí para descargar el TUPA de la
 								UNMSM</a>
 						</p>
-</div>
+					</div>
+					<!-- /ko -->
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
@@ -39,27 +40,5 @@ $sub_page_id = 8;
 		</div>
 	</div>
 </body>
-<script>
-		var viewModel = {
-				userId : ko.observable(null),
-				userName : ko.observable(null),
-				password : ko.observable(null),
-				logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
-				loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-				users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
-				loginUser : function(){
-//		 			login(viewModel.userName(), viewModel.password());
-				},
-			mainMenuSelected : ko.observable(1),
-			pageId : ko.observable(<?php echo $page_id;?>),
-			subPageId : ko.observable(<?php echo $sub_page_id;?>)
-		};
-
-
-		$(function() {
-			ko.applyBindings(viewModel, $("body")[0]);
-			$(".left-navbar").height($("#content-div").height());
-		});
-</script>
+<?php include('./webframes/header-view-model.php');?>
 </html>
-						

@@ -1,3 +1,4 @@
+<?php include('webframes/verify-login.php');?>
 <?php
 include "php_files/FTPConnectionManager.php";
 include "php_files/LegislationDAO.php";

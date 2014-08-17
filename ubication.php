@@ -1,9 +1,5 @@
+<?php include('webframes/verify-login.php');?>
 <?php
-include 'php_files/ConnectionManager.php';
-// $connectionManager = new ConnectionManager();
-// $menus = $connectionManager->doQuery("SELECT * FROM MENUS");
-// $connectionManager->closeConnection();
-
 $page_id = 6;
 $sub_page_id = 0;
 ?>
@@ -17,12 +13,13 @@ $sub_page_id = 0;
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
-				<div class="col-md-9"
+				<!-- ko stopBinding: true -->
+					<div class="col-md-9"
 						style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Escribenos</h1>
 						<form role="form" id="sendMessage" name="sendMessage"
-							method="post" action="send-message.php"  class="form-horizontal">
+							method="post" action="send-message.php" class="form-horizontal">
 							<div class="form-group col-md-8">
 								<label for="exampleInputEmail1">Nombre</label> <input
 									type="text" class="form-control" id="name" name="name"
@@ -30,20 +27,22 @@ $sub_page_id = 0;
 							</div>
 							<div class="form-group col-md-8">
 								<label for="exampleInputEmail1">Dirección de email</label> <input
-									type="email" class="form-control" id="emailAddress" name="emailAddress"
-									placeholder="Ingrese su dirección de email">
+									type="email" class="form-control" id="emailAddress"
+									name="emailAddress" placeholder="Ingrese su dirección de email">
 							</div>
 							<div class="form-group col-md-12">
 								<label for="exampleInputPassword1">Mensaje</label>
-								<textarea class="form-control" rows="3" id="message" name="message"
-									placeholder="Ingrese su mensaje" style="height: 140;"></textarea>
+								<textarea class="form-control" rows="3" id="message"
+									name="message" placeholder="Ingrese su mensaje"
+									style="height: 140;"></textarea>
 							</div>
 							<div class="form-group col-md-12" style="text-align: right;">
 								<button type="button" class="btn btn-danger">Limpiar</button>
-								<button type="submit" class="btn btn-success" >Enviar</button>
+								<button type="submit" class="btn btn-success">Enviar</button>
 							</div>
 						</form>
 					</div>
+					<!-- /ko -->
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
@@ -52,23 +51,6 @@ $sub_page_id = 0;
 	</div>
 </body>
 <script>
-		var viewModel = {
-				userId : ko.observable(null),
-				userName : ko.observable(null),
-				password : ko.observable(null),
-				logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
-				loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-				users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
-				loginUser : function(){
-//		 			login(viewModel.userName(), viewModel.password());
-				},
-				sendEmailMessage: function(){
-				},	
-			mainMenuSelected : ko.observable(1),
-			pageId : ko.observable(<?php echo $page_id;?>),
-			subPageId : ko.observable(<?php echo $sub_page_id;?>)
-		};
-
 		$(document).ready(function() {
 		    $('#sendMessage').bootstrapValidator({
 		        feedbackIcons: {
@@ -116,10 +98,6 @@ $sub_page_id = 0;
 		        }
 		    });
 		});
-		
-		$(function() {
-			ko.applyBindings(viewModel, $("body")[0]);
-			$(".left-navbar").height($("#content-div").height());
-		});
 </script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

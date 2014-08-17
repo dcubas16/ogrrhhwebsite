@@ -31,8 +31,9 @@
 							data-bind="value : password">
 					</div>
 
-					<button class="btn btn-lg btn-primary btn-block" type="button"
-						data-bind="click:loginUser">Ingresar</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit"
+						>Ingresar</button>
+<!-- 						data-bind="click:loginUser" -->
 				</form>
 			</div>
 			<div class="modal-footer"></div>

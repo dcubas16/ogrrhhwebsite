@@ -12,7 +12,7 @@ $queryResult = $userDAO->findUserLogin();
 // echo $queryResult;
 if($queryResult != 0){
 	echo "true";
-	session_name("userLogin");
+// 	session_name("userLogin");
 	session_start();
 	$_SESSION['userName'] = $userName;
 	$_SESSION['password'] = $password;
@@ -20,4 +20,5 @@ if($queryResult != 0){
 	echo "false";
 }
 
+header('Location: index.php');
 ?>

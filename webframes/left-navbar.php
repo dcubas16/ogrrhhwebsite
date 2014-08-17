@@ -1,5 +1,5 @@
 <div class="left-navbar col-md-3 left-navbar-background-style">
-	<div data-bind="visible: pageId() == 1">
+	<div data-bind="visible: headerViewModel.pageId() == 1">
 		<div class="row">
 			<div class="col-md-11">
 				<div class="row" style="height: 30;"></div>
@@ -49,7 +49,7 @@
 	</div>
 	<div class="bs-docs-sidebar hidden-print affix-top vertical-navbar"
 		role="complementary">
-		<ul class="nav bs-docs-sidenav" data-bind="visible: pageId() == 2">
+		<ul class="nav bs-docs-sidenav" data-bind="visible: headerViewModel.pageId() == 2">
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
 				class="vertical-navbar-font-style"
@@ -71,7 +71,7 @@
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 8)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-tupa.php">TUPA</a></li>
 		</ul>
-		<ul class="nav bs-docs-sidenav" data-bind="visible: pageId() == 3">
+		<ul class="nav bs-docs-sidenav" data-bind="visible: headerViewModel.pageId() == 3">
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="offices-gestion.php">Oficina
@@ -89,13 +89,13 @@
 				class="vertical-navbar-font-style" href="offices-development.php">Oficina
 					de Desarrollo y Bienestar Social</a></li>
 		</ul>
-		<ul class="nav bs-docs-sidenav" data-bind="visible: pageId() == 4">
+		<ul class="nav bs-docs-sidenav" data-bind="visible: headerViewModel.pageId() == 4">
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="legislation-laws-decree.php">Leyes
 					y Decretos</a></li>	
 			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 5)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="legislation-rules.php">Reglamentos</a></li>
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
@@ -109,10 +109,8 @@
 				class="vertical-navbar-font-style"
 				href="legislation-ogrrhh-legislation.php">Normatividad OGRRHH y
 					UNMSM</a></li>
-			
-			
 		</ul>
-		<ul class="nav bs-docs-sidenav" data-bind="visible: pageId() == 5">
+		<ul class="nav bs-docs-sidenav" data-bind="visible: headerViewModel.pageId() == 5">
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="work-with-us-calls.php">Convocatorias CAS</a></li>
@@ -120,7 +118,7 @@
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="work-with-us-calls.php">Convocatorias 276</a></li>
 		</ul>
-		<div data-bind="visible: pageId() == 6">
+		<div data-bind="visible: headerViewModel.pageId() == 6">
 			<div class="row">
 				<div class="col-md-11">
 					<div class="row" style="height: 30;"></div>
@@ -181,7 +179,7 @@
 				<div class="col-md-1"></div>
 			</div>
 		</div>
-		<a class="back-to-top" href="#top" data-bind="visible: pageId() != 1">Retornar
+		<a class="back-to-top" href="#top" data-bind="visible: headerViewModel.pageId() != 1">Retornar
 			al inicio</a>
 	</div>
 
