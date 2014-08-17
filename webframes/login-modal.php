@@ -1,6 +1,7 @@
 <div class="modal fade" id="login" tabindex="-1" role="dialog"
 	aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
+	<div class="modal-dialog"
+		data-bind="visible: !headerViewModel.logedUser()">
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">
@@ -8,9 +9,9 @@
 				</button>
 				<h4 class="modal-title" id="myModalLabel">Ingresar</h4>
 			</div>
-			<div class="modal-body">
-				<form class="form-signin" id="logInForm" role="form" action="login-user.php"
-					method="post">
+			<form class="form-signin" id="logInForm" role="form"
+				action="login-user.php" method="post">
+				<div class="modal-body">
 					<h2 class="form-signin-heading">Por favor identifiquese</h2>
 					<div class="alert alert-warning fade in" role="alert"
 						data-bind="visible: loginError()">
@@ -30,13 +31,32 @@
 							class="form-control" placeholder="Contraseña" required="required"
 							data-bind="value : password">
 					</div>
-
-					<button class="btn btn-lg btn-primary btn-block" type="submit"
-						>Ingresar</button>
-<!-- 						data-bind="click:loginUser" -->
-				</form>
+					<div class="modal-footer">
+						<button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="modal-dialog"
+		data-bind="visible: headerViewModel.logedUser()">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
+				</button>
+				<h4 class="modal-title" id="myModalLabel">Cerrar Sesión</h4>
 			</div>
-			<div class="modal-footer"></div>
+			<form class="form-signin" id="logInForm" role="form"
+				action="logout-user.php" method="post">
+				<div class="modal-body">
+					<h2 class="form-signin-heading">Esta seguro e cerrar su sesion ?</h2>
+					<div class="modal-footer">
+						<button type="submit" class="btn btn-primary">Si</button>
+						<button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+					</div>
+				</div>
+			</form>
 		</div>
 	</div>
 </div>
