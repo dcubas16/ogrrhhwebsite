@@ -37,11 +37,11 @@ if ($resultFTP->type != 0) {
 	$queryResult = $convocatoryDAO->insert ();
 	if (! $queryResult) {
 		$errores ++;
-		echo "Entro aqui 1 </br>";
+// 		echo "Entro aqui 1 </br>";
 	}
 } else {
 	$errores ++;
-	echo "Entro aqui 2 </br>";
+// 	echo "Entro aqui 2 </br>";
 }
 
 $page_id = 5;
@@ -82,19 +82,7 @@ $sub_page_id = 0;
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	<?php include('webframes/add-new-legislation-modal.php');?>
 </body>
 
-<script>
-	var viewModel = {
-		fileToUpload : 	ko.observable(""),
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
-	};
-						
-	$(function() {
-		ko.applyBindings(viewModel, $('body')[0]);
-		$(".left-navbar").height($("#content-div").height());
-	});
-</script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

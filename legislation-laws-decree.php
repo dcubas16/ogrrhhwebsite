@@ -1,6 +1,7 @@
 <?php include('webframes/verify-login.php');?>
 <?php
 include 'php_files/LegislationDAO.php';
+include 'php_files/Constants.php';
 
 $page_id = 4;
 $sub_page_id = 2;
@@ -28,8 +29,8 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResultLaws ) ) {
-								print ("<li><a href='" . $row ['file_path'] . "'
- 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . ")</a></li>") ;
+								print ("<li><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
+ 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
 							}
 							?>
 						</ul>
@@ -38,8 +39,8 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<ul>
 						<?php
 						while ( $row = mysql_fetch_assoc ( $queryResultDecree ) ) {
-							print ("<li><a href='" . $row ['file_path'] . "'
- 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . ")</a></li>") ;
+							print ("<li><a href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
+ 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
 						}
 						?>
 						</ul>

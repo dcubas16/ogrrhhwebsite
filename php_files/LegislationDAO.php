@@ -29,7 +29,7 @@ class LegislationDAO {
 		
 		$query = "INSERT INTO LEGISLATIONS(legislation_type_id, name, publication_date, file_path, user_id,
 		office_id,update_date) VALUES (" . $this->legislationType . ",'" . $this->legislationName . "',str_to_date('" . $this->publicationDate . "', '%d/%m/%Y'),'" . $this->fileName . "'," . $this->userId . "," . $this->officeId . ",str_to_date('" . $this->updateDate."', '%d/%m/%Y'));";
-		echo $query;
+// 		echo $query;
 		$connectionManager = new ConnectionManager ();
 		$result = $connectionManager->doQuery ( $query );
 		$connectionManager->closeConnection ();

@@ -1,10 +1,15 @@
 <?php include('webframes/verify-login.php');?>
 <?php
-
-include 'php_files/ConnectionManager.php';
+include 'php_files/LegislationDAO.php';
+include 'php_files/Constants.php';
 
 $page_id = 4;
 $sub_page_id = 3;
+
+$legislationTypeId = 4;
+$legislationDAO = new LegislationDAO ();
+
+$queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -21,9 +26,12 @@ $sub_page_id = 3;
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Directivas</h1>
 						<ul>
-							<!-- 							<li><a -->
-							<!-- 								href="resources/docs/leyes/Ley_23733_Ley_Universitaria_2010.pdf" -->
-							<!-- 								target="_blank">Ley N° 23733 - Ley Universitaria</a></li> -->
+							<?php
+							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
+								print ("<li><a href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
+ 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
+							}
+							?>
 						</ul>
 					</div>
 					<!-- /ko -->

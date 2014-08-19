@@ -44,11 +44,11 @@ if ($resultFTP->type != 0) {
 	$queryResult = $legislationDAO->insert ();
 	if (! $queryResult) {
 		$errores ++;
-		echo "Entro Aqui 1 ";
+// 		echo "Entro Aqui 1 ";
 	}
 } else {
 	$errores ++;
-	echo "Entro Aqui 2 ";
+// 	echo "Entro Aqui 2 ";
 }
 $page_id = 4;
 $sub_page_id = 0;
@@ -87,19 +87,6 @@ $sub_page_id = 0;
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	<?php include('webframes/add-new-legislation-modal.php');?>
 </body>
-
-<script>
-	var viewModel = {
-		fileToUpload : 	ko.observable(""),
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
-	};
-						
-	$(function() {
-		ko.applyBindings(viewModel, $('body')[0]);
-		$(".left-navbar").height($("#content-div").height());
-	});
-</script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

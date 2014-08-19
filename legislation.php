@@ -1,6 +1,7 @@
 <?php include('webframes/verify-login.php');?>
 <?php include('webframes/upload-ftp-settings.php');?>
 <?php
+
 $page_id = 4;
 $sub_page_id = 0;
 ?>
@@ -14,8 +15,9 @@ $sub_page_id = 0;
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
-				<!-- ko stopBinding: true -->
-				<div id="contentSection" class="col-md-9 text-content-style">
+				
+					<div id="contentSection" class="col-md-9 text-content-style"
+						>
 						<!-- 						<div class="alert alert-success fade in" role="alert"> -->
 						<!-- 							<button type="button" class="close" data-dismiss="alert"> -->
 						<!-- 								<span aria-hidden="true">×</span><span class="sr-only">Close</span> -->
@@ -32,8 +34,8 @@ $sub_page_id = 0;
 							recursos humanos</p>
 						<p>Para mayor comodidad se clasificó la normatividad vigente así:</p>
 						<ul>
-							<li><a href="legislation-laws.php">Leyes y Decretos</a></li>
-							<li><a href="legislation-laws.php">Reglamentos</a></li>
+							<li><a href="legislation-laws-decree.php">Leyes y Decretos</a></li>
+							<li><a href="legislation-rules.php">Reglamentos</a></li>
 							<li><a href="legislation-directives.php">Directivas</a></li>
 							<li><a href="legislation-resolutions.php">Resoluciones</a></li>
 							<li><a href="legislation-ogrrhh-legislation.php">Normatividad
@@ -45,26 +47,35 @@ $sub_page_id = 0;
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
+						
 					</div>
 					<?php include('webframes/add-new-legislation-modal.php');?>
-					<!-- /ko -->
+					
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	
+
 </body>
 
 <script>
-	var contentViewModel = {
-		fileToUpload : 	ko.observable(null)			
-	};	
+	
+	var headerViewModel = {
+			userId : ko.observable(null),
+			userName : ko.observable(<?php echo "'".$userName."'";?>),
+			password : ko.observable(null),
+			logedUser : ko.observable(<?php echo $userName!=null; ?>),//Determina si un usuario esta logeado o no
+			loginError : ko.observable(false),//Determina si no se logeo bien el usuario
+			fileToUpload : 	ko.observable(null),
+			pageId : ko.observable(<?php echo $page_id;?>),
+			subPageId : ko.observable(<?php echo $sub_page_id;?>)
+	};
 
 	$(function() {
-		ko.applyBindings(contentViewModel, $('#contentSection')[0]);
+		ko.applyBindings(headerViewModel, $("body")[0]);
+		$(".left-navbar").height($("#content-div").height());
 	});
 </script>
-<?php include('./webframes/header-view-model.php');?>
 </html>

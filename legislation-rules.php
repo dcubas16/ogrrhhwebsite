@@ -1,7 +1,15 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+include 'php_files/LegislationDAO.php';
+include 'php_files/Constants.php';
+
 $page_id = 4;
 $sub_page_id = 5;
+
+$legislationTypeId = 3;
+$legislationDAO = new LegislationDAO ();
+
+$queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -17,6 +25,14 @@ $sub_page_id = 5;
 					<div class="col-md-9 text-content-style">
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Reglamentos</h1>
+						<ul>
+							<?php
+							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
+								print ("<li><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
+ 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
+							}
+							?>
+						</ul>
 					</div>
 					<!-- /ko -->
 				</div>

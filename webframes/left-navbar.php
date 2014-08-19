@@ -114,9 +114,6 @@
 			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 1)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="work-with-us-calls.php">Convocatorias CAS</a></li>
-			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
-				class="vertical-navbar-font-style" href="work-with-us-calls.php">Convocatorias 276</a></li>
 		</ul>
 		<div data-bind="visible: headerViewModel.pageId() == 6">
 			<div class="row">

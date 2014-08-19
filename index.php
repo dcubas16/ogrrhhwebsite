@@ -58,8 +58,7 @@ $sub_page_id = 0;
 								<div class="row homepage-subtitle">
 									<div class="col-md-12">de la Universidad Nacional Mayor de San
 										Marcos</div>
-								</div>
-								<br>
+								</div><br />
 								<div class="row homepage-subtitle">
 									<div class="col-md-12">le da la bienvenida a su sitio web
 										oficial</div>

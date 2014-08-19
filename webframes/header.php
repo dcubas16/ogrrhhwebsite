@@ -81,7 +81,7 @@
 					</ul></li>
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 5)? 'active dropdown' : 'dropdown' }"
-					class=""><a href="work-with-us.php">TRABAJA CON NOSOTROS</a>
+					class=""><a href="work-with-us.php">CONCURSOS PUBLICOS</a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="#">Convocatorias</a></li>
 					</ul></li>
@@ -96,27 +96,12 @@
 		<div class="col-md-12 navbar-separator-style"></div>
 	</div>
 </header>
+
 <?php include('./webframes/login-modal.php');?>
 <script>
 $('div[data-toggle="tooltip"]').tooltip({
     animated: 'fade',
     placement: 'top',
 });
-
-// var users = [{
-// 	{"id":1, "userName":"1" ,"password":"1"}, 
-// 	{"id":2, "userName":"2" ,"password":"2"}, 
-// 	{"id":3, "userName":"3" ,"password":"3"}, 
-// 	{"id":4, "userName":"4" ,"password":"4"}, 
-// 	{"id":5, "userName":"5" ,"password":"5"}, 
-// 	{"id":6, "userName":"6" ,"password":"6"}, 
-// }]
-
-var userName = "admin";
-var password = "admin";
-
-function validateUser(){
-	
-}
 
 </script>

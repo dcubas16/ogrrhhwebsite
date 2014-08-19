@@ -31,6 +31,10 @@ $sub_page_id = 0;
 										</button>
 									</span>
 								</div>
+								<h1 id="mision-and-goals"
+									class="font-style-medium-title-dark page-header ">Normatividades</h1>
+								<h1 id="mision-and-goals"
+									class="font-style-medium-title-dark page-header ">Convocatorias</h1>
 							</div>
 						</div>
 					</div>

@@ -1,7 +1,15 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+include 'php_files/LegislationDAO.php';
+include 'php_files/Constants.php';
+
 $page_id = 4;
 $sub_page_id = 4;
+
+$legislationTypeId = 6;
+$legislationDAO = new LegislationDAO ();
+
+$queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -14,26 +22,35 @@ $sub_page_id = 4;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				<!-- ko stopBinding: true -->
-				<div class="col-md-9 text-content-style">
+					<div class="col-md-9 text-content-style">
 						<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Normatividad de la OGRRHH y la UNMSM</h1>
+							class="font-style-medium-title-dark page-header ">Normatividad de
+							la OGRRHH y la UNMSM</h1>
 						<ul>
-							<li><a
-								href="resources/docs/otros/ESTATUTO UNMSM.pdf"
-								target="_blank">Estatuto de la UNMSM - 1984</a></li>
-								<li><a
-								href="resources/docs/otros/modificacion_art_estatuto_rr_3028-r-04.pdf"
-								target="_blank">Modificación del Estatuto de la UNMSM - 2004</a></li>
-								<li><a
-								href="resources/docs/otros/CAP_UNMSM_2013.pdf"
-								target="_blank">Cuadro para Asignación de Personal (CAP) - 2013</a></li>
-								<li><a
-								href="resources/docs/otros/Clasificador_de_Cargos_UNMSM.pdf"
-								target="_blank">Clasificador de Cargos - 2011</a></li>
-								<li><a
-								href="resources/docs/otros/Manual_Usuario_OGRRHH.pdf"
-								target="_blank">Manual de Usuario de la OGRRHH - 2014</a></li>
+							<?php
+							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
+								print ("<li><a href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
+ 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
+							}
+							?>
 						</ul>
+						<!-- 						<ul> -->
+						<!-- 							<li><a -->
+						<!-- 								href="resources/docs/otros/ESTATUTO UNMSM.pdf" -->
+						<!-- 								target="_blank">Estatuto de la UNMSM - 1984</a></li> -->
+						<!-- 								<li><a -->
+						<!-- 								href="resources/docs/otros/modificacion_art_estatuto_rr_3028-r-04.pdf" -->
+						<!-- 								target="_blank">Modificación del Estatuto de la UNMSM - 2004</a></li> -->
+						<!-- 								<li><a -->
+						<!-- 								href="resources/docs/otros/CAP_UNMSM_2013.pdf" -->
+						<!-- 								target="_blank">Cuadro para Asignación de Personal (CAP) - 2013</a></li> -->
+						<!-- 								<li><a -->
+						<!-- 								href="resources/docs/otros/Clasificador_de_Cargos_UNMSM.pdf" -->
+						<!-- 								target="_blank">Clasificador de Cargos - 2011</a></li> -->
+						<!-- 								<li><a -->
+						<!-- 								href="resources/docs/otros/Manual_Usuario_OGRRHH.pdf" -->
+						<!-- 								target="_blank">Manual de Usuario de la OGRRHH - 2014</a></li> -->
+						<!-- 						</ul> -->
 					</div>
 					<!-- /ko -->
 				</div>
@@ -45,4 +62,3 @@ $sub_page_id = 4;
 </body>
 <?php include('./webframes/header-view-model.php');?>
 </html>
-						

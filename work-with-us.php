@@ -15,7 +15,6 @@ $sub_page_id = 0;
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
-				<!-- ko stopBinding: true -->
 					<div id="contentSection" class="col-md-9 text-content-style">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Trabaja con
@@ -32,7 +31,6 @@ $sub_page_id = 0;
 						</button>
 					</div>
 					<?php include('webframes/add-new-convocatory-modal.php');?>
-					<!-- /ko -->
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
@@ -41,13 +39,20 @@ $sub_page_id = 0;
 	</div>
 </body>
 <script>
-	var contentViewModel = {
-		fileToUpload : 	ko.observable(null)			
-	};	
+var headerViewModel = {
+		userId : ko.observable(null),
+		userName : ko.observable(<?php echo "'".$userName."'";?>),
+		password : ko.observable(null),
+		logedUser : ko.observable(<?php echo $userName!=null; ?>),//Determina si un usuario esta logeado o no
+		loginError : ko.observable(false),//Determina si no se logeo bien el usuario
+		fileToUpload : 	ko.observable(null),
+		pageId : ko.observable(<?php echo $page_id;?>),
+		subPageId : ko.observable(<?php echo $sub_page_id;?>)
+};
 
-	$(function() {
-		ko.applyBindings(contentViewModel, $('#contentSection')[0]);
-	});
+$(function() {
+	ko.applyBindings(headerViewModel, $("body")[0]);
+	$(".left-navbar").height($("#content-div").height());
+});
 </script>
-<?php include('./webframes/header-view-model.php');?>
 </html>

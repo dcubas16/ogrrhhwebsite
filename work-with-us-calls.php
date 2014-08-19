@@ -1,6 +1,7 @@
 <?php include('webframes/verify-login.php');?>
 <?php
 include 'php_files/ConvocatoryDAO.php';
+include 'php_files/Constants.php';
 
 $convocatoryDAO = new ConvocatoryDAO();
 $queryResult = $convocatoryDAO->select ();
@@ -27,7 +28,7 @@ $sub_page_id = 1;
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
-								print("<li><a href='".$row ['file_path']."' 
+								print("<li><a href='". Constants::ogrrhhFTPUrlConvocatorias . $row ['file_path']."' 
  								target='blank'>Convocatoria ". $row ['convocatory_type_name'] ." N° ".$row ['number']." - ". $row ['title'] ."
  									(Publicado el". $row ['update_date'] . " - Vigente hasta el ". $row ['life_date'] .")</a></li>");
 								

@@ -48,10 +48,10 @@
 							<div class="input-group">
 								<input type="file" accept="application/pdf" id="fileToUpload"
 									name="fileToUpload" hidden="true"
-									data-bind="visible:false, value:fileToUpload" /> <input
+									data-bind="visible:false, value: fileToUpload" /> <input
 									id="fileInputText" name="fileInputText" type="text"
 									class="form-control" placeholder="Archivo"
-									data-bind="value:fileToUpload" readonly /> <span
+									data-bind="value: fileToUpload()" readonly /> <span
 									class="input-group-btn">
 									<button id="chooseFile" class="btn btn-default" type="button">
 										<i class="glyphicon glyphicon-file"></i> Seleccione

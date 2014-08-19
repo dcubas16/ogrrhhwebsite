@@ -20,3 +20,18 @@
 	<script src="resources/telerik.kendoui.2014.1.416.core/js/cultures/kendo.culture.es.min.js"></script>
 	<script src="resources/bootstrapvalidator-dist-0.4.5/dist/js/bootstrapValidator.min.js"></script>
 </head>
+<style>
+  .vertical-text-ogrrhh {
+    width: 0.7em; 
+    word-wrap: break-word;
+    -ms-transform: rotateZ(360deg); /* IE 9 */
+    -webkit-transform: rotateZ(360deg); /* Chrome, Safari, Opera */
+    transform: rotateZ(360deg);
+    text-align:center;
+	float: left;
+  }
+</style>
+<div style="position: absolute; top: 300px; left: 0%; z-index: 10000">
+	<a href="work-with-us-calls.php" class="btn btn-danger btn-lg" role="button" style="width: 139px; border-radius:0">Concursos<br/>Públicos</a><br/>
+	<a href="offices-development.php" class="btn btn-danger btn-lg" role="button" style="width: 139px; border-radius:0">Cursos y<br/>Capacitación</a>
+</div>
