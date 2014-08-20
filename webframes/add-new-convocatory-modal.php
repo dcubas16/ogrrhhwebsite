@@ -55,7 +55,7 @@
 						</div>
 					</div>
 					<div class="form-group" data-toggle="tooltip"
-						title="Seleccione un archivo de tipo PDF">
+						title="Seleccione un archivo de tipo PDF (5 Mb máximo)">
 						<label class="col-md-3 control-label">Seleccione Archivo</label>
 						<div class="col-md-8">
 							<div class="input-group">

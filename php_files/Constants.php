@@ -13,5 +13,6 @@ class Constants {
 	const regime_276 = "regimen_276";
 	const normativasPath = "normativas/";
 	const convocatoriasPath = "convocatorias/";
+	const maxFileSize = "convocatorias/";
 }
 ?>

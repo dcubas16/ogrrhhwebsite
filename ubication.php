@@ -1,5 +1,6 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+
 $page_id = 6;
 $sub_page_id = 0;
 ?>
@@ -12,20 +13,66 @@ $sub_page_id = 0;
 			<div class="col-md-8">
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
-				<?php include('webframes/left-navbar.php');?>
-				<!-- ko stopBinding: true -->
-					<div class="col-md-9"
-						style="background-color: #F1F1F1; padding-left: 30px; padding-top: 15px; height: 1550">
+					<div class="col-md-6 text-content-style">
+						<h1 id="universitary-legislation"
+							class="font-style-medium-title-dark page-header ">Dirección</h1>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-12">
+										<div id="page">
+											<script
+												src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+											<script>
+															function initialize() {
+																var map_canvas = document
+																		.getElementById('map_canvas');
+																var map_options = {
+																	center : new google.maps.LatLng(
+																			-12.052625, -77.085099),
+																	zoom : 14,
+																	mapTypeId : google.maps.MapTypeId.ROADMAP
+																}
+																var map = new google.maps.Map(map_canvas,
+																		map_options)
+															}
+															google.maps.event.addDomListener(window,
+																	'load', initialize);
+														</script>
+											<div id="map_canvas" style="height: 320px; width: 100%"></div>
+										</div>
+									</div>
+								</div>
+								<br />
+								<div class="row">
+									<address>
+										<i class="glyphicon glyphicon-map-marker"></i> Av.
+										Universitaria /Av. Germán Amézaga s/n. Edificio Jorge Basadre
+										Ciudad Universitaria, Lima 1. <br /> <br /> <i
+											class="glyphicon glyphicon-phone-alt"></i> Central
+										Telefónica: <strong>619-7000</strong> Anexo 7600 (Recepción y
+										mesa de partes)<br />
+										<a href="aboutus-directory.php"> Enlace directo al directorio</a> <br /><br /> <i
+											class="glyphicon glyphicon-envelope"></i>
+										recursoshumanos@unmsm.edu.pe
+									</address>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<!-- ko stopBinding: true -->
+					<div class="col-md-6 text-content-style">
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Escribenos</h1>
 						<form role="form" id="sendMessage" name="sendMessage"
 							method="post" action="send-message.php" class="form-horizontal">
-							<div class="form-group col-md-8">
+							<div class="form-group col-md-10">
 								<label for="exampleInputEmail1">Nombre</label> <input
 									type="text" class="form-control" id="name" name="name"
 									placeholder="Ingrese su nombre">
 							</div>
-							<div class="form-group col-md-8">
+							<div class="form-group col-md-10">
 								<label for="exampleInputEmail1">Dirección de email</label> <input
 									type="email" class="form-control" id="emailAddress"
 									name="emailAddress" placeholder="Ingrese su dirección de email">
@@ -94,7 +141,6 @@ $sub_page_id = 0;
 		                    }
 		                }
 		            }
-		            
 		        }
 		    });
 		});

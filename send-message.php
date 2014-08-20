@@ -14,7 +14,7 @@ $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
 $mailer = Swift_Mailer::newInstance($transport);
 
 $message = Swift_Message::newInstance($emailName . " : Mensaje de la OGRRHH")
-->setFrom(array('dcubas16@gmail.com' => 'dcubas16@gmail.com'))
+->setFrom(array('diego.nunez@unmsm.edu.pe' => '43953815'))
 ->setTo(array($emailAddress))
 ->setBody($emailMessage);
 

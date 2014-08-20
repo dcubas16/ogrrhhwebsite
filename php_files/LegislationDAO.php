@@ -47,5 +47,17 @@ class LegislationDAO {
 		$connectionManager->closeConnection ();
 		return $result;
 	}
+
+	public function selectByName($legislationTypeId) {
+	
+		$query = 	"SELECT l.*, YEAR(l.publication_date) AS publication_year FROM
+					ogrrhhwebsitedb.legislations l
+					WHERE legislation_type_id = " . $legislationTypeId . " ORDER BY l.publication_date DESC;";
+		// 		echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
+	}
 }
 ?>

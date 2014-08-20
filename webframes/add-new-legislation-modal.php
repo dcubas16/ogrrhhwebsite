@@ -42,11 +42,11 @@
 						</div>
 					</div>
 					<div class="form-group" data-toggle="tooltip"
-						title="Seleccione un archivo de tipo PDF">
+						title="Seleccione un archivo de tipo PDF (5 Mb máximo)">
 						<label class="col-md-3 control-label">Seleccione Archivo</label>
 						<div class="col-md-8">
 							<div class="input-group">
-								<input type="file" accept="application/pdf" id="fileToUpload"
+								<input type="file" accept="application/pdf" id="fileToUpload" onchange="mostrar()"
 									name="fileToUpload" hidden="true"
 									data-bind="visible:false, value: fileToUpload" /> <input
 									id="fileInputText" name="fileInputText" type="text"
@@ -142,4 +142,17 @@ $(document).ready(function() {
 $(function(){
 	$("span.k-datepicker").css({"height": "31px", "padding-right": "0px"});
 });
+
+function mostrar(){
+	alert("hola: "+$("#fileInputText").files[0].size);
+	
+// 	$("#fileInputText").bind('change', function() {
+
+// 		  //this.files[0].size gets the size of your file.
+// 		  alert(this.files[0].size);
+
+// 		});
+}
+
+
 </script>
