@@ -37,10 +37,17 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Normatividades</h1>
 						<ul data-bind="foreach: contentViewModel.legislations">
-							<li><a data-bind="text: name() + ' - ' + publication_year()" target='blank'>hi</a></li>
+							<li><a
+								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl + file_path}"
+								target='blank'>hi</a></li>
 						</ul>
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Convocatorias</h1>
+						<ul data-bind="foreach: contentViewModel.convocatories">
+							<li><a
+								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl + file_path}"
+								target='blank'>hi</a></li>
+						</ul>
 						<!-- 						<ul data-bind="foreach: convocatories"> -->
 									<?php
 									// while ( $row = mysql_fetch_assoc ( $queryResultConvocatory ) ) {
@@ -67,7 +74,6 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 		convocatories: ko.observableArray(<?php echo  $jsonConverter->recordSetToJson($queryResultConvocatory); ?>),
 		lastUpdateDate: ko.observable(null),		
 		ogrrhhFTPUrl: ko.observable(<?php echo "'".Constants::ogrrhhFTPUrl."'"?>)
-		
 	}	
 
 $(function() {
