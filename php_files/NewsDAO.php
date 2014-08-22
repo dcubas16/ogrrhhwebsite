@@ -20,7 +20,7 @@ class NewsDAO {
 	
 	public function selectConvocatoryByDate($date) {
 	
-		$query = 	"SELECT c.*, ct.name
+		$query = 	"SELECT c.*, ct.name AS convocatory_type_name
 					FROM ogrrhhwebsitedb.convocatories c
 					INNER JOIN ogrrhhwebsitedb.convocatory_types ct on c.convocatory_type_id = ct.id
 					WHERE c.update_date = str_to_date('".$date."','%d/%m/%Y')

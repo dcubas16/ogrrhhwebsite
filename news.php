@@ -38,25 +38,17 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 							class="font-style-short-title-dark page-header ">Normatividades</h1>
 						<ul data-bind="foreach: contentViewModel.legislations">
 							<li><a
-								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl + file_path}"
+								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl() + file_path}"
 								target='blank'>hi</a></li>
 						</ul>
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Convocatorias</h1>
 						<ul data-bind="foreach: contentViewModel.convocatories">
 							<li><a
-								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl + file_path}"
+								data-bind="text: 'Convocatoria ' + convocatory_type_name  + ' N° ' + number+ ' - ' + title  + ' (Publicado el' + update_date + '  - Vigente hasta el ' + life_date + ')', attr:{href: $root.ogrrhhFTPUrl() + file_path}"
 								target='blank'>hi</a></li>
 						</ul>
-						<!-- 						<ul data-bind="foreach: convocatories"> -->
-									<?php
-									// while ( $row = mysql_fetch_assoc ( $queryResultConvocatory ) ) {
-									// print ("<li><a href='" . Constants::ogrrhhFTPUrlConvocatorias . $row ['file_path'] . "'
-									// target='blank'>Convocatoria " . $row ['convocatory_type_name'] . " N° " . $row ['number'] . " - " . $row ['title'] . "
-									// (Publicado el" . $row ['update_date'] . " - Vigente hasta el " . $row ['life_date'] . ")</a></li>") ;
-									// }
-									//									?>
-<!-- 								</ul> -->
+						<div data-bind="if: contentViewModel.convocatories()=='null'"><p>No existen convocatorias en esta fecha</p></div>
 					</div>
 					<!-- /ko -->
 				</div>
@@ -89,15 +81,51 @@ $(document).ready(function() {
     });
 
     var calendar = $("#calendar").data("kendoCalendar");
-
-	function onChange(){
-		alert("Hello"+kendo.toString(this.value(), 'd'));
-	}
-
 	var lastaUpdateDate = <?php echo "'". $date ."'";?>;
 	var from = lastaUpdateDate.split("/");
 	calendar.value(new Date(from[2],from[1]-1,from[0]));
 	
 });
+
+
+function onChange(){
+	getLegislationNews(kendo.toString(this.value(), 'd'));
+	getConvocatoriesNews(kendo.toString(this.value(), 'd'));
+}
+
+function getLegislationNews($selectedDate){
+	$.ajax({
+		  type: "POST",
+		  url: "get-legislation-news.php",
+		  data: {selectedDate:$selectedDate},
+		  async: false,
+		  success: function(data){
+			  $a = jQuery.parseJSON(data);
+// 			  return $a;
+			  contentViewModel.legislations($a);
+		  },
+		  error: function(){
+			  return null;
+		  }	
+		});	
+}
+
+function getConvocatoriesNews($selectedDate){
+	$.ajax({
+		  type: "POST",
+		  url: "get-convocatory-news.php",
+		  data: {selectedDate:$selectedDate},
+		  async: false,
+		  success: function(data){
+			  $a = jQuery.parseJSON(data);
+// 			  return $a;
+			  contentViewModel.convocatories($a);
+		  },
+		  error: function(){
+			  return null;
+		  }	  
+		});	
+}
+
 </script>
 </html>
