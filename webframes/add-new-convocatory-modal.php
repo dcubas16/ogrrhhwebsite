@@ -100,6 +100,15 @@ $('div[data-toggle="tooltip"]').tooltip({
 
 
 $(document).ready(function() {
+	$.fn.bootstrapValidator.validators.fileSize = {
+	        validate: function(validator, $field, options) {
+	        	if( $("#fileToUpload")[0].files[0] != undefined){
+	        		if( Math.round($("#fileToUpload")[0].files[0].size/1024).toFixed(0) > 5000 ){
+	        			return false;
+	        		}	
+	        	}
+	        }
+	};
     $('#addNewWorkCall').bootstrapValidator({
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -165,6 +174,9 @@ $(document).ready(function() {
                 validators: {
                 	notEmpty: {
                         message: 'Este campo es requerido'
+                    },
+                    fileSize:{
+                    	message: 'El archivo debe tener un tamaño menor a 5 Mb'
                     }
                 }
             }

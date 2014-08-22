@@ -70,21 +70,21 @@ $sub_page_id = 0;
 							<div class="form-group col-md-10">
 								<label for="exampleInputEmail1">Nombre</label> <input
 									type="text" class="form-control" id="name" name="name"
-									placeholder="Ingrese su nombre">
+									placeholder="Ingrese su nombre" data-bind="value:contentViewModel.name">
 							</div>
 							<div class="form-group col-md-10">
 								<label for="exampleInputEmail1">Dirección de email</label> <input
 									type="email" class="form-control" id="emailAddress"
-									name="emailAddress" placeholder="Ingrese su dirección de email">
+									name="emailAddress" placeholder="Ingrese su dirección de email" data-bind="value:contentViewModel.emailAddress">
 							</div>
 							<div class="form-group col-md-12">
 								<label for="exampleInputPassword1">Mensaje</label>
 								<textarea class="form-control" rows="3" id="message"
 									name="message" placeholder="Ingrese su mensaje"
-									style="height: 140;"></textarea>
+									style="height: 140;" data-bind="value:contentViewModel.message"></textarea>
 							</div>
 							<div class="form-group col-md-12" style="text-align: right;">
-								<button type="button" class="btn btn-danger">Limpiar</button>
+								<button type="button" class="btn btn-danger" data-bind="click:contentViewModel.cleanForm">Limpiar</button>
 								<button type="submit" class="btn btn-success">Enviar</button>
 							</div>
 						</form>
@@ -146,4 +146,20 @@ $sub_page_id = 0;
 		});
 </script>
 <?php include('./webframes/header-view-model.php');?>
+<script>
+var contentViewModel = {
+		name : ko.observable(null),
+		emailAddress : ko.observable(null),
+		message : ko.observable(null),
+		cleanForm : function(){
+			contentViewModel.name(null);
+			contentViewModel.emailAddress(null);
+			contentViewModel.message(null);
+		}
+};
+
+$(function() {
+	ko.applyBindings(contentViewModel, $("#sendMessage")[0]);
+});
+</script>
 </html>

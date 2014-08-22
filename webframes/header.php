@@ -23,10 +23,10 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 search-button">
-					<form action="search-results.php">
+					<form action="search-results.php" method="post">
 						<div class="input-group" data-toggle="tooltip"
 							title="La búsqueda se realiza en el contenido de Normatividad">
-							<input type="text" class="form-control input-sm"> <span
+							<input type="text" class="form-control input-sm" id="searchString" name="searchString" data-bind="value:headerViewModel.searchString"> <span
 								class="input-group-btn">
 								<button class="btn btn-danger btn-sm" type="submit">
 									<span class="glyphicon glyphicon-search"></span><strong> Buscar</strong>

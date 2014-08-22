@@ -46,7 +46,7 @@
 						<label class="col-md-3 control-label">Seleccione Archivo</label>
 						<div class="col-md-8">
 							<div class="input-group">
-								<input type="file" accept="application/pdf" id="fileToUpload" onchange="mostrar()"
+								<input type="file" accept="application/pdf" id="fileToUpload"
 									name="fileToUpload" hidden="true"
 									data-bind="visible:false, value: fileToUpload" /> <input
 									id="fileInputText" name="fileInputText" type="text"
@@ -86,6 +86,16 @@ $('div[data-toggle="tooltip"]').tooltip({
 });
 
 $(document).ready(function() {
+	$.fn.bootstrapValidator.validators.fileSize = {
+	        validate: function(validator, $field, options) {
+	        	if( $("#fileToUpload")[0].files[0] != undefined){
+	        		if( Math.round($("#fileToUpload")[0].files[0].size/1024).toFixed(0) > 5000 ){
+	        			return false;
+	        		}	
+	        	}
+	        }
+	};
+	
     $('#addNewLegislation').bootstrapValidator({
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -108,7 +118,7 @@ $(document).ready(function() {
                         message: 'Este campo es requerido'
                     },
                     stringLength: {
-                        max: 80,
+                        max: 500,
                         message: 'The director name must be less than 80 characters long'
                     }
                 }
@@ -132,6 +142,9 @@ $(document).ready(function() {
                 validators: {
                 	notEmpty: {
                         message: 'Este campo es requerido'
+                    },
+                    fileSize:{
+                    	message: 'El archivo debe tener un tamaño menor a 5 Mb'
                     }
                 }
             }
@@ -142,17 +155,5 @@ $(document).ready(function() {
 $(function(){
 	$("span.k-datepicker").css({"height": "31px", "padding-right": "0px"});
 });
-
-function mostrar(){
-	alert("hola: "+$("#fileInputText").files[0].size);
-	
-// 	$("#fileInputText").bind('change', function() {
-
-// 		  //this.files[0].size gets the size of your file.
-// 		  alert(this.files[0].size);
-
-// 		});
-}
-
 
 </script>

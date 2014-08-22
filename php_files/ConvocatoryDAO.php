@@ -46,5 +46,25 @@ class ConvocatoryDAO {
 		$connectionManager->closeConnection ();
 		return $result;
 	}
+	
+	public function selectByName($searchString) {
+	
+		$query = 	"SELECT c.*, ct.name
+					FROM ogrrhhwebsitedb.convocatories c
+					INNER JOIN ogrrhhwebsitedb.convocatory_types ct on c.convocatory_type_id = ct.id
+					WHERE c.title like '%".$searchString."%'
+					OR  ct.name like '%".$searchString."%'
+					ORDER BY c.update_date ASC;";
+		// 		echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
+	}
+	
+
+	function __destruct() {
+	
+	}
 }
 ?>

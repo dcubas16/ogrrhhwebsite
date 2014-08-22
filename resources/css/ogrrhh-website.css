@@ -280,6 +280,18 @@ p {
 	padding-bottom: 1px;
 }
 
+.font-style-short-title-dark {
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
+		Geneva, Verdana, sans-serif;
+	color: #A81212;
+	font-size: 25;
+	padding: 5;
+	font-weight: bold;
+	letter-spacing: 0.2px;
+	line-height: 36pX;
+	padding-left: 0px;
+}
+
 /****************************************************************** LEFT NAVBAR'S STYLES ********************************************/
 .vertical-navbar {
 	padding-top: 10px;
@@ -319,6 +331,6 @@ p {
 	padding-right: 0px;
 }
 
-.k-widget .k-datepicker .k-header .form-control{
+.k-widget .k-datepicker .k-header .form-control {
 	padding-right: 0px;
 }
