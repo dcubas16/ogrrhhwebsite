@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `ogrrhhwebsitedb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `ogrrhhwebsitedb`;
+CREATE DATABASE  IF NOT EXISTS `db_recursoshumanos` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `db_recursoshumanos`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
--- Host: localhost    Database: ogrrhhwebsitedb
+-- Host: localhost    Database: db_recursoshumanos
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -60,7 +60,7 @@ CREATE TABLE `convocatories` (
   `office_id` int(11) NOT NULL,
   `update_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -69,7 +69,7 @@ CREATE TABLE `convocatories` (
 
 LOCK TABLES `convocatories` WRITE;
 /*!40000 ALTER TABLE `convocatories` DISABLE KEYS */;
-INSERT INTO `convocatories` VALUES (1,1,1,1,'1','2014-08-17','convocatorias/cas/reporte (34).pdf',1,1,'2014-08-17'),(2,2,1,1,'1','2014-08-15','convocatorias/regimen_276/reporte (31).pdf',1,1,'2014-08-15');
+INSERT INTO `convocatories` VALUES (4,1,1,123456,'convocatoria CAS para contratar servicio tecnico','2014-08-18','convocatorias/cas/TUPA_UNMSM_2008.pdf',1,1,'2014-08-18'),(5,1,1,7,'Convocatoria CAS para personal de limpieza','2014-08-01','convocatorias/cas/Manual_Usuario_OGRRHH.pdf',1,1,'2014-08-18'),(6,1,1,7,'secretario de la oficina general de recursos humanos','2014-08-31','convocatorias/cas/Manual_Usuario_OGRRHH.pdf',1,1,'2014-08-18'),(7,1,1,123,'Convocatoria para servicio de limpieza','2014-08-08','convocatorias/cas/Embarque.pdf',1,1,'2014-08-19');
 /*!40000 ALTER TABLE `convocatories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -209,7 +209,7 @@ CREATE TABLE `legislations` (
   `office_id` int(11) NOT NULL,
   `update_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=46 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -218,7 +218,7 @@ CREATE TABLE `legislations` (
 
 LOCK TABLES `legislations` WRITE;
 /*!40000 ALTER TABLE `legislations` DISABLE KEYS */;
-INSERT INTO `legislations` VALUES (1,'hi','1982-11-01','hi',1,1,1,'1982-11-01'),(2,'asd','2014-08-08','Embarque.pdf',1,1,1,'2014-08-08'),(3,'asd','2014-08-07','Embarque.pdf',1,1,1,'2014-08-07'),(4,'asdfg','2014-08-15','fop_actions.pdf',1,1,1,'2014-08-07'),(5,'asdfg','2014-08-09','doc.pdf',1,1,1,'2014-08-08'),(6,'afs','2014-08-31','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08'),(7,'rrrr','2014-08-01','fop_actions.pdf',1,1,1,'2014-08-08'),(8,'eee','2014-08-17','doc.pdf',1,1,1,'2014-08-08'),(9,'qqq','2014-08-09','HojaDeRequerimientoServicios.pdf',1,1,1,'2014-08-08'),(10,'1','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(11,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(12,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(13,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(14,'2','2014-08-11','PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,1,1,'2014-08-12'),(15,'Decreto 1','2014-08-15','decretos/PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,2,1,'2014-08-12'),(16,'Reglamento','2014-08-11','reglamentos/PDT 601-INFORMACION INCONSISTENTE-INGRESOS Y EGRESOS TRABAJADOR-201407.pdf',1,3,1,'2014-08-12'),(17,'123','2014-08-14','leyes/Consulta RUC_ versión Imprimible.pdf',1,1,1,'2014-08-12'),(18,'2','2014-08-09','decretos/Embarque.pdf',1,2,1,'2014-08-12'),(19,'3','2014-08-15','leyes/fop_actions.pdf',1,1,1,'2014-08-12'),(20,'Ley Otra','2014-08-14','otros/seguimientoTramite_cuali.pdf',1,6,1,'2014-08-12'),(21,'Ley N° 123456 del servicio civil','2014-08-15','leyes/FAQs_by_the_EACEA.pdf',1,1,1,'2014-08-13'),(22,'Ley N° 444444 Compensacion FONAVI','2014-08-22','leyes/ATBPDF_2014-07-18_15.39.21.079.pdf',1,1,1,'2014-08-13');
+INSERT INTO `legislations` VALUES (24,'Constitucion politica del peru','1993-01-01','leyes/Constitucion_Politica_Peru_1993.pdf',1,1,1,'2014-08-18'),(28,'Ley Universitaria','2014-01-01','leyes/Ley_30220_Universitaria_2014 .pdf',1,1,1,'2014-08-18'),(29,'ley de transparencia','2014-08-01','leyes/Ley_27806_Transparencia_y_Acceso_Informacion_Publica.pdf',1,1,1,'2014-08-18'),(30,'Ley de Contrato CAS','2014-08-01','leyes/Ley_29849_CAS.pdf',1,1,1,'2014-08-18'),(31,'Ley Universitaria 1993','2014-08-07','leyes/Ley_23733_Ley_Universitaria_2010.pdf',1,1,1,'2014-08-18'),(32,'Ley de servicio civil','2013-01-01','leyes/Ley 30057_Servicio_Civil.pdf',1,1,1,'2014-08-18'),(33,'decreto legislativo 276 ley de cases de la carrera administrativa','1984-03-24','decretos/DL_276_1984.pdf',1,2,1,'2014-08-18'),(34,'decreto legislativo 1057 que regula el regimen especial de CAS','2008-06-28','decretos/DL_1057.pdf',1,2,1,'2014-08-18'),(35,'decreto supremo de ley de nepotismo','2000-01-01','decretos/DS_005_90_PCM_2013.pdf',1,2,1,'2014-08-18'),(36,'decreto supremo 065 modificacion de cas','2011-01-01','decretos/DS_065_2011_PCM.pdf',1,2,1,'2014-08-18'),(37,'decreto supremo 075-2008 que regula el regimen especial de cas','2008-01-01','decretos/DS_075_2008_PCM.pdf',1,2,1,'2014-08-18'),(38,'003-dga-2008 aplicacion del regimen especial de cas','2009-01-07','directivas/R. R. 0007-R-09, Directiva CAS DGA.pdf',1,4,1,'2014-08-18'),(39,'001-ogrrhh-2009 aspectos procedimentales en la aplicacion del cas','2009-04-28','directivas/R. R. 01823-R-09.pdf',1,4,1,'2014-08-18'),(40,'clasificador de cargos','2011-01-14','otros/Clasificador_de_Cargos_UNMSM.pdf',1,6,1,'2014-08-18'),(41,'manual de usuario de la OGRRHH','2014-01-01','otros/Manual_Usuario_OGRRHH.pdf',1,6,1,'2014-08-18'),(42,'modificacion del estatuto universitario','2004-01-01','otros/modificacion_art_estatuto_rr_3028-r-04.pdf',1,6,1,'2014-08-18'),(43,'rof unmsm','2011-03-21','otros/ROF_UNMSM_2011.pdf',1,6,1,'2014-08-18'),(44,'tupa unmsm','2008-01-01','otros/TUPA_UNMSM_2008.pdf',1,6,1,'2014-08-18'),(45,'Ley 123456 - ley Universitaria','2014-08-01','leyes/Ley 30057.pdf',1,1,1,'2014-08-20');
 /*!40000 ALTER TABLE `legislations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -284,8 +284,10 @@ DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `office_id` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -294,6 +296,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin','admin',1);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -362,4 +365,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-12 21:11:18
+-- Dump completed on 2014-08-25 10:28:06

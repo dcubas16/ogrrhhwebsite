@@ -16,7 +16,7 @@ class UserDAO {
 
 	public function findUserLogin() {
 		$query = 	"SELECT name, password
-					FROM ogrrhhwebsitedb.users
+					FROM users
 					WHERE upper(trim(name)) = upper(trim('" . $this->name . "'))
 					AND upper(trim(password)) = upper(trim('" . $this->password . "'));";
 		// echo $query;

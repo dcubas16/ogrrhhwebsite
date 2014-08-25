@@ -22,6 +22,10 @@ var headerViewModel = {
 
 $(function() {
 	ko.applyBindings(headerViewModel, $("body")[0]);
-	$(".left-navbar").height($("#content-div").height());
+// 	$(".left-navbar").height($("#content-div").height());
+	$(".left-navbar").css("min-height",$("#content-div").height());
+	if($(".left-navbar").height() > $("#content-div").height()){
+		$("#content-div").css("height",$(".left-navbar").height());
+	}
 });
 </script>

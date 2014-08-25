@@ -1,6 +1,4 @@
 <head>
-	<meta http-equiv="content-Type" content="text/html; charset=iso-8859-1" /> 
-	<meta http-equiv="content-type" content="Mime-Type; charset=iso-8859-1" />  
 	<title>Oficina General de Recursos Humanos</title>
 	
 	<link href="resources/bootstrap-3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -12,7 +10,6 @@
 	<link href="resources/telerik.kendoui.2014.1.416.core/styles/kendo.silver.min.css" rel="stylesheet" />
 	<link href="resources/bootstrapvalidator-dist-0.4.5/dist/css/bootstrapValidator.min.css" rel="stylesheet">
 	
-	
 	<script	src="resources/js/jquery-1.11.0/jquery-1.11.0.min.js"></script>
 	<script src="resources/bootstrap-3.1.1/js/bootstrap.min.js"></script>
 	<script src="resources/bootstrapformhelpers/js/bootstrap-formhelpers.js"></script>
@@ -21,7 +18,7 @@
 	<script src="resources/telerik.kendoui.2014.1.416.core/js/kendo.all.min.js"></script>
 	<script src="resources/telerik.kendoui.2014.1.416.core/js/cultures/kendo.culture.es-PE.min.js"></script>
 	<script src="resources/bootstrapvalidator-dist-0.4.5/dist/js/bootstrapValidator.min.js"></script>
-
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
 </head>
 
 <div style="position: absolute; top: 300px; left: 0%; z-index: 10000">

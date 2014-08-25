@@ -18,21 +18,26 @@
 				<div class="row" style="height: 30;"></div>
 				<div class="row">
 					<div class="col-md-11">
-						<div class="row">
-							<div class="col-md-12 news-image-container-style">
-								<a href="#"> <img class="news-image-style"
-									src="resources/images/recursos-humanos_1_210_110.jpg">
-								</a>
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-10 news-date">5 de Junio del 2014</div>
-							<div class="col-md-2"></div>
-						</div>
-						<div class="row">
-							<div class="col-md-12 news-subtitle">Aqui va el subtitulo del
-								contenido de la noticia</div>
-						</div>
+					
+					<?php
+					while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
+						print ("<div class='row'>
+									<div class='col-md-12 news-image-container-style'>
+										<a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='blank'> <img class='news-image-style'
+											src='resources/images/recursos-humanos_1_210_110.jpg'>
+										</a>
+									</div>
+								</div>
+								<div class='row'>
+									<div class='col-md-10 news-date'>" . $row ['updated_date'] . "</div>
+									<div class='col-md-2'></div>
+								</div>
+								<div class='row'>
+									<div class='col-md-12 news-subtitle'>" . $row ['title'] . "</div>
+								</div><br>") ;
+					}
+					?>
+						
 					</div>
 					<div class="col-md-1"></div>
 				</div>
@@ -51,7 +56,8 @@
 		role="complementary">
 		<div data-bind="visible: headerViewModel.pageId() == 7">
 			<div class="row">
-				<div class="col-md-12" style="height: 30px; padding-top: 17px; text-align: center;">
+				<div class="col-md-12"
+					style="height: 30px; padding-top: 17px; text-align: center;">
 					<div id="calendar"></div>
 				</div>
 			</div>
@@ -131,6 +137,7 @@
 					CAS</a></li>
 		</ul>
 		<a class="back-to-top" href="#top"
-			data-bind="visible: headerViewModel.pageId() != 1 && headerViewModel.pageId() != 7 ">Retornar al inicio</a>
+			data-bind="visible: headerViewModel.pageId() != 1 && headerViewModel.pageId() != 7 ">Retornar
+			al inicio</a>
 	</div>
 </div>

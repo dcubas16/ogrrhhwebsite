@@ -11,14 +11,14 @@ $queryResult = $userDAO->findUserLogin();
 
 // echo $queryResult;
 if($queryResult != 0){
-	echo "true";
+// 	echo "true";
 // 	session_name("userLogin");
 	session_start();
 	$_SESSION['userName'] = $userName;
 	$_SESSION['password'] = $password;
 }else{
-	echo "false";
+// 	echo "false";
 }
 
-header('Location: index.php');
+header('Location: /index.php');
 ?>

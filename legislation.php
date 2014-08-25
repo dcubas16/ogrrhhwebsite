@@ -5,7 +5,7 @@
 $page_id = 4;
 $sub_page_id = 0;
 ?>
-<html lang="es_PE">
+<html>
 <?php include('webframes/resources.php');?>
 <body class="body-style">
 	<div class="container-fluid">

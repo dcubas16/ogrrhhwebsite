@@ -1,10 +1,16 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+include 'php_files/NewsDAO.php';
+include 'php_files/Constants.php';
+
+$newsDAO = new NewsDAO ();
+
+$queryResultNews = $newsDAO->getLastThreeNews();
 
 $page_id = 1;
 $sub_page_id = 0;
 ?>
-<html lang="es_PE">
+<html lang="es">
 <?php include('./webframes/resources.php');?>
 <body class="body-style">
 	<div class="container-fluid">
@@ -13,7 +19,7 @@ $sub_page_id = 0;
 			<div class="col-md-8">
 			<?php include('./webframes/header.php');?>
 			<!-- ko stopBinding: true -->
-				<div id="webPageContent" class="row">
+				<div class="row">
 					<div class="col-md-12"
 						style="padding-right: 0px; padding-left: 0px;">
 						<div id="carousel-example-generic" class="carousel slide"
@@ -75,11 +81,11 @@ $sub_page_id = 0;
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
 						<p>El Jefe de la Oficina General de Recursos Humanos (OGRRHH) de
-							la Universidad Nacional Mayor de San Marcos (UNMSM), el Doctor
-							Hector Elvis Martinez Flores le da la bienvenida al sitio web
-							oficial de la OGRRHH.</p>
-						<p>En nuestro sitio web Usted podrá encontrar diversa información
-							sobre la OGRRHH y la UNMSM, dentro de cuales puede encontrar el
+							la Universidad Nacional Mayor de San Marcos (UNMSM), <strong>Doctor
+							Hector Elvis Martínez Flores</strong> le da la bienvenida al sitio web
+							oficial de la Oficina General de Recursos Humanos de la Universidad Nacional Mayor de San Marcos.</p>
+						<p>En nuestro sitio web, Usted podrá encontrar información
+							sobre la OGRRHH y la UNMSM, dentro de cuales esta el
 							directorio, MOF, ROF; así mismo, se tiene información específica
 							de cada Oficina dependiente de la OGRRHH, las normas y directivas
 							concernientes a la OGRRHH, y las convocatorias de trabajo que

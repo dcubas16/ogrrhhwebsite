@@ -84,28 +84,25 @@
 </div>
 <?php include("choose-file.php");?>
 <script>
-$(document).ready(function() {
-    kendo.culture("es");
-    var datepicker = $("#life_date").kendoDatePicker({
-    	format: kendo.culture().calendar.patterns.d,
-
-    	culture: "es",
-    });
-});
-
-$('div[data-toggle="tooltip"]').tooltip({
-    animated: 'fade',
-    placement: 'top',
-});
-
 
 $(document).ready(function() {
+	 kendo.culture("es-PE");
+	    var datepicker = $("#life_date").kendoDatePicker({
+	    	format: kendo.culture().calendar.patterns.d,
+	    	culture: "es-PE",
+	    });
+	    $('div[data-toggle="tooltip"]').tooltip({
+	        animated: 'fade',
+	        placement: 'top',
+	    });
+		
 	$.fn.bootstrapValidator.validators.fileSize = {
 	        validate: function(validator, $field, options) {
 	        	if( $("#fileToUpload")[0].files[0] != undefined){
 	        		if( Math.round($("#fileToUpload")[0].files[0].size/1024).toFixed(0) > 5000 ){
 	        			return false;
-	        		}	
+	        		}
+	        		return true;	
 	        	}
 	        }
 	};

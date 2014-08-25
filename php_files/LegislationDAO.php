@@ -39,7 +39,7 @@ class LegislationDAO {
 	public function selectByLegislationType($legislationTypeId) {
 	
 		$query = 	"SELECT l.*, YEAR(l.publication_date) AS publication_year FROM
-					ogrrhhwebsitedb.legislations l
+					legislations l
 					WHERE legislation_type_id = " . $legislationTypeId . " ORDER BY l.publication_date DESC;";
 		// 		echo $query;
 		$connectionManager = new ConnectionManager ();
@@ -50,8 +50,8 @@ class LegislationDAO {
 
 	public function selectByName($searchString) {
 	
-		$query = 	"SELECT l.*, lt.name, YEAR(l.publication_date) AS publication_year FROM ogrrhhwebsitedb.legislations l
-					INNER JOIN ogrrhhwebsitedb.legislation_types lt on l.legislation_type_id = lt.id
+		$query = 	"SELECT l.*, lt.name, YEAR(l.publication_date) AS publication_year FROM legislations l
+					INNER JOIN legislation_types lt on l.legislation_type_id = lt.id
 					WHERE l.name like '%" . $searchString . "%'
 					OR lt.name like  '%" . $searchString . "%';";
 		// 		echo $query;
@@ -64,8 +64,8 @@ class LegislationDAO {
 	public function selectByNameConvocatory($searchString) {
 	
 		$query = 	"SELECT c.*, ct.name AS convocatory_type_name
-					FROM ogrrhhwebsitedb.convocatories c
-					INNER JOIN ogrrhhwebsitedb.convocatory_types ct on c.convocatory_type_id = ct.id
+					FROM convocatories c
+					INNER JOIN convocatory_types ct on c.convocatory_type_id = ct.id
 					WHERE trim(ucase(c.title)) like '%" . $searchString . "%'
 					OR  trim(ucase(ct.name)) like '%" . $searchString . "%'
 					ORDER BY c.update_date ASC;";

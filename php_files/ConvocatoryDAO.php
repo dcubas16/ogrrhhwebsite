@@ -37,8 +37,8 @@ class ConvocatoryDAO {
 		$query = 	"SELECT c.id, c.number, c.title, date_format(c.life_date,'%d/%m/%Y') as life_date
 					, c.file_path, date_format(c.update_date,'%d/%m/%Y') as update_date
 					, ct.name as convocatory_type_name, ct.id as convocatory_type_id
-					FROM ogrrhhwebsitedb.convocatories c
-					INNER JOIN ogrrhhwebsitedb.convocatory_types ct on c.convocatory_type_id = ct.id 
+					FROM convocatories c
+					INNER JOIN convocatory_types ct on c.convocatory_type_id = ct.id 
 					ORDER BY c.life_date DESC";
 		// echo $query;
 		$connectionManager = new ConnectionManager ();
@@ -50,8 +50,8 @@ class ConvocatoryDAO {
 	public function selectByName($searchString) {
 	
 		$query = 	"SELECT c.*, ct.name
-					FROM ogrrhhwebsitedb.convocatories c
-					INNER JOIN ogrrhhwebsitedb.convocatory_types ct on c.convocatory_type_id = ct.id
+					FROM convocatories c
+					INNER JOIN convocatory_types ct on c.convocatory_type_id = ct.id
 					WHERE c.title like '%".$searchString."%'
 					OR  ct.name like '%".$searchString."%'
 					ORDER BY c.update_date ASC;";
