@@ -303,6 +303,10 @@ p {
 	background-size: contain;
 }
 
+#calendar{
+	width: 100%;
+}
+
 /****************************************************************** FOOTER'S STYLES ********************************************/
 .footer-style {
 	margin-bottom: 0px;

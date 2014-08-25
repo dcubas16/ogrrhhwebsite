@@ -1,3 +1,6 @@
+<?php
+header ( 'Content-Type: text/html; charset=iso-8859-1' );
+?>
 <?php include('webframes/verify-login.php');?>
 <?php
 
@@ -20,7 +23,7 @@ while ( $row = mysql_fetch_assoc ( $queryResultLastUpdateDate ) ) {
 $queryResultLegislation = $newsDAO->selectLegislationByDate ( $date );
 $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 ?>
-<html lang="es_PE">
+<html lang="es-PE">
 <?php include('webframes/resources.php');?>
 <body class="body-style">
 	<div class="container-fluid">
@@ -34,13 +37,20 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 					<div id="contentPage" class="col-md-9 text-content-style">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Novedades</h1>
+						<p>En esta sección se muestran todas las novedades de la Oficina
+							General de Recursos Humanos, según fecha de publicación.</p>
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Normatividades</h1>
+
 						<ul data-bind="foreach: contentViewModel.legislations">
 							<li><a
 								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl() + file_path}"
 								target='blank'>hi</a></li>
 						</ul>
+						<div
+							data-bind="if: contentViewModel.legislations()==null || contentViewModel.legislations().length == 0">
+							<p>No se registraron normatividades en esta fecha</p>
+						</div>
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Convocatorias</h1>
 						<ul data-bind="foreach: contentViewModel.convocatories">
@@ -48,7 +58,10 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 								data-bind="text: 'Convocatoria ' + convocatory_type_name  + ' N° ' + number+ ' - ' + title  + ' (Publicado el' + update_date + '  - Vigente hasta el ' + life_date + ')', attr:{href: $root.ogrrhhFTPUrl() + file_path}"
 								target='blank'>hi</a></li>
 						</ul>
-						<div data-bind="if: contentViewModel.convocatories()=='null'"><p>No existen convocatorias en esta fecha</p></div>
+						<div
+							data-bind="if: contentViewModel.convocatories()==null  || contentViewModel.convocatories().length == 0">
+							<p>No se registraron convocatorias en esta fecha</p>
+						</div>
 					</div>
 					<!-- /ko -->
 				</div>
@@ -74,9 +87,9 @@ $(function() {
 
 $(document).ready(function() {
 
-	kendo.culture("es");
+	kendo.culture("es-PE");
     $("#calendar").kendoCalendar({
-    	culture: "es",
+    	culture: "es-PE",
     	change: onChange,
     });
 

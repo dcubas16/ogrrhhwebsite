@@ -47,6 +47,22 @@ class NewsDAO {
 		return $result;
 	}
 	
+	public function getLastThreeNews() {
+	
+		$query = 	"SELECT * FROM (
+					SELECT name as title, update_date, file_path FROM ogrrhhwebsitedb.legislations
+					union
+					SELECT title, update_date, file_path FROM ogrrhhwebsitedb.convocatories
+					) T1 
+					order by t1.update_date desc
+					limit 3";
+		// 		echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
+	}
+	
 	function __destruct() {
 		
 	}

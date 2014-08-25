@@ -47,10 +47,13 @@
 			<div class="col-md-1"></div>
 		</div>
 	</div>
-	<div data-bind="visible: headerViewModel.pageId() == 7">
-		<div class="row">
-			<div class="col-md-12"  style="height: 30px; padding-top: 17px;">
-				<div id="calendar"></div>
+	<div class="hidden-print affix-top vertical-navbar"
+		role="complementary">
+		<div data-bind="visible: headerViewModel.pageId() == 7">
+			<div class="row">
+				<div class="col-md-12" style="height: 30px; padding-top: 17px; text-align: center;">
+					<div id="calendar"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -128,6 +131,6 @@
 					CAS</a></li>
 		</ul>
 		<a class="back-to-top" href="#top"
-			data-bind="visible: headerViewModel.pageId() != 1">Retornar al inicio</a>
+			data-bind="visible: headerViewModel.pageId() != 1 && headerViewModel.pageId() != 7 ">Retornar al inicio</a>
 	</div>
 </div>
