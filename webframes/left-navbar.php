@@ -36,10 +36,10 @@
 					if (isset ( $queryResultNews )) {
 						while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
 // 							echo $row ['updated_date'];
-							$date = explode('/',$row ['updated_date']);
-							$fecha = new DateTime($row ['updated_date']);
+// 							$date = explode('/',$row ['updated_date']);
+// 							$fecha = new DateTime($row ['updated_date']);
 // 							echo $date[0]."-".$date[1]."-".$date[2];
-							echo $dias[$fecha('w')];
+// 							echo $dias[$fecha('w')];
 								
 							print ("<div class='row'>
 									<div class='col-md-12 news-image-container-style'>
