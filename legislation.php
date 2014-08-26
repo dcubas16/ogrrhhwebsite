@@ -16,8 +16,7 @@ $sub_page_id = 0;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				
-					<div id="contentSection" class="col-md-9 text-content-style"
-						>
+					<div id="contentSection" class="col-md-9 text-content-style">
 						<!-- 						<div class="alert alert-success fade in" role="alert"> -->
 						<!-- 							<button type="button" class="close" data-dismiss="alert"> -->
 						<!-- 								<span aria-hidden="true">×</span><span class="sr-only">Close</span> -->
@@ -47,10 +46,9 @@ $sub_page_id = 0;
 							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
 							Normatividad
 						</button>
-						
+
 					</div>
 					<?php include('webframes/add-new-legislation-modal.php');?>
-					
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
@@ -61,21 +59,35 @@ $sub_page_id = 0;
 </body>
 
 <script>
-	
+
+	ko.bindingHandlers.fireChange = {
+	    update: function (element, valueAccessor, allBindingsAccessor){
+	        var bindings = allBindingsAccessor();
+	        if (bindings.value != null) {
+	            $(element).change();
+	        }
+	    }
+	};
+
 	var headerViewModel = {
 			userId : ko.observable(null),
 			userName : ko.observable(<?php echo "'".$userName."'";?>),
 			password : ko.observable(null),
 			logedUser : ko.observable(<?php echo $userName!=null; ?>),//Determina si un usuario esta logeado o no
 			loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-			fileToUpload : 	ko.observable(null),
 			pageId : ko.observable(<?php echo $page_id;?>),
-			subPageId : ko.observable(<?php echo $sub_page_id;?>)
+			subPageId : ko.observable(<?php echo $sub_page_id;?>),
+
+			legislationTypeId : ko.observable(null),
+			legislationTitle : ko.observable(null),
+			legislationPublicationDate : ko.observable(null),
+			fileToUpload : 	ko.observable(null)
 	};
 
 	$(function() {
 		ko.applyBindings(headerViewModel, $("body")[0]);
 		$(".left-navbar").height($("#content-div").height());
 	});
+	
 </script>
 </html>

@@ -15,7 +15,7 @@
 						<label class="col-md-3 control-label">Tipo</label>
 						<div class="col-md-9 selectContainer">
 							<select name="convocatory_type_id" id="convocatory_type_id"
-								class="form-control">
+								class="form-control" data-bind="value:convocatoryTypeId">
 								<option value="">Seleccione</option>
 								<option value="1">CAS</option>
 								<option value="2">Régimen 276</option>
@@ -26,7 +26,7 @@
 						<label class="col-md-3 control-label">Dependencia</label>
 						<div class="col-md-9 selectContainer">
 							<select name="dependency_id" id="dependency_id"
-								class="form-control">
+								class="form-control" data-bind="value : dependencyId">
 								<option value="">Seleccione</option>
 								<option value="1">Adm. Central</option>
 								<option value="2">Facultades</option>
@@ -37,13 +37,14 @@
 						<label class="col-md-3 control-label">Número</label>
 						<div class="col-md-4">
 							<input type="number" name="number" id="number"
-								class="form-control" />
+								class="form-control" data-bind="value : convocatoryNumber" />
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Título</label>
 						<div class="col-md-9">
-							<textarea id="title" name="title" class="form-control" rows="9"></textarea>
+							<textarea id="title" name="title" class="form-control" rows="9"
+								data-bind="value : convocatoryTitle"></textarea>
 						</div>
 					</div>
 					<div class="form-group" data-toggle="tooltip"
@@ -51,7 +52,7 @@
 						<label class="col-md-3 control-label">Vigencia Convocatoria</label>
 						<div class="col-md-5">
 							<input type="text" name="life_date" id="life_date"
-								class="form-control" data-bind="editableText: false" />
+								class="form-control" data-bind="editableText: false, value : convocatoryLifeTime" />
 						</div>
 					</div>
 					<div class="form-group" data-toggle="tooltip"
@@ -64,7 +65,7 @@
 									data-bind="visible:false, value:fileToUpload" /> <input
 									id="fileInputText" name="fileInputText" type="text"
 									class="form-control" placeholder="Archivo"
-									data-bind="value:fileToUpload" readonly /> <span
+									data-bind="value:fileToUpload(), fireChange: true" readonly /> <span
 									class="input-group-btn">
 									<button id="chooseFile" class="btn btn-default" type="button">
 										<i class="glyphicon glyphicon-file"></i> Seleccione
@@ -90,7 +91,9 @@ $(document).ready(function() {
 	    var datepicker = $("#life_date").kendoDatePicker({
 	    	format: kendo.culture().calendar.patterns.d,
 	    	culture: "es-PE",
+	    	change: onChange
 	    });
+	    
 	    $('div[data-toggle="tooltip"]').tooltip({
 	        animated: 'fade',
 	        placement: 'top',
@@ -106,6 +109,7 @@ $(document).ready(function() {
 	        	}
 	        }
 	};
+	
     $('#addNewWorkCall').bootstrapValidator({
         feedbackIcons: {
             valid: 'glyphicon glyphicon-ok',
@@ -185,5 +189,26 @@ $(function(){
 	$("span.k-datepicker").css({"height": "31px", "padding-right": "0px"});
 });
 
+$('#add-new-convocatory-modal').on('hidden.bs.modal', function (e) {
+	headerViewModel.convocatoryTypeId(null);
+	headerViewModel.dependencyId(null);
+	headerViewModel.convocatoryNumber(null);
+	headerViewModel.convocatoryTitle(null);
+	headerViewModel.convocatoryLifeTime(null);
+	headerViewModel.fileToUpload(null);
+	$("#addNewWorkCall").data('bootstrapValidator').resetForm();
+})
+
+function onChange(){
+	$("#addNewWorkCall").data('bootstrapValidator')
+    .updateStatus("life_date", 'NOT_VALIDATED')
+    .validateField("life_date");
+}
+
+$('#fileInputText').on('change', function(){
+	$("#addNewWorkCall").data('bootstrapValidator')
+    .updateStatus("fileInputText", 'NOT_VALIDATED')
+    .validateField("fileInputText");
+});
 
 </script>

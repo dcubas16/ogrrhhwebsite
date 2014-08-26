@@ -50,9 +50,9 @@ class NewsDAO {
 	public function getLastThreeNews() {
 	
 		$query = 	"SELECT * FROM (
-					SELECT name as title, DATE_FORMAT(update_date,'%d/%m/%Y') AS updated_date, file_path FROM legislations
+					SELECT name as title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path FROM legislations
 					union
-					SELECT title, DATE_FORMAT(update_date,'%d/%m/%Y') AS updated_date, file_path FROM convocatories
+					SELECT title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path FROM convocatories
 					) T1 
 					order by T1.updated_date desc
 					limit 3;";

@@ -74,10 +74,10 @@ $sub_page_id = 0;
 					</div>
 				</div>
 				<!-- /ko -->
-				<div class="row" id="content-div">
+				<div class="row">
 					<?php include('webframes/left-navbar.php');?>
 					<!-- ko stopBinding: true -->
-					<div class="col-md-9 text-content-style" style="height: 400px">
+					<div id="content-div" class="col-md-9 text-content-style" style="min-height: 796px">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
 						<p>El Jefe de la Oficina General de Recursos Humanos (OGRRHH) de

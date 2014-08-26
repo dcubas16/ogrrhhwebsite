@@ -8,14 +8,14 @@ $emailMessage = $_POST["message"];
 
 
 $transport = Swift_SmtpTransport::newInstance('smtp.gmail.com', 465, "ssl")
-->setUsername('dcubas16@gmail.com')
-->setPassword('Incubas61');
+->setUsername('recursoshumanos@unmsm.edu.pe')
+->setPassword('ogrrhh_unmsm');
 
 $mailer = Swift_Mailer::newInstance($transport);
 
 $message = Swift_Message::newInstance($emailName . " : Mensaje de la OGRRHH")
-->setFrom(array('diego.nunez@unmsm.edu.pe' => '43953815'))
-->setTo(array($emailAddress))
+->setFrom(array($emailAddress => $emailName))
+->setTo(array('recursoshumanos@unmsm.edu.pe'))
 ->setBody($emailMessage);
 
 $result = $mailer->send($message);
@@ -58,30 +58,6 @@ $sub_page_id = 0;
 			<div class="col-md-2"></div>
 		</div>
 	</div>
-	<?php include('webframes/add-new-legislation-modal.php');?>
 </body>
-
-<script>
-	var viewModel = {
-			userId : ko.observable(null),
-			userName : ko.observable(null),
-			password : ko.observable(null),
-			logedUser : ko.observable(false),//Determina si un usuario esta logeado o no
-			loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-			users: ko.observableArray([{userId: 1, userName:"admin", password:"admin"}]),
-			loginUser : function(){
-//	 			login(viewModel.userName(), viewModel.password());
-			},
-			sendEmailMessage: function(){
-			},	
-		fileToUpload : 	ko.observable(""),
-		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
-	};
-						
-	$(function() {
-		ko.applyBindings(viewModel, $('body')[0]);
-		$(".left-navbar").height($("#content-div").height());
-	});
-</script>
+<?php include('./webframes/header-view-model.php');?>
 </html>

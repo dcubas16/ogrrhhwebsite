@@ -1,4 +1,10 @@
 <script>
+ko.bindingHandlers.afterHtmlRender = {
+	    update: function(el, va, ab){
+	        ab().html && va()(ab().html());
+	    }
+	}
+
 
 ko.bindingHandlers.stopBinding = {
 	    init: function() {
@@ -22,10 +28,10 @@ var headerViewModel = {
 
 $(function() {
 	ko.applyBindings(headerViewModel, $("body")[0]);
-// 	$(".left-navbar").height($("#content-div").height());
-	$(".left-navbar").css("min-height",$("#content-div").height());
-	if($(".left-navbar").height() > $("#content-div").height()){
-		$("#content-div").css("height",$(".left-navbar").height());
-	}
+});
+$(function() {
+ 	if($(".left-navbar").height() < ($("#content-div").height() - 15 )){
+ 		$(".left-navbar").height($("#content-div").height());
+ 	}
 });
 </script>

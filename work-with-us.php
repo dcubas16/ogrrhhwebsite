@@ -39,15 +39,32 @@ $sub_page_id = 0;
 	</div>
 </body>
 <script>
+
+ko.bindingHandlers.fireChange = {
+	    update: function (element, valueAccessor, allBindingsAccessor){
+	        var bindings = allBindingsAccessor();
+	        if (bindings.value != null) {
+	            $(element).change();
+	        }
+	    }
+	};
+	
 var headerViewModel = {
 		userId : ko.observable(null),
 		userName : ko.observable(<?php echo "'".$userName."'";?>),
 		password : ko.observable(null),
 		logedUser : ko.observable(<?php echo $userName!=null; ?>),//Determina si un usuario esta logeado o no
 		loginError : ko.observable(false),//Determina si no se logeo bien el usuario
-		fileToUpload : 	ko.observable(null),
 		pageId : ko.observable(<?php echo $page_id;?>),
-		subPageId : ko.observable(<?php echo $sub_page_id;?>)
+		subPageId : ko.observable(<?php echo $sub_page_id;?>),
+
+		convocatoryTypeId : ko.observable(null),
+		dependencyId : ko.observable(null),
+		convocatoryNumber : ko.observable(null),
+		convocatoryTitle : ko.observable(null),
+		convocatoryLifeTime : ko.observable(null),
+		fileToUpload : 	ko.observable(null)
+		
 };
 
 $(function() {
