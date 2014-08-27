@@ -199,9 +199,12 @@
 	padding-left: 0px;
 	color: white;
 	background-color: #C23838;
-	text-align: center;
 	height: 25;
 	padding-top: 3px;
+	font-size: 12px;
+	padding-right: 0px;
+    padding-left: 5px;
+	
 }
 
 .news-subtitle {
@@ -290,6 +293,10 @@ p {
 	letter-spacing: 0.2px;
 	line-height: 36pX;
 	padding-left: 0px;
+}
+
+.upper-case-link{
+	text-transform: uppercase;
 }
 
 /****************************************************************** LEFT NAVBAR'S STYLES ********************************************/

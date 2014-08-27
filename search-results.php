@@ -43,7 +43,7 @@ $queryResultConvocatory = $legislationDAO->selectByNameConvocatory ( $searchStri
 								<ul>
 									<?php
 									while ( $row = mysql_fetch_assoc ( $queryResultLegislation ) ) {
-										print ("<li><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
+										print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
 		 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
 									}
 									?>
@@ -53,7 +53,7 @@ $queryResultConvocatory = $legislationDAO->selectByNameConvocatory ( $searchStri
 								<ul>
 									<?php
 									while ( $row = mysql_fetch_assoc ( $queryResultConvocatory ) ) {
-										print ("<li><a href='" . Constants::ogrrhhFTPUrlConvocatorias . $row ['file_path'] . "' 
+										print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrlConvocatorias . $row ['file_path'] . "' 
 		 								target='blank'>Convocatoria " . $row ['convocatory_type_name'] . " N° " . $row ['number'] . " - " . $row ['title'] . "
 		 									(Publicado el" . $row ['update_date'] . " - Vigente hasta el " . $row ['life_date'] . ")</a></li>") ;
 									}

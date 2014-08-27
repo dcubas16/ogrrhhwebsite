@@ -28,7 +28,7 @@ $queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
-								print ("<li><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
+								print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
  								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
 							}
 							?>

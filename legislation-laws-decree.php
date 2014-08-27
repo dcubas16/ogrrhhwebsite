@@ -29,7 +29,7 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResultLaws ) ) {
-								print ("<li><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
+								print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
  								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
 							}
 							?>
@@ -39,7 +39,7 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<ul>
 						<?php
 						while ( $row = mysql_fetch_assoc ( $queryResultDecree ) ) {
-							print ("<li><a href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
+							print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
  								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
 						}
 						?>

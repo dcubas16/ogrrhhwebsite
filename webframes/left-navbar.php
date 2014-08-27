@@ -1,6 +1,5 @@
 <div class="left-navbar col-md-3 left-navbar-background-style">
-	<div data-bind="visible: headerViewModel.pageId() == 0">
-	</div>
+	<div data-bind="visible: headerViewModel.pageId() == 0"></div>
 	<div data-bind="visible: headerViewModel.pageId() == 1">
 		<div class="row">
 			<div class="col-md-11">
@@ -21,26 +20,43 @@
 				<div class="row">
 					<div class="col-md-11">
 					<?php
-					 
-						$dias = array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sábado");
-						$meses = array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
-						 
-// 						echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
-						//Salida: Viernes 24 de Febrero del 2012
-// 						echo DateTime::createFromFormat('dd/MM/yyyy', '16/11/1986')->format('dd/MM/yyyy');
+					$dias = array (
+							"Domingo",
+							"Lunes",
+							"Martes",
+							"Miercoles",
+							"Jueves",
+							"Viernes",
+							"Sábado" 
+					);
+					$meses = array (
+							"Enero",
+							"Febrero",
+							"Marzo",
+							"Abril",
+							"Mayo",
+							"Junio",
+							"Julio",
+							"Agosto",
+							"Septiembre",
+							"Octubre",
+							"Noviembre",
+							"Diciembre" 
+					);
+					
+					// echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
+					// Salida: Viernes 24 de Febrero del 2012
+					// echo DateTime::createFromFormat('dd/MM/yyyy', '16/11/1986')->format('dd/MM/yyyy');
 					?>
 					
 					<?php
-// 					setlocale(LC_ALL,"es_ES");
-// 					echo strftime("%A %d de %B del %Y");
+					// setlocale(LC_ALL,"es_ES");
+					// echo strftime("%A %d de %B del %Y");
 					if (isset ( $queryResultNews )) {
 						while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
-// 							echo $row ['updated_date'];
-// 							$date = explode('/',$row ['updated_date']);
-// 							$fecha = new DateTime($row ['updated_date']);
-// 							echo $date[0]."-".$date[1]."-".$date[2];
-// 							echo $dias[$fecha('w')];
-								
+							
+							$formattedDate = date ( 'd', strtotime ( $row ['updated_date'] ) ) . " de " . $meses[date ( 'm', strtotime ( $row ['updated_date'] ))-1]." de ".date ( 'Y', strtotime ( $row ['updated_date'] ));
+							
 							print ("<div class='row'>
 									<div class='col-md-12 news-image-container-style'>
 										<a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='blank'> <img class='news-image-style'
@@ -49,7 +65,7 @@
 									</div>
 								</div>
 								<div class='row'>
-									<div class='col-md-10 news-date'>" . $row ['updated_date'] . "</div>
+									<div class='col-md-10 news-date'>" . $formattedDate . "</div>
 									<div class='col-md-2'></div>
 								</div>
 								<div class='row'>

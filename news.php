@@ -40,9 +40,9 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 							class="font-style-short-title-dark page-header ">Normatividades</h1>
 
 						<ul data-bind="foreach: contentViewModel.legislations">
-							<li><a
+							<li><a class='upper-case-link'
 								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl() + file_path}"
-								target='blank'>hi</a></li>
+								target='blank'></a></li>
 						</ul>
 						<div
 							data-bind="if: contentViewModel.legislations()==null || contentViewModel.legislations().length == 0">
@@ -51,9 +51,9 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Convocatorias</h1>
 						<ul data-bind="foreach: contentViewModel.convocatories">
-							<li><a
+							<li><a class='upper-case-link'
 								data-bind="text: 'Convocatoria ' + convocatory_type_name  + ' N° ' + number+ ' - ' + title  + ' (Publicado el' + update_date + '  - Vigente hasta el ' + life_date + ')', attr:{href: $root.ogrrhhFTPUrl() + file_path}"
-								target='blank'>hi</a></li>
+								target='blank'></a></li>
 						</ul>
 						<div
 							data-bind="if: contentViewModel.convocatories()==null  || contentViewModel.convocatories().length == 0">
