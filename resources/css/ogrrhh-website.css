@@ -238,6 +238,20 @@ a {
 	color: #B40000;
 }
 
+.blue-link-style {
+	color: #0059B4;
+	text-decoration: none;
+}
+
+.blue-link-style:hover {
+	color: #0098B4;
+	text-decoration: none;
+}
+
+.download-link-message{
+	display: inline;
+}
+
 a:hover {
 	color: #D1420A;
 }

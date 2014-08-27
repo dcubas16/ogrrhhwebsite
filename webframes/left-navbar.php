@@ -43,19 +43,13 @@
 							"Noviembre",
 							"Diciembre" 
 					);
-					
-					// echo $dias[date('w')]." ".date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;
-					// Salida: Viernes 24 de Febrero del 2012
-					// echo DateTime::createFromFormat('dd/MM/yyyy', '16/11/1986')->format('dd/MM/yyyy');
 					?>
 					
 					<?php
-					// setlocale(LC_ALL,"es_ES");
-					// echo strftime("%A %d de %B del %Y");
 					if (isset ( $queryResultNews )) {
 						while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
 							
-							$formattedDate = date ( 'd', strtotime ( $row ['updated_date'] ) ) . " de " . $meses[date ( 'm', strtotime ( $row ['updated_date'] ))-1]." de ".date ( 'Y', strtotime ( $row ['updated_date'] ));
+							$formattedDate = date ( 'd', strtotime ( $row ['updated_date'] ) ) . " de " . $meses [date ( 'm', strtotime ( $row ['updated_date'] ) ) - 1] . " de " . date ( 'Y', strtotime ( $row ['updated_date'] ) );
 							
 							print ("<div class='row'>
 									<div class='col-md-12 news-image-container-style'>
@@ -68,7 +62,7 @@
 									<div class='col-md-10 news-date'>" . $formattedDate . "</div>
 									<div class='col-md-2'></div>
 								</div>
-								<div class='row'>
+								<div class='row' data-toggle='tooltip' title='' data-original-title='".$row ['complete_title']."'>
 									<div class='col-md-12 news-subtitle'>" . $row ['title'] . "</div>
 								</div><br>") ;
 						}
@@ -180,3 +174,8 @@
 			al inicio</a>
 	</div>
 </div>
+<script>
+$('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+	'rigth', });
+</script>
+

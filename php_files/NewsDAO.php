@@ -6,7 +6,7 @@ class NewsDAO {
 	
 	public function selectLegislationByDate($date) {
 	
-		$query = 	"SELECT l.*, lt.name, YEAR(l.publication_date) AS publication_year 
+		$query = 	"SELECT l.*, lt.name as legislation_type_name, YEAR(l.publication_date) AS publication_year 
 					FROM legislations l
 					INNER JOIN legislation_types lt on l.legislation_type_id = lt.id
 					WHERE l.update_date = str_to_date('".$date."','%d/%m/%Y')
@@ -49,7 +49,7 @@ class NewsDAO {
 	
 	public function getLastThreeNews() {
 	
-		$query = 	"SELECT * FROM (
+		$query = 	"SELECT IF(CHAR_LENGTH(title) > 50, CONCAT(LEFT(title,50), '...'), title) as title, title as complete_title, updated_date, file_path FROM (
 					SELECT name as title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path FROM legislations
 					union
 					SELECT title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path FROM convocatories

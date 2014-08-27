@@ -20,5 +20,8 @@ if($queryResult != 0){
 // 	echo "false";
 }
 
-header('Location: /index.php');
+// header('Location: /index.php');
 ?>
+<script>
+window.location.replace("index.php");
+</script>

@@ -27,13 +27,13 @@
 							</select>
 						</div>
 					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Número</label>
-						<div class="col-md-4">
-							<input type="number" name="number" id="number"
-								class="form-control" data-bind="value : legislationNumber" />
-						</div>
-					</div>
+<!-- 					<div class="form-group"> -->
+<!-- 						<label class="col-md-3 control-label">Número</label> -->
+<!-- 						<div class="col-md-4"> -->
+<!-- 							<input type="text" name="number" id="number" -->
+<!-- 								class="form-control" data-bind="value : legislationNumber" /> -->
+<!-- 						</div> -->
+<!-- 					</div> -->
 					<div class="form-group">
 						<label class="col-md-3 control-label">Título</label>
 						<div class="col-md-9">
@@ -97,7 +97,7 @@ $(document).ready(function() {
 	$.fn.bootstrapValidator.validators.fileSize = {
 	        validate: function(validator, $field, options) {
 	        	if( $("#fileToUpload")[0].files[0] != undefined){
-	        		if( Math.round($("#fileToUpload")[0].files[0].size/1024).toFixed(0) > 5000 ){
+	        		if( Math.round($("#fileToUpload")[0].files[0].size/1024).toFixed(0) > 6000 ){
 	        			return false;
 	        		}
 	        		return true;	
@@ -128,18 +128,18 @@ $(document).ready(function() {
                     }
                 }
             },
-            number: {
-                group: '.col-md-1',
-                validators: {
-                    notEmpty: {
-                        message: 'Este campo es requerido'
-                    },
-                    stringLength: {
-                        max: 80,
-                        message: 'The director name must be less than 80 characters long'
-                    }
-                }
-            },
+//             number: {
+//                 group: '.col-md-1',
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'Este campo es requerido'
+//                     },
+//                     stringLength: {
+//                         max: 80,
+//                         message: 'The director name must be less than 80 characters long'
+//                     }
+//                 }
+//             },
             legislationName: {
                 group: '.col-md-1',
                 validators: {
@@ -190,7 +190,7 @@ $('#add-new-legislation-modal').on('hidden.bs.modal', function (e) {
 	headerViewModel.legislationTypeId(null);
 	headerViewModel.legislationTitle(null);
 	headerViewModel.legislationPublicationDate(null);
-	headerViewModel.legislationNumber(null);
+// 	headerViewModel.legislationNumber(null);
 	headerViewModel.fileToUpload(null);
 	headerViewModel.decreeTypeId(null);
 	$("#addNewLegislation").data('bootstrapValidator').resetForm();

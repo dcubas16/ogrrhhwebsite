@@ -50,7 +50,7 @@ class LegislationDAO {
 
 	public function selectByName($searchString) {
 	
-		$query = 	"SELECT l.*, lt.name, YEAR(l.publication_date) AS publication_year FROM legislations l
+		$query = 	"SELECT l.*, lt.name as legislation_type_name, YEAR(l.publication_date) AS publication_year FROM legislations l
 					INNER JOIN legislation_types lt on l.legislation_type_id = lt.id
 					WHERE l.name like '%" . $searchString . "%'
 					OR lt.name like  '%" . $searchString . "%';";
@@ -76,6 +76,16 @@ class LegislationDAO {
 		return $result;
 	}
 
+	public function getById($id) {
+	
+		$query = 	"SELECT * FROM legislations l WHERE l.id=".$id.";";
+		// 		echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
+	}
+	
 	function __destruct() {
 		
 	}

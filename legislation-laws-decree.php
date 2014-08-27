@@ -1,5 +1,6 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+
 include 'php_files/LegislationDAO.php';
 include 'php_files/Constants.php';
 
@@ -39,8 +40,10 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<ul>
 						<?php
 						while ( $row = mysql_fetch_assoc ( $queryResultDecree ) ) {
-							print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
- 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
+							print ("<li ><a class='upper-case-link' href='view-legislation.php?id=52'
+ 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a><div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'><a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'> <span class='glyphicon glyphicon-download'></span></a></div></li>") ;
+							// print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'
+							// target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a><a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "'> <span class='glyphicon glyphicon-download'></span></a></li>") ;
 						}
 						?>
 						</ul>
@@ -55,3 +58,7 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 </body>
 <?php include('./webframes/header-view-model.php');?>
 </html>
+<script>
+$('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+	'top', });
+</script>
