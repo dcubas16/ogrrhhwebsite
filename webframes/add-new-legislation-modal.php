@@ -27,19 +27,27 @@
 							</select>
 						</div>
 					</div>
-<!-- 					<div class="form-group"> -->
-<!-- 						<label class="col-md-3 control-label">Número</label> -->
-<!-- 						<div class="col-md-4"> -->
-<!-- 							<input type="text" name="number" id="number" -->
-<!-- 								class="form-control" data-bind="value : legislationNumber" /> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
+					<div class="form-group">
+						<label class="col-md-3 control-label">Número</label>
+						<div class="col-md-7">
+							<input type="text" name="number" id="number"
+								class="form-control" data-bind="value : legislationNumber" />
+						</div>
+					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Título</label>
 						<div class="col-md-9">
 							<textarea id="legislationName" name="legislationName"
-								class="form-control" rows="9" placeholder="Título"
+								class="form-control" rows="5" placeholder="Título"
 								data-bind="value: legislationTitle"></textarea>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-md-3 control-label">Descripción</label>
+						<div class="col-md-9">
+							<textarea id="legislationDescription" name="legislationDescription"
+								class="form-control" rows="9" placeholder="Descripción"
+								data-bind="value: legislationDescription"></textarea>
 						</div>
 					</div>
 					<div class="form-group" data-toggle="tooltip"
@@ -128,18 +136,18 @@ $(document).ready(function() {
                     }
                 }
             },
-//             number: {
-//                 group: '.col-md-1',
-//                 validators: {
-//                     notEmpty: {
-//                         message: 'Este campo es requerido'
-//                     },
-//                     stringLength: {
-//                         max: 80,
-//                         message: 'The director name must be less than 80 characters long'
-//                     }
-//                 }
-//             },
+            number: {
+                group: '.col-md-1',
+                validators: {
+                    notEmpty: {
+                        message: 'Este campo es requerido'
+                    },
+                    stringLength: {
+                        max: 80,
+                        message: 'The director name must be less than 80 characters long'
+                    }
+                }
+            },
             legislationName: {
                 group: '.col-md-1',
                 validators: {
@@ -152,6 +160,18 @@ $(document).ready(function() {
                     }
                 }
             },
+//             legislationDescription: {
+//                 group: '.col-md-1',
+//                 validators: {
+//                     notEmpty: {
+//                         message: 'Este campo es requerido'
+//                     },
+//                     stringLength: {
+//                         max: 500,
+//                         message: 'The director name must be less than 80 characters long'
+//                     }
+//                 }
+//             },
             legislationDate: {
                 group: '.col-md-1',
                 trigger: 'change',

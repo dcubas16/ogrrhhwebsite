@@ -82,6 +82,7 @@ $sub_page_id = 0;
 			legislationTitle : ko.observable(null),
 			legislationPublicationDate : ko.observable(null),
 			legislationNumber : ko.observable(null),
+			legislationDescription : ko.observable(null),
 			decreeTypeId : ko.observable(null),
 			fileToUpload : 	ko.observable(null)
 	};

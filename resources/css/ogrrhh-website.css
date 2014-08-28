@@ -313,6 +313,10 @@ p {
 	text-transform: uppercase;
 }
 
+.download-link{
+    padding-bottom: 10px;
+}
+
 /****************************************************************** LEFT NAVBAR'S STYLES ********************************************/
 .vertical-navbar {
 	padding-top: 10px;
