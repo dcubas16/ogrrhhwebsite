@@ -16,21 +16,18 @@
 						<label class="col-md-3 control-label">Tipo</label>
 						<div class="col-md-9 selectContainer">
 							<select class="form-control" name="legislationType"
-								id="legislationType" data-bind="value: legislationTypeId">
-								<option value="">Seleccione</option>
-								<option value="1">Leyes</option>
-								<option value="2">Decretos</option>
-								<option value="3">Reglamentos</option>
-								<option value="4">Directivas</option>
-								<option value="5">Resoluciones</option>
-								<option value="6">Otras Normatividades</option>
+								id="legislationType" data-bind="value: legislationTypeId, foreach: headerViewModel.legislationTypes">
+									<!-- ko if: ($index() == '0') -->
+									<option data-bind="text: 'Seleccione'"></option>	
+									<!-- /ko -->
+									<option data-bind="value: id, text: name"></option>
 							</select>
 						</div>
 					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Número</label>
 						<div class="col-md-7">
-							<input type="text" name="number" id="number"
+							<input type="text" name="legislationNumber" id="legislationNumber"
 								class="form-control" data-bind="value : legislationNumber" />
 						</div>
 					</div>
@@ -46,7 +43,7 @@
 						<label class="col-md-3 control-label">Descripción</label>
 						<div class="col-md-9">
 							<textarea id="legislationDescription" name="legislationDescription"
-								class="form-control" rows="9" placeholder="Descripción"
+								class="form-control" rows="5" placeholder="Descripción"
 								data-bind="value: legislationDescription"></textarea>
 						</div>
 					</div>
@@ -136,7 +133,7 @@ $(document).ready(function() {
                     }
                 }
             },
-            number: {
+            legislationNumber: {
                 group: '.col-md-1',
                 validators: {
                     notEmpty: {
@@ -160,18 +157,6 @@ $(document).ready(function() {
                     }
                 }
             },
-//             legislationDescription: {
-//                 group: '.col-md-1',
-//                 validators: {
-//                     notEmpty: {
-//                         message: 'Este campo es requerido'
-//                     },
-//                     stringLength: {
-//                         max: 500,
-//                         message: 'The director name must be less than 80 characters long'
-//                     }
-//                 }
-//             },
             legislationDate: {
                 group: '.col-md-1',
                 trigger: 'change',
@@ -210,7 +195,7 @@ $('#add-new-legislation-modal').on('hidden.bs.modal', function (e) {
 	headerViewModel.legislationTypeId(null);
 	headerViewModel.legislationTitle(null);
 	headerViewModel.legislationPublicationDate(null);
-// 	headerViewModel.legislationNumber(null);
+	headerViewModel.legislationNumber(null);
 	headerViewModel.fileToUpload(null);
 	headerViewModel.decreeTypeId(null);
 	$("#addNewLegislation").data('bootstrapValidator').resetForm();

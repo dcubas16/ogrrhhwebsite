@@ -7,6 +7,8 @@ $tempFilePath = $_FILES ["fileToUpload"] ["tmp_name"];
 $filename = $_FILES ["fileToUpload"] ["name"];
 $legislationType = $_POST ["legislationType"];
 $legislationName = $_POST ["legislationName"];
+$legislationNumber = $_POST ["legislationNumber"];
+$legislationDescription = $_POST ["legislationDescription"];
 $publicationDate = $_POST ["legislationDate"];
 $remoteFilePath = setRemotePath ( $legislationType ) . "/";
 
@@ -37,7 +39,7 @@ $ftpConnectionManager = new FTPConnectionManager ( $tempFilePath, $filename, Con
 $resultFTP = $ftpConnectionManager->uploadFile ();
 
 $legislationDAO = new LegislationDAO ();
-$legislationDAO->setProperties($legislationType, $legislationName, $publicationDate, $remoteFilePath.$filename, 1, 1, date ( 'd/m/Y' ) );
+$legislationDAO->setProperties($legislationType, $legislationName, $legislationNumber, $legislationDescription, $publicationDate, $remoteFilePath.$filename, 1, 1, date ( 'd/m/Y' ) );
 $errores = 0;
 
 if ($resultFTP->type != 0) {

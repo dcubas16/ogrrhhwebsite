@@ -1,5 +1,6 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+
 include 'php_files/LegislationDAO.php';
 include 'php_files/Constants.php';
 
@@ -24,34 +25,35 @@ $queryResult = $legislationDAO->getById ( $legislationId );
 				
 					<div id="contentSection" class="col-md-9 text-content-style">
 						<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Normatividad</h1>
+							class="font-style-medium-title-dark page-header ">Detalle de
+							Normatividad</h1>
 						
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
 								print ("<table class='table table-condensed'>
 								<tbody>
 								<tr>
-								<td><strong>Tipo de Normatividad</strong></td>
+								<td><strong class='strong-ogrrhh'>Tipo de Normatividad</strong></td>
 								<td>" . $row ['legislation_type_name'] . "</td>
 								</tr>
 								<tr>
-								<td><strong>Título</strong></td>
+								<tr>
+								<td><strong class='strong-ogrrhh'>Número</strong></td>
+								<td>" . $row ['number'] . "</td>
+								</tr>
+								<td><strong class='strong-ogrrhh'>Título</strong></td>
 								<td>" . $row ['name'] . "</td>
 								</tr>
 								<tr>
-								<td><strong>Número</strong></td>
-								<td>" . $row ['number'] . "</td>
-								</tr>
-								<tr>
-								<td><strong>Descripcion</strong></td>
+								<td><strong class='strong-ogrrhh'>Descripción</strong></td>
 								<td>" . $row ['description'] . "</td>
 								</tr>
 								<tr>
-								<td><strong>Fecha de Publicación</strong></td>
+								<td><strong class='strong-ogrrhh'>Fecha de Publicación</strong></td>
 								<td>" . $row ['publication_date'] . "</td>
 								</tr>
 								<tr>
-								<td><strong>Archivos</strong></td>
+								<td><strong class='strong-ogrrhh'>Archivos</strong></td>
 								<td><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'><span class='glyphicon glyphicon-download'></span>
 								Descargar</a></td>
 								</tr>
@@ -60,7 +62,11 @@ $queryResult = $legislationDAO->getById ( $legislationId );
 							}
 							
 							?>
-							
+							<button type="button" class="btn btn-info btn-xs"
+							data-toggle="modal" onclick="backPage()">
+							<span class="glyphicon glyphicon-chevron-left"></span><span
+								class="glyphicon glyphicon-chevron-left" /></span> Retornar
+							</button>
 					</div>
 				</div>
 			<?php include('webframes/footer.php');?>
@@ -70,4 +76,11 @@ $queryResult = $legislationDAO->getById ( $legislationId );
 	</div>
 </body>
 <?php include('./webframes/header-view-model.php');?>
+<script type="text/javascript">
+function backPage(){
+	
+	parent.history.back();
+    return false;
+}
+</script>
 </html>

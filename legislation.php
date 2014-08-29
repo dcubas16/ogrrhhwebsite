@@ -1,9 +1,15 @@
 <?php include('webframes/verify-login.php');?>
 <?php include('webframes/upload-ftp-settings.php');?>
 <?php
+include 'php_files/JSONConverter.php';
+include 'php_files/LegislationTypeDAO.php';
 
 $page_id = 4;
 $sub_page_id = 0;
+$legislationType = new LegislationTypeDAO();
+$jsonConverter = new JSONConverter ();
+
+$queryResult = $legislationType->getLegislationTypes();
 ?>
 <html>
 <?php include('webframes/resources.php');?>
@@ -78,6 +84,7 @@ $sub_page_id = 0;
 			pageId : ko.observable(<?php echo $page_id;?>),
 			subPageId : ko.observable(<?php echo $sub_page_id;?>),
 
+			legislationTypes : ko.observableArray(<?php echo  $jsonConverter->recordSetToJson($queryResult); ?>),
 			legislationTypeId : ko.observable(null),
 			legislationTitle : ko.observable(null),
 			legislationPublicationDate : ko.observable(null),

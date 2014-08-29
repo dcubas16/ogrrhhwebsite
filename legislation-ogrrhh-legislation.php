@@ -29,28 +29,13 @@ $queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
-								print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
- 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
+								print ("<li class='download-link'><a class='upper-case-link' href='view-legislation.php?id=".$row ['id']."'>
+								" . $row ['name'] . " - " . $row ['publication_year'] . "</a><div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
+								<a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'> 
+								<span class='glyphicon glyphicon-download'></span></a></div></li>") ;
 							}
 							?>
 						</ul>
-						<!-- 						<ul> -->
-						<!-- 							<li><a -->
-						<!-- 								href="resources/docs/otros/ESTATUTO UNMSM.pdf" -->
-						<!-- 								target="_blank">Estatuto de la UNMSM - 1984</a></li> -->
-						<!-- 								<li><a -->
-						<!-- 								href="resources/docs/otros/modificacion_art_estatuto_rr_3028-r-04.pdf" -->
-						<!-- 								target="_blank">Modificación del Estatuto de la UNMSM - 2004</a></li> -->
-						<!-- 								<li><a -->
-						<!-- 								href="resources/docs/otros/CAP_UNMSM_2013.pdf" -->
-						<!-- 								target="_blank">Cuadro para Asignación de Personal (CAP) - 2013</a></li> -->
-						<!-- 								<li><a -->
-						<!-- 								href="resources/docs/otros/Clasificador_de_Cargos_UNMSM.pdf" -->
-						<!-- 								target="_blank">Clasificador de Cargos - 2011</a></li> -->
-						<!-- 								<li><a -->
-						<!-- 								href="resources/docs/otros/Manual_Usuario_OGRRHH.pdf" -->
-						<!-- 								target="_blank">Manual de Usuario de la OGRRHH - 2014</a></li> -->
-						<!-- 						</ul> -->
 					</div>
 					<!-- /ko -->
 				</div>
@@ -62,3 +47,7 @@ $queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 </body>
 <?php include('./webframes/header-view-model.php');?>
 </html>
+<script>
+$('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+	'top', });
+</script>
