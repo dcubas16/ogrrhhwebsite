@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `db_recursoshumanos` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `db_recursoshumanos`;
+CREATE DATABASE  IF NOT EXISTS `ogrrhhwebsitedb` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `ogrrhhwebsitedb`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
--- Host: localhost    Database: db_recursoshumanos
+-- Host: localhost    Database: ogrrhhwebsitedb
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -60,7 +60,7 @@ CREATE TABLE `convocatories` (
   `office_id` int(11) NOT NULL,
   `update_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -201,6 +201,8 @@ DROP TABLE IF EXISTS `legislations`;
 CREATE TABLE `legislations` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(500) NOT NULL,
+  `number` varchar(45) NOT NULL,
+  `description` varchar(500) DEFAULT NULL,
   `publication_date` date NOT NULL,
   `file_path` varchar(500) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -208,7 +210,7 @@ CREATE TABLE `legislations` (
   `office_id` int(11) NOT NULL,
   `update_date` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -217,7 +219,7 @@ CREATE TABLE `legislations` (
 
 LOCK TABLES `legislations` WRITE;
 /*!40000 ALTER TABLE `legislations` DISABLE KEYS */;
-INSERT INTO `legislations` VALUES (52,'constitucion politica del peru','1993-01-01','leyes/Constitucion_Politica_Peru_1993.pdf',1,1,1,'2014-08-27'),(53,'ley 30057 ley del servicio civil','2013-07-04','leyes/Ley 30057_Servicio_Civil.pdf',1,1,1,'2014-08-27'),(54,'ley 23733 ley universitaria','1983-12-09','leyes/Ley_23733_Ley_Universitaria_2010.pdf',1,1,1,'2014-08-27'),(55,'ley 27806 ley de transparencia y acceso a la informacion publica','2003-08-07','leyes/Ley_27806_Transparencia_y_Acceso_Informacion_Publica.pdf',1,1,1,'2014-08-27'),(56,'ley 29849 ley que establece la eliminacion progresiva del regimen especial del decreto legislativo 1057 y otorga derechos laborales','2012-04-05','leyes/Ley_29849_CAS.pdf',1,1,1,'2014-08-27'),(57,'ley 30220 ley universitaria','2014-07-09','leyes/Ley_30220_Universitaria_2014 .pdf',1,1,1,'2014-08-27'),(58,'decreto legislativo 276 ley base de la carrera administrativa','1984-03-24','decretos/DL_276_1984.pdf',1,2,1,'2014-08-27'),(59,'decreto legislativo 1057 que regula el regimen especial de contratacion administrativa de servicios','2008-06-28','decretos/DL_1057.pdf',1,2,1,'2014-08-27'),(60,'directiva 001-2013-PCM/OGA normas y procedimientos para la prevencion y sancion de los actos de nepotismo','2013-12-04','directivas/DS_005_90_PCM_2013.pdf',1,4,1,'2014-08-27'),(61,'decreto supremo 065-2011-pcm ','2011-01-01','decretos/DS_065_2011_PCM.pdf',1,2,1,'2014-08-27'),(62,'decreto supremo 075-2008-pcm que aprueba el reglamento del decreto legislativo 1057, que regula el regimen especial de cas','2008-01-01','decretos/DS_075_2008_PCM.pdf',1,2,1,'2014-08-27'),(63,'directiva 003-dga-2008 para la aplicacion del regimen especial de contratacion de administracion de servicios','2009-01-07','directivas/R. R. 0007-R-09, Directiva CAS DGA.pdf',1,4,1,'2014-08-27'),(64,'directiva 001-ogrrhh-2009 aspectos procedimentales en la palicacion del regimen especial de contratacion administrativa de servicios','2009-04-28','directivas/R. R. 01823-R-09.pdf',1,4,1,'2014-08-27'),(65,'clasificador de cargos institucionales de la universidad nacional mayor de san marcos','2011-01-14','otros/Clasificador_de_Cargos_UNMSM.pdf',1,6,1,'2014-08-27'),(66,'manual del usuario de la oficina general de recursos humanos de la unmsm','2014-01-01','otros/Manual_Usuario_OGRRHH.pdf',1,6,1,'2014-08-27'),(67,'modificacion de los articulos 40, 46, 47 y 48 del estatuto universitario segu resolucion rectoral 03028-r-04','2004-01-01','otros/modificacion_art_estatuto_rr_3028-r-04.pdf',1,6,1,'2014-08-27');
+INSERT INTO `legislations` VALUES (52,'constitucion politica del peru','',NULL,'1993-01-01','leyes/Constitucion_Politica_Peru_1993.pdf',1,1,1,'2014-08-27'),(53,'ley 30057 ley del servicio civil','',NULL,'2013-07-04','leyes/Ley 30057_Servicio_Civil.pdf',1,1,1,'2014-08-27'),(54,'ley 23733 ley universitaria','',NULL,'1983-12-09','leyes/Ley_23733_Ley_Universitaria_2010.pdf',1,1,1,'2014-08-27'),(55,'ley 27806 ley de transparencia y acceso a la informacion publica','',NULL,'2003-08-07','leyes/Ley_27806_Transparencia_y_Acceso_Informacion_Publica.pdf',1,1,1,'2014-08-27'),(56,'ley 29849 ley que establece la eliminacion progresiva del regimen especial del decreto legislativo 1057 y otorga derechos laborales','',NULL,'2012-04-05','leyes/Ley_29849_CAS.pdf',1,1,1,'2014-08-27'),(57,'ley 30220 ley universitaria','',NULL,'2014-07-09','leyes/Ley_30220_Universitaria_2014 .pdf',1,1,1,'2014-08-27'),(58,'decreto legislativo 276 ley base de la carrera administrativa','',NULL,'1984-03-24','decretos/DL_276_1984.pdf',1,2,1,'2014-08-27'),(59,'decreto legislativo 1057 que regula el regimen especial de contratacion administrativa de servicios','',NULL,'2008-06-28','decretos/DL_1057.pdf',1,2,1,'2014-08-27'),(60,'directiva 001-2013-PCM/OGA normas y procedimientos para la prevencion y sancion de los actos de nepotismo','',NULL,'2013-12-04','directivas/DS_005_90_PCM_2013.pdf',1,4,1,'2014-08-27'),(61,'decreto supremo 065-2011-pcm ','',NULL,'2011-01-01','decretos/DS_065_2011_PCM.pdf',1,2,1,'2014-08-27'),(62,'decreto supremo 075-2008-pcm que aprueba el reglamento del decreto legislativo 1057, que regula el regimen especial de cas','',NULL,'2008-01-01','decretos/DS_075_2008_PCM.pdf',1,2,1,'2014-08-27'),(63,'directiva 003-dga-2008 para la aplicacion del regimen especial de contratacion de administracion de servicios','',NULL,'2009-01-07','directivas/R. R. 0007-R-09, Directiva CAS DGA.pdf',1,4,1,'2014-08-27'),(64,'directiva 001-ogrrhh-2009 aspectos procedimentales en la palicacion del regimen especial de contratacion administrativa de servicios','',NULL,'2009-04-28','directivas/R. R. 01823-R-09.pdf',1,4,1,'2014-08-27'),(65,'clasificador de cargos institucionales de la universidad nacional mayor de san marcos','',NULL,'2011-01-14','otros/Clasificador_de_Cargos_UNMSM.pdf',1,6,1,'2014-08-27'),(66,'manual del usuario de la oficina general de recursos humanos de la unmsm','',NULL,'2014-01-01','otros/Manual_Usuario_OGRRHH.pdf',1,6,1,'2014-08-27'),(67,'modificacion de los articulos 40, 46, 47 y 48 del estatuto universitario segu resolucion rectoral 03028-r-04','',NULL,'2004-01-01','otros/modificacion_art_estatuto_rr_3028-r-04.pdf',1,6,1,'2014-08-27');
 /*!40000 ALTER TABLE `legislations` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -364,4 +366,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-08-27  9:33:37
+-- Dump completed on 2014-08-29 18:43:42
