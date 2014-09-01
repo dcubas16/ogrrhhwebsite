@@ -31,7 +31,8 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResultLaws ) ) {
 								print ("<li class='download-link'><a class='upper-case-link' href='view-legislation.php?id=".$row ['id']."'>" 
-								. $row ['name'] . " - " . $row ['publication_year'] . "</a><div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
+								. $row ['legislation_type_name'] . " N° " . $row ['number'] . " - " . $row ['name'] . " - " . $row ['publication_year'] 
+								. "</a><div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
 								<a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'> 
 								<span class='glyphicon glyphicon-download'></span></a></div></li>") ;
 							}
@@ -43,7 +44,7 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<?php
 						while ( $row = mysql_fetch_assoc ( $queryResultDecree ) ) {
 							print ("<li class='download-link'><a class='upper-case-link' href='view-legislation.php?id=".$row ['id']."'>" 
-								. $row ['name'] . " - " . $row ['publication_year'] . 
+								. $row ['legislation_type_name'] . " N° " . $row ['number'] . " - ". $row ['name'] . " - " . $row ['publication_year'] . 
 								"</a><div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
 								<a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'> 
 								<span class='glyphicon glyphicon-download'></span></a></div></li>") ;

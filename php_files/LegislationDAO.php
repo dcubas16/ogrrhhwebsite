@@ -43,8 +43,9 @@ class LegislationDAO {
 	
 	public function selectByLegislationType($legislationTypeId) {
 	
-		$query = 	"SELECT l.*, YEAR(l.publication_date) AS publication_year FROM
-					legislations l
+		$query = 	"SELECT l.*, YEAR(l.publication_date) AS publication_year, lt.name as legislation_type_name
+					FROM legislations l
+					INNER JOIN legislation_types lt on l.legislation_type_id = lt.id
 					WHERE legislation_type_id = " . $legislationTypeId . " ORDER BY l.publication_date DESC;";
 		// 		echo $query;
 		$connectionManager = new ConnectionManager ();

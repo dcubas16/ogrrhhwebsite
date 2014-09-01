@@ -40,9 +40,11 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 							class="font-style-short-title-dark page-header ">Normatividades</h1>
 
 						<ul data-bind="foreach: contentViewModel.legislations">
-							<li><a class='upper-case-link'
-								data-bind="text: name + ' - ' + publication_year , attr:{href: $root.ogrrhhFTPUrl() + file_path}"
-								target='blank'></a></li>
+							<li class='download-link'><a class='upper-case-link'
+								data-bind="text: legislation_type_name + ' N° ' + number + ' - ' + name + ' - ' + publication_year , attr:{href: 'view-legislation.php?id=' + id}"></a>
+								<div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
+								<a class='blue-link-style ' data-bind="attr:{href: $root.ogrrhhFTPUrl() + file_path}" target='_blank'> 
+								<span class='glyphicon glyphicon-download'></span></a></div></li>
 						</ul>
 						<div
 							data-bind="if: contentViewModel.legislations()==null || contentViewModel.legislations().length == 0">
@@ -51,7 +53,7 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 						<h1 id="mision-and-goals"
 							class="font-style-short-title-dark page-header ">Convocatorias</h1>
 						<ul data-bind="foreach: contentViewModel.convocatories">
-							<li><a class='upper-case-link'
+							<li class='download-link'><a class='upper-case-link'
 								data-bind="text: 'Convocatoria ' + convocatory_type_name  + ' N° ' + number+ ' - ' + title  + ' (Publicado el' + update_date + '  - Vigente hasta el ' + life_date + ')', attr:{href: $root.ogrrhhFTPUrl() + file_path}"
 								target='blank'></a></li>
 						</ul>
@@ -71,6 +73,7 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 <?php include('./webframes/header-view-model.php');?>
 <script>
 
+
 	var contentViewModel = {
 		legislations: ko.observableArray(<?php echo  $jsonConverter->recordSetToJson($queryResultLegislation); ?>),
 		convocatories: ko.observableArray(<?php echo  $jsonConverter->recordSetToJson($queryResultConvocatory); ?>),
@@ -78,10 +81,16 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 		ogrrhhFTPUrl: ko.observable(<?php echo "'".Constants::ogrrhhFTPUrl."'"?>)
 	}	
 
-$(function() {
-	ko.applyBindings(contentViewModel, $("#contentPage")[0]);
-});
+	$(function() {
+		ko.applyBindings(contentViewModel, $("#contentPage")[0]);
+		executeAdditionalScripts ();
+	});
 
+	function executeAdditionalScripts (){
+		$('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+			'top', });
+	}
+	
 $(document).ready(function() {
 
 	kendo.culture("es-PE");

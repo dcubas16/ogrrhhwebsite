@@ -28,9 +28,12 @@ $sub_page_id = 1;
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
-								print("<li><a class='upper-case-link' href='". Constants::ogrrhhFTPUrlConvocatorias . $row ['file_path']."' 
- 								target='blank'>Convocatoria ". $row ['convocatory_type_name'] ." N° ".$row ['number']." - ". $row ['title'] ."
- 									(Publicado el". $row ['update_date'] . " - Vigente hasta el ". $row ['life_date'] .")</a></li>");
+								print("<li class='download-link'><a class='upper-case-link' href='view-convocatory.php?id=".$row ['id']."'>
+								Convocatoria ". $row ['convocatory_type_name'] ." N° ".$row ['number']." - ". $row ['title'] ."
+ 									(Publicado el". $row ['update_date'] . " - Vigente hasta el ". $row ['life_date'] .")</a>
+								<div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
+								<a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'> 
+								<span class='glyphicon glyphicon-download'></span></a></div></li>");
 								
 								$rowCounter ++;
 							}
@@ -47,3 +50,7 @@ $sub_page_id = 1;
 </body>
 <?php include('./webframes/header-view-model.php');?>
 </html>
+<script>
+$('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+	'top', });
+</script>

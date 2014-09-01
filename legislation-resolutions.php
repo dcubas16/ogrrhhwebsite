@@ -29,16 +29,14 @@ $queryResult = $legislationDAO->selectByLegislationType ( $legislationTypeId );
 						<ul>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
-								print ("<li><a class='upper-case-link' href='" . Constants::ogrrhhFTPUrl .  $row ['file_path'] . "'
- 								target='blank'>" . $row ['name'] . " - " . $row ['publication_year'] . "</a></li>") ;
+								print ("<li class='download-link'><a class='upper-case-link' href='view-legislation.php?id=".$row ['id']."'>" 
+								. $row ['legislation_type_name'] . " N° " . $row ['number'] . " - " . $row ['name'] . " - " . $row ['publication_year'] 
+								. "</a><div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
+								<a class='blue-link-style ' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'> 
+								<span class='glyphicon glyphicon-download'></span></a></div></li>") ;
 							}
 							?>
 						</ul>
-						<!-- 						<ul> -->
-						<!-- 							<li><a href="resources/docs/decretos/DL_276_1984.pdf" -->
-						<!-- 								target="_blank">Decreto Legislativo N° 276 - Ley de Bases de la -->
-						<!-- 									Carrera Administrativa y de Remuneraciones del Sector Público</a></li> -->
-						<!-- 						</ul> -->
 					</div>
 					<!-- /ko -->
 				</div>

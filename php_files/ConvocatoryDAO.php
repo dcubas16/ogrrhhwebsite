@@ -62,6 +62,19 @@ class ConvocatoryDAO {
 		return $result;
 	}
 	
+	public function getById($id) {
+		$query = 	"SELECT c.id, c.number, c.title, date_format(c.life_date,'%d/%m/%Y') as life_date
+					, c.file_path, date_format(c.update_date,'%d/%m/%Y') as update_date
+					, ct.name as convocatory_type_name, ct.id as convocatory_type_id
+					FROM convocatories c
+					INNER JOIN convocatory_types ct on c.convocatory_type_id = ct.id
+					ORDER BY c.life_date DESC";
+		// echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
+	}
 
 	function __destruct() {
 	
