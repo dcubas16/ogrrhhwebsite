@@ -54,8 +54,10 @@ $queryResultConvocatory = $newsDAO->selectConvocatoryByDate ( $date );
 							class="font-style-short-title-dark page-header ">Convocatorias</h1>
 						<ul data-bind="foreach: contentViewModel.convocatories">
 							<li class='download-link'><a class='upper-case-link'
-								data-bind="text: 'Convocatoria ' + convocatory_type_name  + ' N° ' + number+ ' - ' + title  + ' (Publicado el' + update_date + '  - Vigente hasta el ' + life_date + ')', attr:{href: $root.ogrrhhFTPUrl() + file_path}"
-								target='blank'></a></li>
+								data-bind="text: convocatory_type_name + ' N° ' + number + ' - ' + title + ' - ' + ' (Publicado el' + update_date + '  - Vigente hasta el ' + life_date + ')' , attr:{href: 'view-convocatory.php?id=' + id}"></a>
+								<div class='download-link-message' data-toggle='tooltip' title='' data-original-title='Descargar'>
+								<a class='blue-link-style ' data-bind="attr:{href: $root.ogrrhhFTPUrl() + file_path}" target='_blank'> 
+								<span class='glyphicon glyphicon-download'></span></a></div></li>
 						</ul>
 						<div
 							data-bind="if: contentViewModel.convocatories()==null  || contentViewModel.convocatories().length == 0">

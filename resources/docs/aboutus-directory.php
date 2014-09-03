@@ -4,7 +4,7 @@
 include 'php_files/ConnectionManager.php';
 
 $page_id = 2;
-$sub_page_id = 4;
+$sub_page_id = 5;
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>
@@ -51,7 +51,7 @@ $sub_page_id = 4;
 									<td rowspan="9"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">JEFATURA
 										DE LA OFICINA GENERAL DE RECURSOS HUMANOS</td>
-									<td>Mg. Martínez Flores, Héctor Elvis</td>
+									<td>Dr. Martínez Flores, Héctor Elvis</td>
 									<td>Docente Permanente</td>
 									<td>Jefe de Oficina General</td>
 									<td>7605</td>

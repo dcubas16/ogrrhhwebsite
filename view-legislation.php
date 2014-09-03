@@ -34,23 +34,23 @@ $queryResult = $legislationDAO->getById ( $legislationId );
 								<tbody>
 								<tr>
 								<td><strong class='strong-ogrrhh'>Tipo de Normatividad</strong></td>
-								<td>" . $row ['legislation_type_name'] . "</td>
+								<td class='upper-case-link'>" . $row ['legislation_type_name'] . "</td>
 								</tr>
 								<tr>
 								<tr>
 								<td><strong class='strong-ogrrhh'>Número</strong></td>
-								<td>" . $row ['number'] . "</td>
+								<td class='upper-case-link'>" . $row ['number'] . "</td>
 								</tr>
 								<td><strong class='strong-ogrrhh'>Título</strong></td>
-								<td>" . $row ['name'] . "</td>
+								<td class='upper-case-link'>" . $row ['name'] . "</td>
 								</tr>
 								<tr>
 								<td><strong class='strong-ogrrhh'>Descripción</strong></td>
-								<td>" . $row ['description'] . "</td>
+								<td class='upper-case-link'>" . $row ['description'] . "</td>
 								</tr>
 								<tr>
 								<td><strong class='strong-ogrrhh'>Fecha de Publicación</strong></td>
-								<td>" . $row ['publication_date'] . "</td>
+								<td class='upper-case-link'>" . $row ['formated_publication_date'] . "</td>
 								</tr>
 								<tr>
 								<td><strong class='strong-ogrrhh'>Archivos</strong></td>

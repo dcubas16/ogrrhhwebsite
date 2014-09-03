@@ -28,6 +28,11 @@ $queryResultDecree = $legislationDAO->selectByLegislationType ( $legislationType
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Leyes</h1>
 						<ul>
+							<li class="download-link">
+								<a class="upper-case-link" href="view-legislation.php?id=52">ley N°  - constitucion politica del peru - 1993</a>
+								<div class="download-link-message" data-toggle="tooltip" title="" data-original-title="Descargar">
+							<a class="blue-link-style " href="http://ogrrhh.unmsm.edu.pe/files/normativas/leyes/Constitucion_Politica_Peru_1993.pdf" target="_blank"> 
+							<span class="glyphicon glyphicon-download"></span></a></div></li>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResultLaws ) ) {
 								print ("<li class='download-link'><a class='upper-case-link' href='view-legislation.php?id=".$row ['id']."'>" 

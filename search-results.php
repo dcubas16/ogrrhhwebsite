@@ -6,7 +6,7 @@ include 'php_files/Constants.php';
 $page_id = 0;
 $sub_page_id = 0;
 $legislationDAO = new LegislationDAO ();
-$searchString = $_POST ["searchString"];
+$searchString = $_GET ["searchString"];
 
 $queryResultLegislation = $legislationDAO->selectByName ( $searchString );
 $queryResultConvocatory = $legislationDAO->selectByNameConvocatory ( $searchString );

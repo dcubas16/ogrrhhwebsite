@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<div class="row" style="height: 30;"></div>
+				<div class="row" style="height: 50;"></div>
 				<div class="row">
 					<div class="col-md-11">
 					<?php
@@ -105,20 +105,23 @@
 				class="vertical-navbar-font-style"
 				href="aboutus-vision-and-goals.php">Misión y Visión</a></li>
 			<li class=""
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 2)? 'active' : '' }"><a
+				class="vertical-navbar-font-style" href="aboutus-authorities.php">Autoridades</a></li>
+			<li class=""
 				data-bind="attr: { class: (<?php echo $sub_page_id?> == 3)? 'active' : '' }"><a
 				class="vertical-navbar-font-style"
 				href="aboutus-organization-chart.php">Organigrama</a></li>
 			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 5)? 'active' : '' }"><a
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 4)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-directory.php">Directorio</a></li>
 			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 6)? 'active' : '' }"><a
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 5)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-mof.php">MOF</a></li>
 			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 7)? 'active' : '' }"><a
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 6)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-rof.php">ROF</a></li>
 			<li class=""
-				data-bind="attr: { class: (<?php echo $sub_page_id?> == 8)? 'active' : '' }"><a
+				data-bind="attr: { class: (<?php echo $sub_page_id?> == 7)? 'active' : '' }"><a
 				class="vertical-navbar-font-style" href="aboutus-tupa.php">TUPA</a></li>
 		</ul>
 		<ul class="nav bs-docs-sidenav"

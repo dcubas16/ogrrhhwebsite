@@ -15,7 +15,7 @@ ko.bindingHandlers.stopBinding = {
 ko.virtualElements.allowedBindings.stopBinding = true;
 
 var headerViewModel = {
-		userId : ko.observable(null),
+		userId : ko.observable(<?php if($userId!=null){echo $userId;} else {echo 'null';}?>),
 		userName : ko.observable(<?php echo "'".$userName."'";?>),
 		password : ko.observable(null),
 		logedUser : ko.observable(<?php echo $userName!=null; ?>),//Determina si un usuario esta logeado o no

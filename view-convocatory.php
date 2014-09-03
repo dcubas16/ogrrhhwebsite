@@ -66,7 +66,7 @@ $queryResult = $convocatoryDAO->getById($convocatoryId);
 								Descargar (Resultado 2)</a></td>
 								</tr>
 								<tr>
-								<td><button type='button' class='btn btn-info btn-xs'
+								<td data-bind='visible: headerViewModel.userId() != null'><button type='button' class='btn btn-info btn-xs'
 								data-toggle='modal' onclick='backPage()'>
 								<span class='glyphicon glyphicon-plus' /></span> Agregar
 								</button></a></td>

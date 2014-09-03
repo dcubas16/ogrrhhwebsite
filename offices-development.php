@@ -16,7 +16,7 @@ $sub_page_id = 4;
 				<!-- ko stopBinding: true -->
 					<div class="col-md-9 text-content-style">
 						<h1 id="social-benefies-office"
-							class="font-style-medium-title-dark page-header ">Oficia de
+							class="font-style-medium-title-dark page-header ">Oficina de
 							Desarrollo y Bienestar Social</h1>
 						<p></p>
 					</div>

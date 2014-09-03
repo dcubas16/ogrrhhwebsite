@@ -39,16 +39,18 @@ $sub_page_id = 1;
 									de los servidores de la universidad.</p></li>
 						</ul>
 						<h3 id="overview-doctype">Visión</h3>
-						<p>La Oficina General de Recursos Humanos, plenamente identificada
-							con la misión, visión y los valores universitarios, es la
-							responsable de gestionar el talento humano para la Universidad
-							Nacional Mayor de San Marcos, a traves de los procesos de
-							ingreso, incentivos, estímulos del Personal Administrativo en sus
-							distintas modalidades, requerido por las facultades y
-							dependencias. De esta manera, contribuye a la presencia de un
-							adecuado entorno laboral y bienestar a los trabajadores,
-							sustentándose en el mejoramiento integral de procesos y en su
-							personal de alta calidad humana y profesional.</p>
+						<ul>
+							<li><p>La Oficina General de Recursos Humanos, plenamente
+									identificada con la misión, visión y los valores
+									universitarios, es la responsable de gestionar el talento
+									humano para la Universidad Nacional Mayor de San Marcos, a
+									traves de los procesos de ingreso, incentivos, estímulos del
+									Personal Administrativo en sus distintas modalidades, requerido
+									por las facultades y dependencias. De esta manera, contribuye a
+									la presencia de un adecuado entorno laboral y bienestar a los
+									trabajadores, sustentándose en el mejoramiento integral de
+									procesos y en su personal de alta calidad humana y profesional.</p></li>
+						</ul>
 					</div>
 					<!-- /ko -->
 				</div>

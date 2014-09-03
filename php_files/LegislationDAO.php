@@ -46,7 +46,7 @@ class LegislationDAO {
 		$query = 	"SELECT l.*, YEAR(l.publication_date) AS publication_year, lt.name as legislation_type_name
 					FROM legislations l
 					INNER JOIN legislation_types lt on l.legislation_type_id = lt.id
-					WHERE legislation_type_id = " . $legislationTypeId . " ORDER BY l.publication_date DESC;";
+					WHERE legislation_type_id = " . $legislationTypeId . "  and upper(trim(l.name)) != upper(trim('constitucion politica del peru'))  ORDER BY l.publication_date DESC;";
 		// 		echo $query;
 		$connectionManager = new ConnectionManager ();
 		$result = $connectionManager->doQuery ( $query );
@@ -86,6 +86,7 @@ class LegislationDAO {
 	
 		$query = 	"SELECT l.id, l.name, l.number, l.description, l.publication_date, l.file_path
 					, l.user_id, l.legislation_type_id, l.office_id, l.update_date, lt.name as legislation_type_name
+					, DATE_FORMAT(publication_date,'%d/%m/%Y') as formated_publication_date
 					FROM legislations l
 					INNER JOIN legislation_types lt on l.legislation_type_id = lt.id
 					WHERE l.id=".$id.";";

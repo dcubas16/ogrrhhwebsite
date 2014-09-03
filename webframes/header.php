@@ -24,7 +24,7 @@
 			</div>
 			<div class="row">
 				<div class="col-md-12 search-button">
-					<form action="search-results.php" method="post">
+					<form action="search-results.php" method="GET">
 						<div class="input-group" data-toggle="tooltip"
 							title="La búsqueda se realiza en el contenido de Normatividad">
 							<input type="text" class="form-control input-sm" id="searchString" name="searchString" data-bind="value:headerViewModel.searchString"> <span
@@ -50,6 +50,7 @@
 					<a href="aboutus.php">NOSOTROS</a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="aboutus-vision-and-goals.php">Misión y Visión</a></li>
+						<li><a href="aboutus-authorities.php">Autoridades</a></li>
 						<li><a href="aboutus-organization-chart.php">Organigrama</a></li>
 						<li><a href="aboutus-directory.php">Directorio</a></li>
 						<li><a href="aboutus-mof.php">MOF</a></li>
@@ -67,7 +68,6 @@
 						<li><a href="offices-pension.php">Pensiones y Beneficios Sociales</a></li>
 						<li><a href="offices-development.php">Desarrollo y Bienestar
 								Social</a></li>
-						<li><a href="#">Moderización e Informatización</a></li>
 					</ul></li>
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 4)? 'active dropdown' : 'dropdown' }"
@@ -84,7 +84,7 @@
 					data-bind="attr: { class: (<?php echo $page_id?> == 5)? 'active dropdown' : 'dropdown' }"
 					class=""><a href="work-with-us.php">CONCURSOS PUBLICOS</a>
 					<ul class="dropdown-menu" role="menu">
-						<li><a href="#">Convocatorias</a></li>
+						<li><a href="work-with-us-calls.php">Convocatorias CAS</a></li>
 					</ul></li>
 				<li
 					data-bind="attr: { class: (<?php echo $page_id?> == 6)? 'active dropdown' : 'dropdown' }"

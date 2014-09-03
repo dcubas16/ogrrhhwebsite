@@ -4,7 +4,7 @@
 include 'php_files/ConnectionManager.php';
 
 $page_id = 2;
-$sub_page_id = 6;
+$sub_page_id = 5;
 ?>
 <html lang="es_PE">
 <?php include('webframes/resources.php');?>

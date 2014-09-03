@@ -81,7 +81,7 @@ $sub_page_id = 0;
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
 						<p>El Jefe de la Oficina General de Recursos Humanos (OGRRHH) de
-							la Universidad Nacional Mayor de San Marcos (UNMSM), <strong>Magister
+							la Universidad Nacional Mayor de San Marcos (UNMSM), <strong>Doctor
 							Hector Elvis Martínez Flores</strong> le da la bienvenida al sitio web
 							oficial de la Oficina General de Recursos Humanos de la Universidad Nacional Mayor de San Marcos.</p>
 						<p>En nuestro sitio web, Usted podrá encontrar información

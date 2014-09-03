@@ -15,7 +15,7 @@ class UserDAO {
 	}
 
 	public function findUserLogin() {
-		$query = 	"SELECT name, password
+		$query = 	"SELECT name, id
 					FROM users
 					WHERE upper(trim(name)) = upper(trim('" . $this->name . "'))
 					AND upper(trim(password)) = upper(trim('" . $this->password . "'));";
@@ -23,7 +23,19 @@ class UserDAO {
 		$connectionManager = new ConnectionManager ();
 		$result = $connectionManager->doQuery ( $query );
 		$connectionManager->closeConnection ();
-		return mysql_num_rows($result);;
+		return mysql_num_rows($result);
+	}
+	
+	public function getUser() {
+		$query = 	"SELECT name, id
+					FROM users
+					WHERE upper(trim(name)) = upper(trim('" . $this->name . "'))
+					AND upper(trim(password)) = upper(trim('" . $this->password . "'));";
+		// echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
 	}
 }
 ?>
