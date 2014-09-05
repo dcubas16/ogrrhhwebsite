@@ -9,8 +9,8 @@ $sub_page_id = 0;
 $convocatoryId = $_GET ['id'];
 // echo $legislationId;
 
-$convocatoryDAO = new ConvocatoryDAO();
-$queryResult = $convocatoryDAO->getById($convocatoryId);
+$convocatoryDAO = new ConvocatoryDAO ();
+$queryResult = $convocatoryDAO->getById ( $convocatoryId );
 ?>
 <html>
 <?php include('webframes/resources.php');?>
@@ -22,16 +22,16 @@ $queryResult = $convocatoryDAO->getById($convocatoryId);
 			<?php include('webframes/header.php');?>
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
-				
 					<div id="contentSection" class="col-md-9 text-content-style">
 						<h1 id="universitary-legislation"
 							class="font-style-medium-title-dark page-header ">Detalle de
 							Convocatoria</h1>
-						
+						<table class='table table-condensed'>
+							<tbody>
 							<?php
 							while ( $row = mysql_fetch_assoc ( $queryResult ) ) {
-								print ("<table class='table table-condensed'>
-								<tbody>
+								print ("<input type='hidden' name='id' id='id' value='" . $row ['id'] . "'>") ;
+								print ("
 								<tr>
 								<td><strong class='strong-ogrrhh'>Tipo de Convocatoria</strong></td>
 								<td class='upper-case-link'>" . $row ['convocatory_type_name'] . "</td>
@@ -64,23 +64,24 @@ $queryResult = $convocatoryDAO->getById($convocatoryId);
 								<tr>
 								<td><a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='_blank'><span class='glyphicon glyphicon-download'></span>
 								Descargar (Resultado 2)</a></td>
-								</tr>
-								<tr>
-								<td data-bind='visible: headerViewModel.userId() != null'><button type='button' class='btn btn-info btn-xs'
-								data-toggle='modal' onclick='backPage()'>
-								<span class='glyphicon glyphicon-plus' /></span> Agregar
-								</button></a></td>
-								</tr>		
-								</tbody>
-								</table>") ;
+								</tr>") ;
 							}
 							
 							?>
-							<button type="button" class="btn btn-info btn-xs"
+							<tr>
+									<td data-bind='visible: headerViewModel.userId() != null'><button
+											type='button' class='btn btn-info btn-xs' data-toggle='modal'
+											data-target="#add-new-convocatory-result-modal">
+											<span class='glyphicon glyphicon-plus' /></span> Agregar
+										</button></td>
+								</tr>
+							</tbody>
+						</table>
+						<button type="button" class="btn btn-info btn-xs"
 							data-toggle="modal" onclick="backPage()">
 							<span class="glyphicon glyphicon-chevron-left"></span><span
 								class="glyphicon glyphicon-chevron-left" /></span> Retornar
-							</button>
+						</button>
 					</div>
 				</div>
 			<?php include('webframes/footer.php');?>
@@ -90,6 +91,9 @@ $queryResult = $convocatoryDAO->getById($convocatoryId);
 	</div>
 </body>
 <?php include('./webframes/header-view-model.php');?>
+<!-- ko stopBinding: true -->
+<?php include('./webframes/add-new-convocatory-result-modal.php');?>
+<!-- /ko -->
 <script type="text/javascript">
 function backPage(){
 	

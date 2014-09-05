@@ -28,10 +28,15 @@ var headerViewModel = {
 
 $(function() {
 	ko.applyBindings(headerViewModel, $("body")[0]);
+	renderPageSections();
 });
-$(function() {
- 	if($(".left-navbar").height() < ($("#content-div").height() - 15 )){
+
+function renderPageSections(){
+	if($(".left-navbar").height() < ($("#content-div").height() )){
  		$(".left-navbar").height($("#content-div").height());
+ 	}else{
+ 		$("#content-div").height($(".left-navbar").height()-15);
  	}
-});
+}
+
 </script>
