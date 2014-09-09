@@ -1,5 +1,6 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+
 $page_id = 3;
 $sub_page_id = 3;
 ?>
@@ -18,7 +19,14 @@ $sub_page_id = 3;
 						<h1 id="pension-office"
 							class="font-style-medium-title-dark page-header ">Oficina de
 							Pensiones y Beneficios Sociales</h1>
-						<p></p>
+						<p>La Oficina de Pensiones y Beneficios Sociales, es un órgano de
+							línea de la Oficina General de Recursos Humanos, encargada de
+							planificar, elaborar, proponer y ejecutar acciones
+							administrativas relacionadas al otorgamiento de los beneficios
+							sociales y pensionarios a los funcionarios y servidores docentes,
+							administrativos y obreros.</p>
+						<h1 id="mision-and-goals"
+							class="font-style-short-title-dark page-header ">Publicaciones</h1>
 					</div>
 					<!-- /ko -->
 				</div>

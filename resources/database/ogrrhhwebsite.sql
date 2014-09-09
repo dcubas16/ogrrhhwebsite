@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `ogrrhhwebsitedb` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `ogrrhhwebsitedb`;
+CREATE DATABASE  IF NOT EXISTS `db_recursoshumanos` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `db_recursoshumanos`;
 -- MySQL dump 10.13  Distrib 5.6.13, for Win32 (x86)
 --
--- Host: localhost    Database: ogrrhhwebsitedb
+-- Host: localhost    Database: db_recursoshumanos
 -- ------------------------------------------------------
 -- Server version	5.6.17
 
@@ -69,7 +69,6 @@ CREATE TABLE `convocatories` (
 
 LOCK TABLES `convocatories` WRITE;
 /*!40000 ALTER TABLE `convocatories` DISABLE KEYS */;
-INSERT INTO `convocatories` VALUES (1,1,1,1,'jARDIN BOTANICO','2014-11-01','/FILE.PDF',1,1,'2014-08-25');
 /*!40000 ALTER TABLE `convocatories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -385,7 +384,7 @@ INSERT INTO `websites` VALUES (1,'ogrrhhwebsite','ogrrhhwebsite','ogrrhhwebsite'
 UNLOCK TABLES;
 
 --
--- Dumping routines for database 'ogrrhhwebsitedb'
+-- Dumping routines for database 'db_recursoshumanos'
 --
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -397,4 +396,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-09-03 16:31:13
+-- Dump completed on 2014-09-05  9:38:19

@@ -63,7 +63,7 @@
 									<div class='col-md-2'></div>
 								</div>
 								<div class='row' data-toggle='tooltip' title='' data-original-title='".$row ['complete_title']."'>
-									<div class='col-md-12 news-subtitle'>" . $row ['title'] . "</div>
+									<div class='col-md-12 news-subtitle upper-case-link'>" . $row ['title'] . "</div>
 								</div><br>") ;
 						}
 					}

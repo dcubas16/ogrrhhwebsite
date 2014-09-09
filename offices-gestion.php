@@ -1,5 +1,6 @@
 <?php include('webframes/verify-login.php');?>
 <?php
+
 $page_id = 3;
 $sub_page_id = 1;
 ?>
@@ -14,11 +15,16 @@ $sub_page_id = 1;
 			<div id="content-div" class="row">
 				<?php include('webframes/left-navbar.php');?>
 				<!-- ko stopBinding: true -->
-				<div class="col-md-9 text-content-style">
+					<div class="col-md-9 text-content-style">
 						<h1 id="gestion-office"
 							class="font-style-medium-title-dark page-header ">Oficina de
 							Gestión y Escalafón</h1>
-						<p></p>
+						<p>La Oficina de Gestión y Escalafón es el órgano de línea,
+							dependiente de la Jefatura de la Oficina General de Recursos
+							Humanos, encargado de proponer normas y ejecutar las acciones
+							técnicas del Sistema de Recursos Humanos.</p>
+						<h1 id="mision-and-goals"
+							class="font-style-short-title-dark page-header ">Publicaciones</h1>
 					</div>
 					<!-- /ko -->
 				</div>

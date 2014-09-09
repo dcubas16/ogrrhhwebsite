@@ -2,15 +2,15 @@
 
 class ConnectionManager{
 	
-// 	public $hostName = "localhost";
-// 	public $userName = "recursoshumanos";
-// 	public $password = "rec-0a9bf1";
-// 	public $database = "db_recursoshumanos";
-
 	public $hostName = "localhost";
-	public $userName = "root";
-	public $password = "root";
-	public $database = "ogrrhhwebsitedb";
+	public $userName = "recursoshumanos";
+	public $password = "rec-0a9bf1";
+	public $database = "db_recursoshumanos";
+
+// 	public $hostName = "localhost";
+// 	public $userName = "root";
+// 	public $password = "root";
+// 	public $database = "ogrrhhwebsitedb";
 	public $connection;
 	
 	public function __construct(){
