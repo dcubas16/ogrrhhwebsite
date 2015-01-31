@@ -31,30 +31,17 @@ $queryResult = $legislationType->getLegislationTypes();
 						<!-- 							looking too good. -->
 						<!-- 						</div> -->
 						<h1 id="universitary-legislation"
-							class="font-style-medium-title-dark page-header ">Normatividad</h1>
-						<p>En esta sección Usted podrá encotrar la normatividad vigente
-							bajo la cual se ríge la Oficina General de Recursos Humanos de la
-							Universidad Nacional Mayor de San Marcos, además de la
-							normatividad que regula a las universidades y la gestión de
-							recursos humanos</p>
-						<p>Para mayor comodidad se clasificó la normatividad vigente así:</p>
-						<ul>
-							<li><a href="legislation-laws-decree.php">Leyes y Decretos</a></li>
-							<li><a href="legislation-rules.php">Reglamentos</a></li>
-							<li><a href="legislation-directives.php">Directivas</a></li>
-							<li><a href="legislation-resolutions.php">Resoluciones</a></li>
-							<li><a href="legislation-ogrrhh-legislation.php">Normatividad
-									OGRRHH y UNMSM</a></li>
-						</ul>
+							class="font-style-medium-title-dark page-header ">Comunicados</h1>
+						<p>En esta sección Usted podrá encotrar los comunicados que realiza la OGRRHH y suss dependencias.</p>
 						<button type="button" class="btn btn-info btn-xs"
-							data-toggle="modal" data-target="#add-new-legislation-modal"
+							data-toggle="modal" data-target="#add-new-statement-modal"
 							data-bind="visible: headerViewModel.logedUser()">
-							<span class="glyphicon glyphicon-plus"></span> Agregar Nueva
-							Normatividad
+							<span class="glyphicon glyphicon-plus"></span> Agregar Nuevo
+							Comunicado
 						</button>
 
 					</div>
-					<?php include('webframes/add-new-legislation-modal.php');?>
+					<?php include('webframes/add-new-statement-modal.php');?>
 				</div>
 			<?php include('webframes/footer.php');?>
 		</div>
@@ -84,7 +71,7 @@ $queryResult = $legislationType->getLegislationTypes();
 			pageId : ko.observable(<?php echo $page_id;?>),
 			subPageId : ko.observable(<?php echo $sub_page_id;?>),
 
-			legislationTypes : ko.toJS(<?php echo  $jsonConverter->recordSetToJson($queryResult); ?>),
+			legislationTypes : ko.observableArray(<?php echo  $jsonConverter->recordSetToJson($queryResult); ?>),
 			legislationTypeId : ko.observable(null),
 			legislationTitle : ko.observable(null),
 			legislationPublicationDate : ko.observable(null),

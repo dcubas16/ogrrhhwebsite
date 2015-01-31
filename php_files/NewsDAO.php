@@ -49,12 +49,12 @@ class NewsDAO {
 	
 	public function getLastThreeNews() {
 	
-		$query = 	"SELECT IF(CHAR_LENGTH(title) > 50, CONCAT(LEFT(title,50), '...'), title) as title, title as complete_title, updated_date, file_path FROM (
-					SELECT name as title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path FROM legislations
+		$query = 	"SELECT IF(CHAR_LENGTH(title) > 50, CONCAT(LEFT(title,50), '...'), title) as title, title as complete_title, updated_date, file_path, publication_date FROM (
+					SELECT name as title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path, publication_date  FROM legislations
 					union
-					SELECT title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path FROM convocatories
+					SELECT title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path,null FROM convocatories
 					) T1 
-					order by T1.updated_date desc
+					order by T1.publication_date desc
 					limit 3;";
 		// 		echo $query;
 		$connectionManager = new ConnectionManager ();

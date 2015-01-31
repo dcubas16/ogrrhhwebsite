@@ -1,4 +1,4 @@
-<div class="left-navbar col-md-3 left-navbar-background-style">
+<div class="left-navbar col-md-3 left-navbar-background-style" style="min-height: 500px;">
 	<div data-bind="visible: headerViewModel.pageId() == 0"></div>
 	<div data-bind="visible: headerViewModel.pageId() == 1">
 		<div class="row">
@@ -8,7 +8,7 @@
 					<div class="col-md-12">ULTIMAS</div>
 				</div>
 				<div class="row font-style-tall-title-white">
-					<div class="col-md-12">NOTICIAS</div>
+					<div class="col-md-12">PUBLICACIONES</div>
 				</div>
 			</div>
 			<div class="col-md-1"></div>
@@ -16,7 +16,7 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10">
-				<div class="row" style="height: 50;"></div>
+				<div class="row" style="height: 25;"></div>
 				<div class="row">
 					<div class="col-md-11">
 					<?php
@@ -44,32 +44,31 @@
 							"Diciembre" 
 					);
 					?>
-					
-					<?php
-					if (isset ( $queryResultNews )) {
-						while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
-							
-							$formattedDate = date ( 'd', strtotime ( $row ['updated_date'] ) ) . " de " . $meses [date ( 'm', strtotime ( $row ['updated_date'] ) ) - 1] . " de " . date ( 'Y', strtotime ( $row ['updated_date'] ) );
-							
-							print ("<div class='row'>
-									<div class='col-md-12 news-image-container-style'>
-										<a href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='blank'> <img class='news-image-style'
-											src='resources/images/recursos-humanos_1_210_110.jpg'>
-										</a>
+						<?php
+						if (isset ( $queryResultNews )) {
+							while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
+								
+								$formattedDate = date ( 'd', strtotime ( $row ['updated_date'] ) ) . " de " . $meses [date ( 'm', strtotime ( $row ['updated_date'] ) ) - 1] . " de " . date ( 'Y', strtotime ( $row ['updated_date'] ) );
+								
+								print ("<a  data-toggle='tooltip' title='' data-original-title='".$row ['complete_title']."' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='blank'><div class='row'>
+										<div class='col-md-12 news-image-container-style'>
+											 <img class='news-image-style'
+												src='resources/images/recursos-humanos_1_210_110.jpg'>
+											
+										</div>
 									</div>
-								</div>
-								<div class='row'>
-									<div class='col-md-10 news-date'>" . $formattedDate . "</div>
-									<div class='col-md-2'></div>
-								</div>
-								<div class='row' data-toggle='tooltip' title='' data-original-title='".$row ['complete_title']."'>
-									<div class='col-md-12 news-subtitle upper-case-link'>" . $row ['title'] . "</div>
-								</div><br>") ;
+									<div class='row'>
+										<div class='col-md-10 news-date'>" . $formattedDate . "</div>
+										<div class='col-md-2'></div>
+									</div>
+									<div class='row'>
+										<div class='col-md-12 news-subtitle upper-case-link'>" . $row ['title'] . "</div>
+									</div></a><br>") ;
+							}
 						}
-					}
-					
-					?>
-						
+						?>
+
+
 					</div>
 					<div class="col-md-1"></div>
 				</div>
@@ -80,7 +79,7 @@
 		<div class="row">
 			<div class="col-md-1"></div>
 			<div class="col-md-10 link-font-style">
-				<a href="news.php"> Ver todas las Noticias...</a>
+				<a class="watchAllNews" href="news.php"> Ver todas las Publicaciones...</a>
 			</div>
 			<div class="col-md-1"></div>
 		</div>
@@ -178,7 +177,9 @@
 	</div>
 </div>
 <script>
-$('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+// $('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
+// 	'rigth', });
+$('a[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
 	'rigth', });
 </script>
 

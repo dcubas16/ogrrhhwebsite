@@ -1,4 +1,4 @@
-<div class="modal fade" id="add-new-legislation-modal" tabindex="-1"
+<div class="modal fade" id="add-new-statement-modal" tabindex="-1"
 	role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
@@ -6,33 +6,12 @@
 				<button type="button" class="close" data-dismiss="modal">
 					<span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span>
 				</button>
-				<h4 class="modal-title" id="myModalLabel">Agregar Nueva Normatividad</h4>
+				<h4 class="modal-title" id="myModalLabel">Agregar Nuevo Comunicado</h4>
 			</div>
-			<form id="addNewLegislation" method="post"
+			<form id="addNewStatement" method="post"
 				enctype="multipart/form-data" action="upload-file-FTP.php"
 				class="form-horizontal">
 				<div class="modal-body">
-					<div class="form-group">
-						<label class="col-md-3 control-label">Tipo</label>
-						<div class="col-md-9 selectContainer">
-							<select class="form-control" id="legislationType"
-								name="legislationType"><option value="">Seleccione</option>
-								<option value="1">ley</option>
-								<option value="2">decreto</option>
-								<option value="3">reglamento</option>
-								<option value="4">directiva</option>
-								<option value="5">resolución</option>
-								<option value="6">otro</option></select>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="col-md-3 control-label">Número</label>
-						<div class="col-md-7">
-							<input type="text" name="legislationNumber"
-								id="legislationNumber" class="form-control"
-								data-bind="value : legislationNumber" />
-						</div>
-					</div>
 					<div class="form-group">
 						<label class="col-md-3 control-label">Título</label>
 						<div class="col-md-9">
@@ -44,18 +23,9 @@
 					<div class="form-group">
 						<label class="col-md-3 control-label">Descripción</label>
 						<div class="col-md-9">
-							<textarea id="legislationDescription"
-								name="legislationDescription" class="form-control" rows="5"
-								placeholder="Descripción"
+							<textarea id="legislationDescription" name="legislationDescription"
+								class="form-control" rows="5" placeholder="Descripción"
 								data-bind="value: legislationDescription"></textarea>
-						</div>
-					</div>
-					<div class="form-group" data-toggle="tooltip"
-						title="Esta fecha corresponde a la publicación de la Normativa">
-						<label class="col-md-3 control-label">Promulgación</label>
-						<div class="col-md-9">
-							<input type="text" id="legislationDate" name="legislationDate"
-								data-bind="editableText: false, value: legislationPublicationDate">
 						</div>
 					</div>
 					<div class="form-group" data-toggle="tooltip"
@@ -68,8 +38,8 @@
 									data-bind="visible:false, value: fileToUpload" /> <input
 									id="fileInputText" name="fileInputText" type="text"
 									class="form-control" placeholder="Archivo"
-									data-bind="value: fileToUpload(), fireChange: true" readonly />
-								<span class="input-group-btn">
+									data-bind="value: fileToUpload(), fireChange: true" readonly /> <span
+									class="input-group-btn">
 									<button id="chooseFile" class="btn btn-default" type="button">
 										<i class="glyphicon glyphicon-file"></i> Seleccione
 									</button>

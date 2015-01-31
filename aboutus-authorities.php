@@ -37,7 +37,7 @@ $sub_page_id = 2;
 									<td><p><strong>Director General de Administración</strong></p></td>
 								</tr>
 								<tr>
-									<td><p>Mg. Hector Elvis Martínez Flores</p></td>
+									<td><p>Econ. Victor Félix Portocarrero Chávez</p></td>
 									<td><p><strong>Jefe de la Oficina General de Recursos Humanos</strong></p></td>
 								</tr>
 								<tr class="danger">
@@ -46,11 +46,11 @@ $sub_page_id = 2;
 											Sociales</strong></p></td>
 								</tr>
 								<tr>
-									<td><p>Lic. Juana Mercedes Sulca Brancacho</p></td>
+									<td><p>Lic. Gladys Raquel Piña Rondon</p></td>
 									<td><p><strong>Jefe de la Oficina de Gestión y Escalafónn</strong></p></td>
 								</tr>
 								<tr class="danger">
-									<td><p>María Esperanza Moncada Alfaro</p></td>
+									<td><p>Lic. Geremías Félix Esteban Camacuari</p></td>
 									<td><p><strong>Jefe de la Oficina de Pensiones y Beneficios Sociales</strong></p></td>
 								</tr>
 								<tr>

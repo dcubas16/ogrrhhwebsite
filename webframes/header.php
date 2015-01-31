@@ -10,7 +10,7 @@
 		<div class="col-md-4">
 			<div class="row">
 				<div class="col-md-12 login-button" data-bind="visible: !logedUser()">
-					<button type="button" class="btn btn-success btn-sm"
+					<button type="button" class="btn btn-danger btn-sm"
 						data-toggle="modal" data-target="#login">
 						<strong>Ingresar </strong><span class="glyphicon glyphicon-user"></span>
 					</button>

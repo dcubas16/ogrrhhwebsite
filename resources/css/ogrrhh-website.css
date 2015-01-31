@@ -142,7 +142,7 @@
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans",
 		Geneva, Verdana, sans-serif;
 	color: #FFFFFF;
-	font-size: 37;
+	font-size: 30;
 	padding: 5;
 	font-weight: bold;
 	letter-spacing: 0.2px;
@@ -203,8 +203,7 @@
 	padding-top: 3px;
 	font-size: 12px;
 	padding-right: 0px;
-    padding-left: 5px;
-	
+	padding-left: 5px;
 }
 
 .news-subtitle {
@@ -218,6 +217,20 @@
 	padding-top: 20px;
 	font-weight: bold;
 	cursor: auto;
+}
+
+.link-font-style>a.watchAllNews {
+	padding-top: 20px;
+	font-weight: bold;
+	cursor: auto;
+	color: #FFCDCD;
+}
+
+.link-font-style>a:hover.watchAllNews {
+	padding-top: 20px;
+	font-weight: bold;
+	cursor: auto;
+	color: #FFF;
 }
 
 .general-link-container-style {
@@ -248,7 +261,7 @@ a {
 	text-decoration: none;
 }
 
-.download-link-message{
+.download-link-message {
 	display: inline;
 }
 
@@ -278,23 +291,29 @@ p {
 }
 
 .homepage-title {
-	font-size: 38px;
 	font-family: Montserrat, sans-serif;
 	padding: 0 15px;
-	letter-spacing: -2px;
-	background: rgba(52, 48, 45, .8);
-	color: #f1f1f1;
+	background: rgba(143, 51, 51, 0.8); color : #f1f1f1;
 	display: inline-block;
+	color: #f1f1f1;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+div.tooltip>div.tooltip-inner{
+	background-color: #360000;
 }
 
 .homepage-subtitle {
 	font-size: 22px;
 	padding: 8px 19px 8px;
-	background: rgba(52, 48, 45, .8);
-	color: #f1f1f1;
+	background: rgba(143, 51, 51, 0.8); color : #f1f1f1;
 	display: inline-block;
 	padding-top: 1px;
 	padding-bottom: 1px;
+	color: #f1f1f1;
 }
 
 .font-style-short-title-dark {
@@ -309,16 +328,42 @@ p {
 	padding-left: 0px;
 }
 
-.upper-case-link{
+.upper-case-link {
 	text-transform: uppercase;
 }
 
-.download-link{
-    padding-bottom: 10px;
+.download-link {
+	padding-bottom: 10px;
 }
 
-.strong-ogrrhh{
+.strong-ogrrhh {
 	color: rgb(114, 43, 43);
+}
+
+.carousel-control.left {
+	background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, .5)
+		0), color-stop(rgba(0, 0, 0, .0001) 100%));
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.15) 0,
+		rgba(0, 0, 0, .0001) 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',
+		endColorstr='#00000000', GradientType=1);
+}
+
+.carousel-control.right {
+	left: auto;
+	right: 0;
+	background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, .0001)
+		0), color-stop(rgba(0, 0, 0, .5) 100%));
+	background-image: linear-gradient(to right, rgba(0, 0, 0, .0001) 0,
+		rgba(0, 0, 0, 0.1) 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000',
+		endColorstr='#80000000', GradientType=1);
+}
+
+div.tooltip.rigth.fade.in {
+	width: 350px;
 }
 
 /****************************************************************** LEFT NAVBAR'S STYLES ********************************************/
@@ -332,7 +377,7 @@ p {
 	background-size: contain;
 }
 
-#calendar{
+#calendar {
 	width: 100%;
 }
 

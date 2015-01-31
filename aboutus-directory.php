@@ -48,13 +48,19 @@ $sub_page_id = 4;
 							</thead>
 							<tbody>
 								<tr class="success text-align-center">
-									<td rowspan="9"
+									<td rowspan="7"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">JEFATURA
 										DE LA OFICINA GENERAL DE RECURSOS HUMANOS</td>
-									<td>Mg. Martínez Flores, Héctor Elvis</td>
+									<td>Econ. Portocarrero Chávez, Victor Félix</td>
 									<td>Docente Permanente</td>
 									<td>Jefe de Oficina General</td>
 									<td>7605</td>
+								</tr>
+								<tr class="success">
+									<td>Lic. Sarmiento Hurtado, Enrique Eduardo</td>
+									<td>Docente Permanente</td>
+									<td>Asesor</td>
+									<td></td>
 								</tr>
 								<tr class="success">
 									<td>Pagan Soto, Moraima Edith</td>
@@ -66,18 +72,6 @@ $sub_page_id = 4;
 									<td>Roque Delgado, Nelson</td>
 									<td>Administrativo Permanente</td>
 									<td>Apoyo Administrativo</td>
-									<td></td>
-								</tr>
-								<tr class="success">
-									<td>Piña Rondon, Gladys Raquel</td>
-									<td>Administrativo Permanente</td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr class="success">
-									<td>Prado Ore, William Ernesto</td>
-									<td>Administrativo Permanente</td>
-									<td></td>
 									<td></td>
 								</tr>
 								<tr class="success">
@@ -97,12 +91,6 @@ $sub_page_id = 4;
 									<td>CAS</td>
 									<td>Recepción y Mesa de Partes</td>
 									<td>7600</td>
-								</tr>
-								<tr class="success">
-									<td>Ramírez Garnique, Jorge Oswaldo</td>
-									<td>CAS</td>
-									<td></td>
-									<td></td>
 								</tr>
 								<tr class="info">
 									<td rowspan="8"
@@ -151,7 +139,7 @@ $sub_page_id = 4;
 									<td></td>
 								</tr>
 								<tr class="info">
-									<td>Valdivieso Carreño, Christian Luis</td>
+									<td>Azorsa Salazar, Luis Tulio</td>
 									<td>CAS</td>
 									<td></td>
 									<td></td>
@@ -160,8 +148,8 @@ $sub_page_id = 4;
 									<td rowspan="16"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA
 										DE GESTIÓN Y ESCALAFÓN</td>
-									<td>Sulca Brancacho, Juana Mercedes</td>
-									<td>CONTRATO PERSONAL</td>
+									<td>Lic. Piña Rondon, Gladys Raquel</td>
+									<td>Administrativo Permanente</td>
 									<td>Jefe de la Oficina de Gestión y Escalafón</td>
 									<td>7607</td>
 								</tr>
@@ -244,8 +232,8 @@ $sub_page_id = 4;
 									<td></td>
 								</tr>
 								<tr class="warning">
-									<td>Pari Capa, Edith</td>
-									<td>CAS</td>
+									<td>Sulca Brancacho, Juana Mercedes</td>
+									<td></td>
 									<td></td>
 									<td></td>
 								</tr>
@@ -259,8 +247,8 @@ $sub_page_id = 4;
 									<td rowspan="15"
 										style="vertical-align: middle; text-align: center; font-weight: bold;">OFICINA
 										DE PENSIONES Y BENEFICIOS SOCIALES</td>
-									<td>Moncada Alfaro María Esperanza</td>
-									<td>CONTRATO PERSONAL</td>
+									<td>Lic. Esteban Camacuari, Geremías Félix</td>
+									<td>Administrativo Permanente</td>
 									<td>Jefe de la Oficina de Pensiones y Beneficios Sociales</td>
 									<td>7614</td>
 								</tr>
@@ -269,6 +257,12 @@ $sub_page_id = 4;
 									<td>Administrativo Permanente</td>
 									<td>Jefe de la Unidad de Beneficios Sociales</td>
 									<td></td>
+								</tr>
+								<tr class="danger">
+									<td>Moncada Alfaro María Esperanza</td>
+									<td>CONTRATO PERSONAL</td>
+									<td></td>
+									<td>7614</td>
 								</tr>
 								<tr class="danger">
 									<td>Alipázaga Camacho, Tito Fortunato</td>
@@ -319,6 +313,12 @@ $sub_page_id = 4;
 									<td></td>
 								</tr>
 								<tr class="danger">
+									<td>Flores Valera, Karen Mariela</td>
+									<td>CAS</td>
+									<td></td>
+									<td></td>
+								</tr>
+								<tr class="danger">
 									<td>Silva Azañedo, Doris Elizabeth</td>
 									<td>CAS</td>
 									<td></td>
@@ -328,18 +328,6 @@ $sub_page_id = 4;
 									<td>Salazar Huillca, Amalia Rocio</td>
 									<td>CAS</td>
 									<td></td>
-									<td></td>
-								</tr>
-								<tr class="danger">
-									<td>Aquino Guillen, Sandy Lucia</td>
-									<td>CAS</td>
-									<td></td>
-									<td></td>
-								</tr>
-								<tr class="danger">
-									<td>Esteban Camacuari Geremias Félix</td>
-									<td>Administrativo Permanente</td>
-									<td>Jefe de la Unidad de Pensiones</td>
 									<td></td>
 								</tr>
 								<tr class="danger">
