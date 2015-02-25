@@ -12,3 +12,11 @@
 			<div class="col-md-1"></div>
 		</div>
 </footer>
+<script type="text/javascript">
+$(function() {
+	setTimeout(function(){
+		
+		  $("#left-navbar-ogrrhh").css("height",$("#content-div").css("height"));
+		}, 500);
+});
+</script>

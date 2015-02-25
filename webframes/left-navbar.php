@@ -1,4 +1,4 @@
-<div class="left-navbar col-md-3 left-navbar-background-style" style="min-height: 500px;">
+<div id="left-navbar-ogrrhh" class="left-navbar col-md-3 left-navbar-background-style" style="min-height: 500px;">
 	<div data-bind="visible: headerViewModel.pageId() == 0"></div>
 	<div data-bind="visible: headerViewModel.pageId() == 1">
 		<div class="row">
@@ -89,7 +89,7 @@
 		<div data-bind="visible: headerViewModel.pageId() == 7">
 			<div class="row">
 				<div class="col-md-12"
-					style="height: 30px; padding-top: 17px; text-align: center;">
+					style="height: 30px; padding-top: 8px; text-align: center;">
 					<div id="calendar"></div>
 				</div>
 			</div>
@@ -177,8 +177,6 @@
 	</div>
 </div>
 <script>
-// $('div[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
-// 	'rigth', });
 $('a[data-toggle="tooltip"]').tooltip({ animated: 'fade', placement:
 	'rigth', });
 </script>

@@ -381,6 +381,10 @@ div.tooltip.rigth.fade.in {
 	width: 100%;
 }
 
+div#calendar{
+	border-radius: 3px;
+}
+
 /****************************************************************** FOOTER'S STYLES ********************************************/
 .footer-style {
 	margin-bottom: 0px;

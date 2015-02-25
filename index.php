@@ -57,19 +57,27 @@ $sub_page_id = 0;
 								href="#carousel-example-generic" data-slide="next"> <span
 								class="glyphicon glyphicon-chevron-right"></span>
 							</a>
-							<div class="carousel-caption" style="font-family: Montserrat, sans-serif;">
-								<h2 class="homepage-title" style="font-family: Montserrat, sans-serif;">La Oficina General de Recursos Humanos</h2>
-								<h3 class="homepage-title" style="font-family: Montserrat, sans-serif;">de la Universidad Nacional Mayor de San Marcos</h3>
-								<h3 class="homepage-title" style="font-family: Montserrat, sans-serif;">le da la bienvenida a su sitio web oficial</h3>
+							<div class="carousel-caption"
+								style="font-family: Montserrat, sans-serif;">
+								<h2 class="homepage-title"
+									style="font-family: Montserrat, sans-serif;">La Oficina General
+									de Recursos Humanos</h2>
+								<h3 class="homepage-title"
+									style="font-family: Montserrat, sans-serif;">de la Universidad
+									Nacional Mayor de San Marcos</h3>
+								<h3 class="homepage-title"
+									style="font-family: Montserrat, sans-serif;">le da la
+									bienvenida a su sitio web oficial</h3>
 							</div>
 						</div>
 					</div>
 				</div>
 				<!-- /ko -->
-				<div class="row" style="background-color: #F7F7F7;">
+				<div id="main-page-ogrrhh" class="row"
+					style="background-color: #F7F7F7;">
 					<?php include('webframes/left-navbar.php');?>
 					<!-- ko stopBinding: true -->
-					<div id="content-div" class="col-md-9 text-content-style"
+					<div id="content-div-home" class="col-md-9 text-content-style"
 						style="min-height: 500px;">
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
@@ -106,6 +114,37 @@ $sub_page_id = 0;
 					<h4 class="modal-title" id="myModalLabel">COMUNICADO</h4>
 				</div>
 				<div class="modal-body">
+					<h4 style="text-align: center;">OFICINA GENERAL DE RECURSOS HUMANOS</h4>
+					<h4 style="text-align: center;">OFICINA DE DESARROLLO Y BIENESTAR
+						SOCIAL DE LA OGRRHH</h4>
+					<br>
+					<p style="text-align: justify;">Con el presente comunicado,
+						se hace de conocimiento a la comunidad San Marquina, las
+						actividades que viene realizando la Oficina de Desarrollo y
+						Bienestar Social, orientadas a capacitar y promover el desarrollo
+						socio-cultural, para ello se muestran las fotos adjuntas al
+						presente comunicado.</p>
+					<br> <a
+						href="http://ogrrhh.unmsm.edu.pe/files/normativas/otros/COMUNICADO_ODBS_CURSOS_REALIZADOS.pdf"
+						target="blank">Descargar Comunicado</a>
+				</div>
+				<div class="modal-body" style="display: none;">
+					<h4 style="text-align: center;">OFICINA DE DESARROLLO Y BIENESTAR
+						SOCIAL DE LA OGRRHH</h4>
+					<h4 style="text-align: center;">COMUNICADO</h4>
+					<h4 style="text-align: center;">CURSO DE ESPECIALIZACIÓN GERENCIA
+						EN GESTIÓN Y ADMINISTRACIÓN PÚBLICA</h4>
+					<br>
+					<p style="text-align: justify;">Con el presente comunicado, se hace
+						de conocimiento a la comunidad San Marquina la relación de
+						participantes al curso de especialización "Gerencia en Gestión y
+						Administración Pública" divididos en dos grupos; Además, se brinda
+						la información correspondiente al curso.</p>
+					<br> <a
+						href="http://ogrrhh.unmsm.edu.pe/files/normativas/otros/Comunicado_Curso_Gerencia_10_02_2015.pdf"
+						target="blank">Descargar Comunicado</a>
+				</div>
+				<div class="modal-body" style="display: none;">
 					<h4>OFICINA GENERAL DE RECURSOS HUMANOS</h4>
 					<h4>COMUNICADO</h4>
 					<h4>SOBRE PAGO POR DESCUENTOS JUDICIALES</h4>
