@@ -6,7 +6,7 @@ include 'php_files/Constants.php';
 
 $newsDAO = new NewsDAO ();
 
-$queryResultNews = $newsDAO->getLastThreeNews ();
+$queryResultNews = $newsDAO->getLastThreeNewsWithLegislationType ();
 
 $page_id = 1;
 $sub_page_id = 0;
@@ -31,23 +31,23 @@ $sub_page_id = 0;
 									class=""></li>
 								<li data-target="#carousel-example-generic" data-slide-to="1"
 									class="active"></li>
-								<li data-target="#carousel-example-generic" data-slide-to="2"
-									class=""></li>
+<!-- 								<li data-target="#carousel-example-generic" data-slide-to="1" -->
+<!-- 									class=""></li> -->
 							</ol>
 							<!-- Wrapper for slides -->
 							<div class="carousel-inner">
 								<div class="item">
-									<img src="resources/images/simulacro_unmsm.jpg" alt="...">
+									<img src="resources/images/simulacro_unmsm.jpg">
 									<div class="carousel-caption"></div>
 								</div>
 								<div class="item active">
-									<img src="resources/images/unmsm_ogrrhh.jpg" alt="...">
-									<div class="carousel-caption">...</div>
-								</div>
-								<div class="item">
 									<img src="resources/images/unmsm_3.jpg" alt="...">
 									<div class="carousel-caption">...</div>
 								</div>
+<!-- 								<div class="item"> -->
+<!-- 									<img src="resources/images/unmsm_3.jpg"> -->
+<!-- 									<div class="carousel-caption">..</div> -->
+<!-- 								</div> -->
 							</div>
 							<!-- Controls -->
 							<a class="left carousel-control" href="#carousel-example-generic"
@@ -78,9 +78,16 @@ $sub_page_id = 0;
 					<?php include('webframes/left-navbar.php');?>
 					<!-- ko stopBinding: true -->
 					<div id="content-div-home" class="col-md-9 text-content-style"
-						style="min-height: 500px;">
+						style="min-height: 500px; text-align: justify;">
+
 						<h1 id="mision-and-goals"
 							class="font-style-medium-title-dark page-header ">Bienvenidos</h1>
+
+						<a href="#" class="thumbnail"
+							style='float: right; width: 300px; height: 300px; margin-left: 10px; text-align: center;'>
+							<img src="resources/images/VPortocarrero.JPG">
+							<p style="color: #B40000; font-size: 12px;padding-top: 10px;">Econ. Victor Félix Portocarrero Chávez</p>
+						</a>
 						<p>
 							El Jefe de la Oficina General de Recursos Humanos (OGRRHH) de la
 							Universidad Nacional Mayor de San Marcos (UNMSM), <strong>Econ.
@@ -89,10 +96,15 @@ $sub_page_id = 0;
 							Universidad Nacional Mayor de San Marcos.
 						</p>
 						<p>En nuestro sitio web, Usted podrá encontrar información sobre
-							la OGRRHH y la UNMSM, dentro de cuales esta el directorio, MOF,
-							ROF; así mismo, se tiene información específica de cada Oficina
-							dependiente de la OGRRHH, las normas y directivas concernientes a
-							la OGRRHH, y las convocatorias de trabajo que realiza la OGRRHH</p>
+							la OGRRHH y la UNMSM, dentro de cuales esta el directorio general
+							de la OGRRRHH, MOF, ROF; así mismo, se tiene información
+							específica de cada Oficina dependiente de la OGRRHH, las normas y
+							directivas concernientes a la OGRRHH, y las convocatorias de
+							trabajo que realiza la OGRRHH</p>
+
+						<p>Asimismo, por medio de nuestro sitio web, esperamos llegar a la
+							mayor parte de la comunidad San Marquina, y poder ser
+							asertivos en todo lo que queremos dar a conocer.</p>
 					</div>
 					<!-- /ko -->
 				</div>
@@ -114,16 +126,47 @@ $sub_page_id = 0;
 					<h4 class="modal-title" id="myModalLabel">COMUNICADO</h4>
 				</div>
 				<div class="modal-body">
+					<h4 style="text-align: center;">COMUNICADO</h4>
+					<p style="text-align: justify;">
+						CON EL PRESENTE COMUNICADO SE HACE DE CONOCIMIENTO A LOS JEFES DE
+						PERSONAL DE LAS FACULTADES Y RESPONSABLES DE LA ELABORACIÓN DE
+						PLANILLAS DE CAS Y SUBVENCIÓN DE LAS DEPENDENCIAS DE LAS DE LA
+						UNIVERSIDAD NACIONAL MAYOR DE SAN MARCOS, EL CRONOGRAMA DE
+						ELABORACIÓN DE PLANILLAS PARA EL MES DE ABRIL DEL 2015. <br>Lima,
+						09 de Abril del 2015 <br>Oficina de Remuneraciones y Obligaciones
+						Sociales
+					</p>
+					<br> <a
+						href="http://ogrrhh.unmsm.edu.pe/files/normativas/otros/Comunicado_Cronograma_Pagos.pdf"
+						target="blank">Descargar Cronograma</a>
+				</div>
+				<div class="modal-body" style="display: none;">
+					<h4 style="text-align: center;">COMUNICADO</h4>
+					<p style="text-align: justify;">
+						Con el presente comunicado, se hace de conocimiento a la comunidad
+						San Marquina, que la Oficina de Pensiones y Beneficios de la
+						Oficina General de Recursos Humanos está generando las
+						"Constancias de los Pagos Detallado Conforme al Decreto de
+						Urgencia N° 037-94" desde el día 16 de Marzo del presente año,
+						siendo requisito para solicitar esta constancia, la presentación
+						de FUT en mesa de partes de la Oficina General de Recursos
+						Humanos. <br>Lima, 19 de Marzo del 2015 <br>Jefatura de la Oficina
+						General de Recursos Humanos
+					</p>
+					<br> <a
+						href="http://ogrrhh.unmsm.edu.pe/files/normativas/otros/Comunicado_DU_037_94.pdf"
+						target="blank">Descargar Comunicado</a>
+				</div>
+				<div class="modal-body" style="display: none;">
 					<h4 style="text-align: center;">OFICINA GENERAL DE RECURSOS HUMANOS</h4>
 					<h4 style="text-align: center;">OFICINA DE DESARROLLO Y BIENESTAR
 						SOCIAL DE LA OGRRHH</h4>
 					<br>
-					<p style="text-align: justify;">Con el presente comunicado,
-						se hace de conocimiento a la comunidad San Marquina, las
-						actividades que viene realizando la Oficina de Desarrollo y
-						Bienestar Social, orientadas a capacitar y promover el desarrollo
-						socio-cultural, para ello se muestran las fotos adjuntas al
-						presente comunicado.</p>
+					<p style="text-align: justify;">Con el presente comunicado, se hace
+						de conocimiento a la comunidad San Marquina, las actividades que
+						viene realizando la Oficina de Desarrollo y Bienestar Social,
+						orientadas a capacitar y promover el desarrollo socio-cultural,
+						para ello se muestran las fotos adjuntas al presente comunicado.</p>
 					<br> <a
 						href="http://ogrrhh.unmsm.edu.pe/files/normativas/otros/COMUNICADO_ODBS_CURSOS_REALIZADOS.pdf"
 						target="blank">Descargar Comunicado</a>

@@ -63,6 +63,20 @@ class NewsDAO {
 		return $result;
 	}
 	
+	public function getLastThreeNewsWithLegislationType() {
+	
+		$query = 	"SELECT IF(CHAR_LENGTH(title) > 50, CONCAT(LEFT(title,50), '...'), title) as title, title as complete_title, updated_date, file_path, publication_date, legislation_type_id FROM (
+					SELECT name as title, DATE_FORMAT(update_date,'%m/%d/%Y') AS updated_date, file_path, publication_date, legislation_type_id  FROM legislations
+					) T1
+					order by T1.publication_date desc
+					limit 3;";
+		// 		echo $query;
+		$connectionManager = new ConnectionManager ();
+		$result = $connectionManager->doQuery ( $query );
+		$connectionManager->closeConnection ();
+		return $result;
+	}
+	
 	function __destruct() {
 		
 	}

@@ -5,10 +5,10 @@
 			<div class="col-md-11">
 				<div class="row" style="height: 30;"></div>
 				<div class="row font-style-short-title-white">
-					<div class="col-md-12">ULTIMAS</div>
+					<div class="col-md-12">ÚLTIMAS</div>
 				</div>
 				<div class="row font-style-tall-title-white">
-					<div class="col-md-12">PUBLICACIONES</div>
+					<div class="col-md-12">NOTICIAS</div>
 				</div>
 			</div>
 			<div class="col-md-1"></div>
@@ -45,15 +45,19 @@
 					);
 					?>
 						<?php
+						
 						if (isset ( $queryResultNews )) {
+							
 							while ( $row = mysql_fetch_assoc ( $queryResultNews ) ) {
-								
+								$cadena_mews_type = "normatividad";
 								$formattedDate = date ( 'd', strtotime ( $row ['updated_date'] ) ) . " de " . $meses [date ( 'm', strtotime ( $row ['updated_date'] ) ) - 1] . " de " . date ( 'Y', strtotime ( $row ['updated_date'] ) );
-								
-								print ("<a  data-toggle='tooltip' title='' data-original-title='".$row ['complete_title']."' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='blank'><div class='row'>
+								if(strcmp($row ['legislation_type_id'],"6") != -1 ){
+									$cadena_mews_type = "comunicado";
+								}
+								print (" <a  data-toggle='tooltip' title='' data-original-title='".$row ['complete_title']."' href='" . Constants::ogrrhhFTPUrl . $row ['file_path'] . "' target='blank'><div class='row'>
 										<div class='col-md-12 news-image-container-style'>
 											 <img class='news-image-style'
-												src='resources/images/recursos-humanos_1_210_110.jpg'>
+												src='resources/images/". $cadena_mews_type .".png'>
 											
 										</div>
 									</div>
